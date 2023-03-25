@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: #333;
+    background-color: #f5f5f5;
+    line-height: 1.6;
+  }
+  
+  header {
+    background-color: #4c4c4c;
+    padding: 1.5rem 0;
+  }
+  
+  header h1 {
+    text-align: center;
+    color: #fff;
+    margin-bottom: 0.3rem;
+  }
+  
+  header p {
+    text-align: center;
+    color: #d3d3d3;
+  }
+  
+  main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  }
+  .profile-img {
+    display: block;
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .profile-img + h2 {
+    margin-top: 1rem;
+    text-align: center;
+  }
+  
+  section {
+    margin-bottom: 2rem;
+  }
+  
+  h2 {
+    font-size: 24px;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #4c4c4c;
+    padding-bottom: 0.5rem;
+  }
+  
+  .job {
+    margin-bottom: 1.5rem;
+  }
+  
+  .job h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 0.2rem;
+  }
+  
+  .job-duration {
+    font-style: italic;
+    margin-bottom: 0.5rem;
+  }
+  
+  .project {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+ul {
+  list-style: none;
+  padding-left: 1rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+footer {
+  background-color: #4c4c4c;
+  padding: 1rem 0;
+}
+
+footer p {
+  text-align: center;
+  color: #d3d3d3;
+  font-size: 0.9rem;
+}
