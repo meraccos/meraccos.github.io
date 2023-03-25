@@ -43,11 +43,18 @@
     border-radius: 50%;
     object-fit: cover;
   } */
+/* 
+  .profile-img {
+    display: block;
+    margin: 0 auto;
+    object-fit: cover;
+  } */
 
   .profile-img {
     display: block;
     margin: 0 auto;
     object-fit: cover;
+    border-radius: 0;
   }
   
   .profile-img + h2 {
