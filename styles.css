@@ -28,7 +28,6 @@ body {
 }
 
 .nav a {
-    /* color: #333; */
     color: #3f1010;
     text-decoration: none;
     margin-right: 24px; /* Space between links */
@@ -58,8 +57,27 @@ body {
 }
 
 .profile-description {
-    /* text-align: justify; */
+    text-align: justify;
     color: #3f1010;
     max-width: 55%; /* Adjust the width as needed */
     font-size: 18px; /* Adjust the font size as needed */
+}
+
+.projects {
+    font-size: 18px;
+    text-align: left;
+    padding: 20px;
+}
+
+.projects h2 {
+    font-size: 24px;
+    text-align: left;
+    padding-top: 50px;
+    padding-bottom: 25px;
+    color: #6d3b3b;
+}
+
+.projects h3 {
+    color: #6d3b3b;
+    font-style: italic;
 }
