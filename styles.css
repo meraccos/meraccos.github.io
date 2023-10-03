@@ -40,7 +40,8 @@ h1 {
     color: #3f1010;
     /* color: #; */
     text-decoration: none;
-    margin-right: 24px;
+    /* margin-right: 24px; */
+    margin-right: 3%;
     font-size: 24px;
 }
 
@@ -103,7 +104,7 @@ body.dark-mode .nav a {
         padding-top: 50px;
         text-align: center;
     }
-    
+
     .nav {
         display: flex;
         align-items: center;
