@@ -96,6 +96,28 @@ body.dark-mode .nav a {
 
 
 
+@media (max-width: 768px) {
+    .about-me {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .profile-picture {
+      margin-left: 0;
+      width: 200px !important;
+      height: 200px !important;
+      order: 1; /* Change the order to 1 for mobile */
+    }
+  
+    .profile-description {
+      max-width: 100%;
+      margin-top: 20px;
+      text-align: center;
+      order: 2; /* Change the order to 2 for mobile */
+    }
+  }
+
+
 
 
 
