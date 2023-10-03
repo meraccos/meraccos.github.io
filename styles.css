@@ -49,7 +49,7 @@ h1 {
 }
 
 body.dark-mode .nav a {
-    color: #BDBDBD; /* Match the body text color for dark mode */
+    color: #636363; /* Match the body text color for dark mode */
 }
 
 .about-me {
@@ -97,6 +97,22 @@ body.dark-mode .nav a {
 
 
 @media (max-width: 768px) {
+    h1 {
+        font-size: 35px;
+        text-align: left;
+        padding-top: 50px;
+        text-align: center;
+    }
+    
+    .nav {
+        display: flex;
+        align-items: center;
+        justify-content: center; /* Add this line to center-align the items for mobile */
+        font-size: 21px;
+        text-align: center; /* Remove this line to center-align the items for mobile */
+        margin-top: 10px;
+      }
+
     .about-me {
       flex-direction: column;
       align-items: center;
@@ -106,14 +122,14 @@ body.dark-mode .nav a {
       margin-left: 0;
       width: 200px !important;
       height: 200px !important;
-      order: 1; /* Change the order to 1 for mobile */
+      order: 1;
     }
   
     .profile-description {
       max-width: 100%;
       margin-top: 20px;
       text-align: center;
-      order: 2; /* Change the order to 2 for mobile */
+      order: 2;
     }
   }
 
@@ -148,7 +164,7 @@ label:after {
     position: absolute;
     top: 4px;
     left: 4px;
-    background: linear-gradient(180deg, #ffcc89, #d8860b);
+    background: linear-gradient(180deg, #8f8271, #7e5c29);
     border-radius: 8px;
     box-shadow: 0px 5px 10px rgba(0,0,0,0.2);
     transition: 0.3s;
