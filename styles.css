@@ -11,8 +11,6 @@ body.dark-mode {
     padding: 20px;
     background-color: #121212;
     color: #BDBDBD;
-    /* color: #9E9E9E; */
-    /* color: #777; */
     font-family: 'Lato', sans-serif;
 }
 
@@ -20,7 +18,6 @@ h1 {
     font-size: 35px;
     text-align: left;
     padding-top: 50px;
-    /* color: #6d3b3b; */
 }
 
 .container {
@@ -38,9 +35,7 @@ h1 {
 
 .nav a {
     color: #3f1010;
-    /* color: #; */
     text-decoration: none;
-    /* margin-right: 24px; */
     margin-right: 3%;
     font-size: 24px;
 }
@@ -50,7 +45,7 @@ h1 {
 }
 
 body.dark-mode .nav a {
-    color: #636363; /* Match the body text color for dark mode */
+    color: #636363;
 }
 
 .about-me {
@@ -70,11 +65,11 @@ body.dark-mode .nav a {
     border-color: #3f1010;
     border-radius: 50%;
     object-fit: cover;
-    margin-left: 85px; /* Space between the picture and text */
+    margin-left: 85px;
 }
 
 .profile-description {
-    max-width: 55%; /* Adjust the width as needed */
+    max-width: 55%;
 }
 
 .projects {
@@ -108,9 +103,9 @@ body.dark-mode .nav a {
     .nav {
         display: flex;
         align-items: center;
-        justify-content: center; /* Add this line to center-align the items for mobile */
+        justify-content: center;
         font-size: 21px;
-        text-align: center; /* Remove this line to center-align the items for mobile */
+        text-align: center;
         margin-top: 10px;
       }
 
@@ -133,8 +128,6 @@ body.dark-mode .nav a {
       order: 2;
     }
   }
-
-
 
 
 
@@ -190,5 +183,3 @@ input:checked + label:after {
     transform: translateX(-100%);
     background: linear-gradient(180deg, #777, #3a3a3a);
 }
-
-
