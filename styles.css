@@ -10,14 +10,13 @@ body {
 body.dark-mode {
     margin: 0;
     padding: 0px;
-    background-color: #000000;
-    /* color: #f0f0f0f0; */
+    background-color: #121212;
+    color: #BDBDBD;
+    /* color: #9E9E9E; */
+    /* color: #777; */
     padding-left: 80px;
     font-family: 'Lato', sans-serif;
 }
-
-
-
 
 h1 {
     font-size: 35px;
@@ -34,7 +33,6 @@ h1 {
 .nav {
     display: flex;
     align-items: center;
-    /* color: #3f1010; */
     font-size: 21px;
     text-align: left;
     margin-top: 10px;
@@ -42,6 +40,7 @@ h1 {
 
 .nav a {
     color: #3f1010;
+    /* color: #; */
     text-decoration: none;
     margin-right: 24px;
     font-size: 24px;
@@ -51,6 +50,10 @@ h1 {
     text-decoration: underline;
 }
 
+body.dark-mode .nav a {
+    color: #BDBDBD; /* Match the body text color for dark mode */
+}
+
 .about-me {
     display: flex;
     align-items: center;
@@ -58,7 +61,6 @@ h1 {
     max-width: 1200px;
     font-size: 18px;
     margin-top: 20px;
-    /* color: #3f1010; */
 }
 
 .profile-picture {
@@ -86,11 +88,9 @@ h1 {
     text-align: left;
     padding-top: 50px;
     padding-bottom: 25px;
-    color: #6d3b3b;
 }
 
 .projects h3 {
-    color: #6d3b3b;
     font-style: italic;
 }
 
