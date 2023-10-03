@@ -1,20 +1,18 @@
 body {
     margin: 0;
-    padding: 0px;
+    padding: 20px;
     background-color: #f0f0f0;
     color: #6d3b3b;
-    /* padding-left: 80px; */
     font-family: 'Lato', sans-serif;
 }
 
 body.dark-mode {
     margin: 0;
-    padding: 0px;
+    padding: 20px;
     background-color: #121212;
     color: #BDBDBD;
     /* color: #9E9E9E; */
     /* color: #777; */
-    padding-left: 80px;
     font-family: 'Lato', sans-serif;
 }
 
