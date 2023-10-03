@@ -5,12 +5,12 @@ const h1 = document.h1
 
 darkModeToggle.addEventListener('change', () => {
     if (darkModeToggle.checked) {
-        body.classList.add('dark-mode');
-        h1.classList.add('dark-mode')
+        body.classList.add('white-mode');
+        h1.classList.add('white-mode')
         modeText.textContent = 'Dark Mode';
     } else {
-        body.classList.remove('dark-mode');
-        h1.classList.remove('dark-mode')
+        body.classList.remove('white-mode');
+        h1.classList.remove('white-mode')
         modeText.textContent = 'Light Mode';
     }
 });
