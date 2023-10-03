@@ -2,6 +2,7 @@ body {
     margin: 0;
     padding: 0px;
     background-color: #f0f0f0;
+    color: #6d3b3b;
     padding-left: 80px;
     font-family: 'Lato', sans-serif;
 }
@@ -10,9 +11,93 @@ body.dark-mode {
     margin: 0;
     padding: 0px;
     background-color: #000000;
+    /* color: #f0f0f0f0; */
     padding-left: 80px;
     font-family: 'Lato', sans-serif;
 }
+
+
+
+
+h1 {
+    font-size: 35px;
+    text-align: left;
+    padding-top: 50px;
+    /* color: #6d3b3b; */
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    /* color: #3f1010; */
+    font-size: 21px;
+    text-align: left;
+    margin-top: 10px;
+  }
+
+.nav a {
+    color: #3f1010;
+    text-decoration: none;
+    margin-right: 24px;
+    font-size: 24px;
+}
+
+.nav a:hover {
+    text-decoration: underline;
+}
+
+.about-me {
+    display: flex;
+    align-items: center;
+    text-align: justify;
+    max-width: 1200px;
+    font-size: 18px;
+    margin-top: 20px;
+    /* color: #3f1010; */
+}
+
+.profile-picture {
+    width: 350px !important;
+    height: 350px !important;
+
+    border: 1px solid;
+    border-color: #3f1010;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-left: 85px; /* Space between the picture and text */
+}
+
+.profile-description {
+    max-width: 55%; /* Adjust the width as needed */
+}
+
+.projects {
+    text-align: left;
+    font-size: 18px;
+}
+
+.projects h2 {
+    font-size: 24px;
+    text-align: left;
+    padding-top: 50px;
+    padding-bottom: 25px;
+    color: #6d3b3b;
+}
+
+.projects h3 {
+    color: #6d3b3b;
+    font-style: italic;
+}
+
+
+
+
+
 
 
 
@@ -70,82 +155,3 @@ input:checked + label:after {
 }
 
 
-
-
-
-
-
-h1 {
-    font-size: 35px;
-    text-align: left;
-    padding-top: 50px;
-    color: #6d3b3b;
-}
-
-.container {
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-.nav {
-    display: flex;
-    align-items: center;
-    color: #3f1010;
-    font-size: 21px;
-    text-align: left;
-    margin-top: 10px;
-  }
-
-.nav a {
-    color: #3f1010;
-    text-decoration: none;
-    margin-right: 24px;
-    font-size: 24px;
-}
-
-.nav a:hover {
-    text-decoration: underline;
-}
-
-.about-me {
-    display: flex;
-    align-items: center;
-    text-align: justify;
-    max-width: 1200px;
-    font-size: 18px;
-    margin-top: 20px;
-    color: #3f1010;
-}
-
-.profile-picture {
-    width: 350px !important;
-    height: 350px !important;
-
-    border: 1px solid;
-    border-color: #3f1010;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-left: 85px; /* Space between the picture and text */
-}
-
-.profile-description {
-    max-width: 55%; /* Adjust the width as needed */
-}
-
-.projects {
-    text-align: left;
-    font-size: 18px;
-}
-
-.projects h2 {
-    font-size: 24px;
-    text-align: left;
-    padding-top: 50px;
-    padding-bottom: 25px;
-    color: #6d3b3b;
-}
-
-.projects h3 {
-    color: #6d3b3b;
-    font-style: italic;
-}
