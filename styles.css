@@ -224,6 +224,9 @@ transform: scale(0.98);
       text-align: center;
       order: 2;
     }
+    .output_box {
+        max-height: calc(100vh - 450px);
+    }
   }
 
 

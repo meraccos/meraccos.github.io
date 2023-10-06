@@ -57,29 +57,7 @@ function multinomial(probs){
     return -1;
 }
 
-// function multinomial(probs){
-//     // Cumulative sum of the probs
-//     var len_vocab = probs.length
-
-//     for (let j = 0; j < probs.length; j++) {
-        
-//     }
-
-//     var cum_sums = [];
-//     var cur_sum = 0.0;
-//     for (prob of probs) {
-//         cur_sum += prob;
-//         cum_sums.push(cur_sum);
-//     }
-
-//     const randomValue = Math.random();
-//     for (let j = 0; j < cum_sums.length; j++){
-//         if (cum_sums[j] > randomValue) {
-//             return j;
-//         }
-//     }
-//     return -1;
-// }
+let generationInProgress = false;
 
 function generateText() {
     const inputElement = document.getElementById("inputText");
