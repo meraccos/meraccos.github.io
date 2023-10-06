@@ -117,12 +117,19 @@ body.white-mode .nav a {
     color: #BDBDBD;
     text-align: center;
     padding: 10px;
-    border-style: none;
     border:none;
-    overflow: hidden;
     box-shadow: inset 0 -1px 0 #e6e4e4;
     font-size: 13px;    
 }
+
+.input_box:focus {
+    box-shadow: inset 0 -2px 0 #e6e4e4;
+    outline: none;
+}
+
+/* .input_box:hover {
+    background-color: #252525;
+} */
 
 .generate_button {
     width: 100px;
