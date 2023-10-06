@@ -37,10 +37,15 @@
         <label for="dark-mode-toggle"></label>
       </div>
     </nav>
-    <input type="text" class="visible" id="inputText" placeholder="Number of chars">
-    <button onclick="generateText()">Generate</button>
-    <p id="output"></p>
+  
+    <div class = generator>
+      <input type="text" class="input_box" id="inputText" placeholder="Number of chars">
+      <button onclick="generateText()" class="generate_box">Generate</button>
+    </div>
+    <p id="output" class="output_box"></p>
   </div>
+
+
 
   <script src="https://cdn.jsdelivr.net/npm/onnxruntime-web/dist/ort.min.js"></script>
   <script src="bigram.js"></script>

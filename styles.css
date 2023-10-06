@@ -9,18 +9,16 @@ body {
 body.white-mode {
     margin: 0;
     padding: 20px;
-    /* background-color: #f0f0f0; */
-    /* background-color: hsl(0, 19%, 93%); */
     background-color: hsl(40, 63%, 93%);
-    /* background-color: hsl(35, 24%, 76%); */
     color: #6d3b3b;
     font-family: 'Lato', sans-serif;
 }
 
 h1 {
-    font-size: 35px;
+    font-size: 38px;
     text-align: left;
     padding-top: 50px;
+    color: #e3dfdf;
 }
 
 .container {
@@ -91,6 +89,53 @@ body.white-mode .nav a {
     font-style: italic;
 }
 
+
+
+
+
+.generator {
+    display: flex;
+    flex-direction: row;
+
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: justify;
+    padding: 20px;
+    padding-top: 50px;
+    padding-bottom: 30px;
+}
+
+.input_box {
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+
+    width: 100px;
+    height: auto;
+    visibility: visible;  
+    background-color: #2b2a2a;
+    color: #BDBDBD;
+    text-align: center;
+    border-radius: 15px;
+    padding: 10px;
+    border-style: none;
+    
+}
+
+.generate_box {
+    width: 150px;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.output_box {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #2b2a2a;
+    padding: 20px;
+    border-radius: 20px;
+}
 
 
 
@@ -174,12 +219,6 @@ input {
     width:5px;
     height: 0;
     visibility: hidden;
-}
-
-.visible {
-    width: auto; /* Set the width to a desired value */
-    height: auto; /* Set the height to a desired value */
-    visibility: visible;
 }
 
 input:checked + label {

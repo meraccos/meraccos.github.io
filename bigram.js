@@ -8,7 +8,7 @@ async function forward(x) {
 }
 
 async function readCharacterEncodingFile() {
-    const response = await fetch('/encodings/enc_tinyshakespeare.txt');
+    const response = await fetch('/encodings/enc_nizami.txt');
     const data = await response.text();
     const lines = data;
     var characterDictionary = {};
@@ -16,12 +16,11 @@ async function readCharacterEncodingFile() {
         const character = lines[i].trim();
         characterDictionary[i] = character;
     }
-    characterDictionary[0] = "\n";
+    characterDictionary[0] = "<br>";
     characterDictionary[1] = " ";
 
     return characterDictionary;
 }
-
 
 function softmax(logits) {
     var exp_logits = [];
@@ -40,9 +39,7 @@ function softmax(logits) {
     return probs
 }
 
-function multinomial(logits){
-    probs = softmax(logits);
-
+function multinomial(probs){
     // Cumulative sum of the probs
     var cum_sums = [];
     var cur_sum = 0.0;
@@ -60,6 +57,30 @@ function multinomial(logits){
     return -1;
 }
 
+// function multinomial(probs){
+//     // Cumulative sum of the probs
+//     var len_vocab = probs.length
+
+//     for (let j = 0; j < probs.length; j++) {
+        
+//     }
+
+//     var cum_sums = [];
+//     var cur_sum = 0.0;
+//     for (prob of probs) {
+//         cur_sum += prob;
+//         cum_sums.push(cur_sum);
+//     }
+
+//     const randomValue = Math.random();
+//     for (let j = 0; j < cum_sums.length; j++){
+//         if (cum_sums[j] > randomValue) {
+//             return j;
+//         }
+//     }
+//     return -1;
+// }
+
 function generateText() {
     const inputElement = document.getElementById("inputText");
     const userInput = inputElement.value;
@@ -73,9 +94,9 @@ function generateText() {
         for (let j = 0; j < userInput; j++) {
             const tensorA = new ort.Tensor("int32", dataA, []);
             const logits = await forward(tensorA);
-            const sampled_idx = multinomial(logits);
+            const probs = softmax(logits);
+            const sampled_idx = multinomial(probs);
             const sampled_char = characterDictionary[sampled_idx];
-            // console.log("Max character:", sampled_char);
 
             generatedText += sampled_char;
             outputElement.innerHTML = generatedText;
