@@ -39,19 +39,18 @@
     </nav>
   </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/onnxjs/dist/onnx.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/onnxruntime-web/dist/ort.min.js"></script>
   <script>
     async function test() {
-      const sess = new onnx.InferenceSession()
-      await sess.loadModel("./onnx_model.onnx")
-      const input = new onnx.Tensor(new Int32Array(1), 'int32', [])
-      console.log('here3')
+      const session = await ort.InferenceSession.create('/model.onnx');
 
-      const outputMap = await sess.run([input])
-      console.log('here4')
+      const dataA = Int32Array.from([2])
+      const tensorA = new ort.Tensor('int32', dataA, []);
+      const feeds = { "input": tensorA };
+      const results = await session.run(feeds);
+      const output = results[13].data
+      console.log('network output:', output)
 
-      const outputTensor = outputMap.values().next().value
-      console.log('Output Tensor: ${outputTensor.data}')
     }
     test()
   </script>
