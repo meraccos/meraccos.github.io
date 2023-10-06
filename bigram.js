@@ -68,14 +68,12 @@ function generateText() {
 
     (async () => {
         var dataA = Int32Array.from([1]);
+        const characterDictionary = await readCharacterEncodingFile();
 
         for (let j = 0; j < userInput; j++) {
             const tensorA = new ort.Tensor("int32", dataA, []);
             const logits = await forward(tensorA);
             const sampled_idx = multinomial(logits);
-            // inefficient
-            const characterDictionary = await readCharacterEncodingFile();
-
             const sampled_char = characterDictionary[sampled_idx];
             // console.log("Max character:", sampled_char);
 
