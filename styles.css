@@ -18,7 +18,6 @@ h1 {
     font-size: 38px;
     text-align: left;
     padding-top: 50px;
-    /* color: #e3dfdf; */
 }
 
 .container {
@@ -119,21 +118,27 @@ body.white-mode .nav a {
     padding: 10px;
     border:none;
     box-shadow: inset 0 -1px 0 #e6e4e4;
-    font-size: 13px;    
+    font-size: 13px;  
 }
 
 .input_box:focus {
-    box-shadow: inset 0 -2px 0 #e6e4e4;
+    box-shadow: inset 0 -2px 0 #ffffff;
     outline: none;
 }
 
-/* .input_box:hover {
-    background-color: #252525;
-} */
+.input_box.white-mode {
+    background-color: hsl(40, 63%, 93%);
+    box-shadow: inset 0 -1px 0 #605f5f;
+    color: #070606;
+}
+
+.input_box.white-mode:focus {
+    box-shadow: inset 0 -2px 0 #605f5f;
+    outline: none;
+}
 
 .generate_button {
     width: 100px;
-
     margin: 0 auto;
     margin-left: 0px;
     border-radius: 15px;
@@ -147,25 +152,15 @@ body.white-mode .nav a {
 .generate_button:hover {
     background-color: #95999d;
     color: #070707;
-  }
+}
 
 .generate_button:active {
 transform: scale(0.98);
 }  
 
 
-.input_box.white_mode {
-    background-color: #0f79e4;
-    color: #6d3b3b;
-}
-
-.generate_button.white_mode {
-    background-color: #0f79e4;
-    color: #6d3b3b;
-}
-
-.generator.white_mode {
-    background-color: #0f79e4;
+.generate_button.white-mode {
+    background-color: hsl(42, 20%, 83%);
     color: #6d3b3b;
 }
 
@@ -175,9 +170,15 @@ transform: scale(0.98);
     max-width: 800px;
     margin: 0 auto;
     background-color: #2b2a2a;
-    padding: 20px;
+    padding: 10px;
     border-radius: 20px;
     font-size: 16px;
+    border: 1px solid #403e3e;
+
+    position: relative;
+    box-sizing: border-box;
+    max-height: calc(100vh - 325px);
+    overflow-y: auto;
 }
 
 .output_box.white-mode {
