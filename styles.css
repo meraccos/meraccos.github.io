@@ -176,7 +176,7 @@ transform: scale(0.98);
 
     position: relative;
     box-sizing: border-box;
-    max-height: calc(100vh - 380px);
+    max-height: calc(100vh - 400px);
     overflow-y: auto;
 }
 

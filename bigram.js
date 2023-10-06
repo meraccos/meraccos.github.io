@@ -105,3 +105,11 @@ function generateText() {
         }
     })();
 }
+
+const inputElement = document.getElementById("inputText");
+inputElement.addEventListener("keydown", function (event) {
+    if (event.key === "Enter") {
+        generateText(); // Call the generateText function when Enter is pressed
+        event.preventDefault(); // Prevent the default form submission behavior
+    }
+});
