@@ -176,6 +176,12 @@ input {
     visibility: hidden;
 }
 
+.visible {
+    width: auto; /* Set the width to a desired value */
+    height: auto; /* Set the height to a desired value */
+    visibility: visible;
+}
+
 input:checked + label {
     /* background: #cecaca; */
     background: #cdd0c3;

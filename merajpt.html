@@ -37,22 +37,12 @@
         <label for="dark-mode-toggle"></label>
       </div>
     </nav>
+    <input type="text" class="visible" id="inputText" placeholder="Number of chars">
+    <button onclick="generateText()">Generate</button>
+    <p id="output"></p>
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/onnxruntime-web/dist/ort.min.js"></script>
-  <script>
-    async function test() {
-      const session = await ort.InferenceSession.create('/model.onnx');
-
-      const dataA = Int32Array.from([2])
-      const tensorA = new ort.Tensor('int32', dataA, []);
-      const feeds = { "input": tensorA };
-      const results = await session.run(feeds);
-      const output = results[13].data
-      console.log('network output:', output)
-
-    }
-    test()
-  </script>
+  <script src="bigram.js"></script>
 </body>
 </html>

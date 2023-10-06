@@ -14,3 +14,4 @@ darkModeToggle.addEventListener('change', () => {
         modeText.textContent = 'Light Mode';
     }
 });
+
