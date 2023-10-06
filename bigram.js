@@ -24,25 +24,40 @@ async function readCharacterEncodingFile() {
 
 
 function softmax(logits) {
-    console.log(logits)
     var exp_logits = [];
     var sum_exp_logits = 0.0;
     var exp_logit = 0.0;
-    for (let j = 0; j < logits.length; j++) {
-        exp_logit = Math.pow(Math.E, logits[j])
+    for (const logit of logits) {
+        exp_logit = Math.pow(Math.E, logit)
         exp_logits.push(exp_logit);
         sum_exp_logits += exp_logit;
     }
 
     var probs = [];
     for (let j = 0; j < logits.length; j++) {
-        probs.push(exp_logits[j] / sum_exp_logits)
+        probs.push(exp_logits[j] / sum_exp_logits);
     }
+    return probs
 }
 
 function multinomial(logits){
-    probs = softmax(logits)
-    
+    probs = softmax(logits);
+
+    // Cumulative sum of the probs
+    var cum_sums = [];
+    var cur_sum = 0.0;
+    for (prob of probs) {
+        cur_sum += prob;
+        cum_sums.push(cur_sum);
+    }
+
+    const randomValue = Math.random();
+    for (let j = 0; j < cum_sums.length; j++){
+        if (cum_sums[j] > randomValue) {
+            return j;
+        }
+    }
+    return -1;
 }
 
 function generateText() {
