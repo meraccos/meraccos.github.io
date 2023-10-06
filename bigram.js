@@ -57,8 +57,6 @@ function multinomial(probs){
     return -1;
 }
 
-let generationInProgress = false;
-
 function generateText() {
     const inputElement = document.getElementById("inputText");
     const userInput = inputElement.value;
@@ -87,7 +85,7 @@ function generateText() {
 const inputElement = document.getElementById("inputText");
 inputElement.addEventListener("keydown", function (event) {
     if (event.key === "Enter") {
-        generateText(); // Call the generateText function when Enter is pressed
-        event.preventDefault(); // Prevent the default form submission behavior
+        generateText();
+        event.preventDefault();
     }
 });

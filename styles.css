@@ -170,7 +170,7 @@ transform: scale(0.98);
     margin: 0 auto;
     background-color: #2b2a2a;
     padding: 20px;
-    border-radius: 20px;
+    /* border-radius: 20px; */
     font-size: 16px;
     border: 1px solid #403e3e;
 
@@ -178,6 +178,7 @@ transform: scale(0.98);
     box-sizing: border-box;
     max-height: calc(100vh - 400px);
     overflow-y: auto;
+    border-radius:0px;
 }
 
 .output_box.white-mode {
