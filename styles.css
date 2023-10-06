@@ -167,7 +167,7 @@ transform: scale(0.98);
 
 
 .output_box {
-    max-width: 800px;
+    max-width: 300px;
     margin: 0 auto;
     background-color: #2b2a2a;
     padding: 20px;
@@ -177,7 +177,7 @@ transform: scale(0.98);
 
     position: relative;
     box-sizing: border-box;
-    max-height: calc(100vh - 340px);
+    max-height: calc(100vh - 360px);
     overflow-y: auto;
 }
 
