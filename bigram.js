@@ -38,11 +38,6 @@ function softmax(logits) {
     for (let j = 0; j < logits.length; j++) {
         probs.push(exp_logits[j] / sum_exp_logits)
     }
-
-    var sum_probs = 0.0
-    for (let j = 0; j < probs.length; j++) {
-        sum_probs += probs[j]
-    }
 }
 
 function multinomial(logits){
