@@ -117,23 +117,23 @@ body.white-mode .nav a {
     text-align: center;
     padding: 10px;
     border:none;
-    box-shadow: inset 0 -1px 0 #e6e4e4;
     font-size: 13px;  
+    border-bottom: 1px solid #e6e4e4;
 }
 
 .input_box:focus {
-    box-shadow: inset 0 -2px 0 #ffffff;
+    border-bottom: 2px solid #ffffff;
     outline: none;
 }
 
 .input_box.white-mode {
     background-color: hsl(40, 63%, 93%);
-    box-shadow: inset 0 -1px 0 #605f5f;
+    border-bottom: 1px solid #605f5f;
     color: #070606;
 }
 
 .input_box.white-mode:focus {
-    box-shadow: inset 0 -2px 0 #605f5f;
+    border-bottom: 2px solid #605f5f;
     outline: none;
 }
 
@@ -165,9 +165,8 @@ transform: scale(0.98);
 }
 
 
-
 .output_box {
-    max-width: 300px;
+    max-width: 800px;
     margin: 0 auto;
     background-color: #2b2a2a;
     padding: 20px;
@@ -177,13 +176,13 @@ transform: scale(0.98);
 
     position: relative;
     box-sizing: border-box;
-    max-height: calc(100vh - 360px);
+    max-height: calc(100vh - 380px);
     overflow-y: auto;
 }
 
 .output_box.white-mode {
     background-color: hsl(42, 20%, 83%);
-    color: #fff; /* Change text color in white mode */
+    color: #fff;
     color: #6d3b3b;
     font-size: 16px;
 }
