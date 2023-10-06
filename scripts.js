@@ -1,17 +1,22 @@
 const darkModeToggle = document.getElementById('dark-mode-toggle');
-const modeText = document.getElementById('mode-text');
 const body = document.body;
-const h1 = document.h1
+const inputText = document.getElementById('inputText');
+const outputBox = document.getElementById('output');
+const generatorButton = document.getElementById('generate_button');
+const generator = document.getElementById('generator')
 
 darkModeToggle.addEventListener('change', () => {
     if (darkModeToggle.checked) {
         body.classList.add('white-mode');
-        h1.classList.add('white-mode')
-        modeText.textContent = 'Dark Mode';
+        inputText.classList.add('white-mode');
+        outputBox.classList.add('white-mode');
+        generator.classList.add('white-mode');
     } else {
         body.classList.remove('white-mode');
-        h1.classList.remove('white-mode')
-        modeText.textContent = 'Light Mode';
+        inputText.classList.remove('white-mode');
+        outputBox.classList.remove('white-mode');
+        generatorButton.classList.remove('white-mode');
+        generator.classList.add('white-mode');
     }
 });
 

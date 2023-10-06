@@ -18,7 +18,7 @@ h1 {
     font-size: 38px;
     text-align: left;
     padding-top: 50px;
-    color: #e3dfdf;
+    /* color: #e3dfdf; */
 }
 
 .container {
@@ -96,6 +96,7 @@ body.white-mode .nav a {
 .generator {
     display: flex;
     flex-direction: row;
+    gap: 1px;
 
     max-width: 800px;
     margin: 0 auto;
@@ -106,28 +107,62 @@ body.white-mode .nav a {
 }
 
 .input_box {
-    justify-content: center;
-    align-items: center;
     margin: 0 auto;
+    margin-right: 25px;
 
     width: 100px;
     height: auto;
     visibility: visible;  
-    background-color: #2b2a2a;
+    background-color: #121212;
     color: #BDBDBD;
     text-align: center;
-    border-radius: 15px;
     padding: 10px;
     border-style: none;
-    
+    border:none;
+    overflow: hidden;
+    box-shadow: inset 0 -1px 0 #e6e4e4;
+    font-size: 13px;    
 }
 
-.generate_box {
-    width: 150px;
-    justify-content: center;
-    align-items: center;
+.generate_button {
+    width: 100px;
+
     margin: 0 auto;
+    margin-left: 0px;
+    border-radius: 15px;
+    border-style:none;
+    background-color: #2b2a2a;
+    color: #BDBDBD;
+    font-size: 14px;
+    cursor: pointer;
 }
+
+.generate_button:hover {
+    background-color: #95999d;
+    color: #070707;
+  }
+
+.generate_button:active {
+transform: scale(0.98);
+}  
+
+
+.input_box.white_mode {
+    background-color: #0f79e4;
+    color: #6d3b3b;
+}
+
+.generate_button.white_mode {
+    background-color: #0f79e4;
+    color: #6d3b3b;
+}
+
+.generator.white_mode {
+    background-color: #0f79e4;
+    color: #6d3b3b;
+}
+
+
 
 .output_box {
     max-width: 800px;
@@ -135,8 +170,15 @@ body.white-mode .nav a {
     background-color: #2b2a2a;
     padding: 20px;
     border-radius: 20px;
+    font-size: 16px;
 }
 
+.output_box.white-mode {
+    background-color: hsl(42, 20%, 83%);
+    color: #fff; /* Change text color in white mode */
+    color: #6d3b3b;
+    font-size: 16px;
+}
 
 
 
@@ -184,7 +226,6 @@ body.white-mode .nav a {
     display: flex;
     align-items: center;
 }
-
 
 label {
     width: 50px;
