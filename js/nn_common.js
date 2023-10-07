@@ -16,7 +16,7 @@ function getModel(model, dataset) {
         if (model == 'bigram') {
             MODEL.modelFile = '/models/bigram_shakespeare.onnx'
         } else {
-            MODEL.modelFile = '/models/bigram_shakespeare.onnx'     // FIX THIS
+            MODEL.modelFile = '/models/lstm_shakespeare.onnx'     // FIX THIS
         }
     }
 }
