@@ -14,8 +14,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Meraj Mammadov</title>
   <link rel="favicon" type="image/x-icon" href="favicon.ico" />
-  <link rel="stylesheet" href="styles.css" />
-  <script src="scripts.js" defer></script>
+  <link rel="stylesheet" href="/css/skeleton.css" />
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script src="/js/nn_common.js"></script>
   <link
     href="https://fonts.googleapis.com/css?family=Lato:400,700"
     rel="stylesheet"
@@ -27,17 +28,26 @@
   <div class="container">
     <h1>Meraj Mammadov</h1>
     <nav class="nav">
-      <a href="index.html">cv</a>
-      <a href="merajpt.html">merajpt</a>
-      <a href="index.html">chess</a>
-      <a href="index.html">contact</a>
+      <a href="/html/index.html">cv</a>
+      <a href="/html/merajpt.html">merajpt</a>
+      <a href="/html/index.html">chess</a>
+      <a href="/html/index.html">contact</a>
 
       <div class="darkmode-container">
         <input type="checkbox" id="dark-mode-toggle"/>
         <label for="dark-mode-toggle"></label>
       </div>
     </nav>
+
+    <p class="division-text dt_ds"><span> Datasets </span></p>
   
+    <div class="dataset-switch">
+      <button onclick="switchDataset('NIZAMI')" class="nizami-button">Nizami</button>
+      <button onclick="switchDataset('SHAKESPEARE')" class="shakespeare-button">Shakespeare</button>
+    </div>
+
+    <p class="division-text dt_g"><span> Generate </span></p>
+
     <div class = generator id="generator">
       <input type="text" class="input_box" id="inputText" maxlength = 4 inputmode="numeric" placeholder="Number of chars">
       <button onclick="generateText()" class="generate_button" id="generate_button">Generate</button>
@@ -45,9 +55,9 @@
     <p id="output" class="output_box"></p>
   </div>
 
-
+  <script src="/js/common.js"></script>
 
   <script src="https://cdn.jsdelivr.net/npm/onnxruntime-web/dist/ort.min.js"></script>
-  <script src="bigram.js"></script>
+  <script src="/js/bigram.js"></script>
 </body>
 </html>

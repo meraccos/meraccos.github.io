@@ -3,6 +3,7 @@ const body = document.body;
 const inputText = document.getElementById('inputText');
 const outputBox = document.getElementById('output');
 const generatorButton = document.getElementById('generate_button');
+const nizamiButton = document.getElementsByClassName('nizami-button')
 
 darkModeToggle.addEventListener('change', () => {
     if (darkModeToggle.checked) {
@@ -10,11 +11,13 @@ darkModeToggle.addEventListener('change', () => {
         inputText.classList.add('white-mode');
         outputBox.classList.add('white-mode');
         generatorButton.classList.add('white-mode');
+        nizamiButton.classList.add('white-mode');
     } else {
         body.classList.remove('white-mode');
         inputText.classList.remove('white-mode');
         outputBox.classList.remove('white-mode');
         generatorButton.classList.remove('white-mode');
+        nizamiButton.classList.remove('white-mode');
     }
 });
 
