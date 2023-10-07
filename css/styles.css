@@ -209,7 +209,7 @@ transform: scale(0.95);
     }  
 
     
-/* 
+
 .nizami-button.white-mode {
     background-color: hsl(42, 20%, 83%);
     color: #6d3b3b;
@@ -218,7 +218,7 @@ transform: scale(0.95);
 .shakespeare-button.white-mode {
     background-color: hsl(42, 20%, 83%);
     color: #6d3b3b;
-} */
+} 
 
 
 
@@ -242,6 +242,15 @@ transform: scale(0.95);
 .dt_g {
     padding-top: 20px;
 }
+
+.dt_ds.white-mode span {
+    background:hsl(40, 63%, 93%);
+}
+
+.dt_g.white-mode span {
+    background:hsl(40, 63%, 93%);
+}
+
 
 
 

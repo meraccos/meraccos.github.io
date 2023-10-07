@@ -39,14 +39,14 @@
       </div>
     </nav>
 
-    <p class="division-text dt_ds"><span> Datasets </span></p>
+    <p class="division-text dt_ds" id="dt_ds"><span> Datasets </span></p>
   
     <div class="dataset-switch">
-      <button onclick="switchDataset('NIZAMI')" class="nizami-button">Nizami</button>
-      <button onclick="switchDataset('SHAKESPEARE')" class="shakespeare-button">Shakespeare</button>
+      <button onclick="switchDataset('NIZAMI')" class="nizami-button" id="nizami-button">Nizami</button>
+      <button onclick="switchDataset('SHAKESPEARE')" class="shakespeare-button" id="shakespeare-button">Shakespeare</button>
     </div>
 
-    <p class="division-text dt_g"><span> Generate </span></p>
+    <p class="division-text dt_g" id="dt_g"><span> Generate </span></p>
 
     <div class = generator id="generator">
       <input type="text" class="input_box" id="inputText" maxlength = 4 inputmode="numeric" placeholder="Number of chars">
