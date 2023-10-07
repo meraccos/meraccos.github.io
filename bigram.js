@@ -57,13 +57,17 @@ function multinomial(probs){
     return -1;
 }
 
+button = document.getElementById('generate_button')
 function generateText() {
     const inputElement = document.getElementById("inputText");
     const userInput = inputElement.value;
     const outputElement = document.getElementById("output");
     let generatedText = "";
 
+
     (async () => {
+
+        button.disabled = true;
         var dataA = Int32Array.from([1]);
         const characterDictionary = await readCharacterEncodingFile();
 
@@ -78,9 +82,13 @@ function generateText() {
             outputElement.innerHTML = generatedText;
 
             dataA = Int32Array.from([sampled_idx]);
+
         }
+
+        button.disabled = false;
     })();
 }
+
 
 const inputElement = document.getElementById("inputText");
 inputElement.addEventListener("keydown", function (event) {

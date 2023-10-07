@@ -156,8 +156,16 @@ body.white-mode .nav a {
 }
 
 .generate_button:active {
-transform: scale(0.98);
+transform: scale(0.95);
 }  
+
+.generate_button:disabled {
+    transform: scale(0.98);
+    background-color: #95999d;
+    color: #070707;
+    cursor:default;
+    }  
+    
 
 
 .generate_button.white-mode {
