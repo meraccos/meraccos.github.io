@@ -194,9 +194,19 @@ transform: scale(0.95);
     color: #070707;
 }
 
-/* .generate_button:active {
-    transform: scale(0.95);
-    }   */
+.nizami-button:disabled {
+    transform: scale(0.98);
+    background-color: #95999d;
+    color: #070707;
+    cursor:default;
+    }  
+
+.shakespeare-button:disabled {
+    transform: scale(0.98);
+    background-color: #95999d;
+    color: #070707;
+    cursor:default;
+    }  
 
     
 /* 

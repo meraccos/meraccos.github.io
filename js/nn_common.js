@@ -62,10 +62,16 @@ function multinomial(probs){
 }
 
 function switchDataset(dataset) {
-    if (DATASETS[dataset]) {
-        currentDataset = DATASETS[dataset];
-        // You can also update the UI or perform any other necessary actions here
+    const nizamiButton = document.querySelector('.nizami-button');
+    const shakespeareButton = document.querySelector('.shakespeare-button');
+
+    currentDataset = DATASETS[dataset];
+
+    if (dataset === 'NIZAMI') {
+        nizamiButton.disabled = true;
+        shakespeareButton.disabled = false;
     } else {
-        console.error('Invalid dataset:', dataset);
+        nizamiButton.disabled = false;
+        shakespeareButton.disabled = true;
     }
 }
