@@ -76,5 +76,5 @@ function multinomial(probs){
 
     const randomValue = Math.random();
     const sampled_idx = cum_sums.findIndex((cum_sum) => cum_sum > randomValue);
-    return sampled_idx
+    return sampled_idx //test
 }
