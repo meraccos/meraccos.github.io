@@ -39,8 +39,22 @@
       </div>
     </nav>
 
-    <p class="division-text dt_ds" id="dt_ds"><span> Datasets </span></p>
-  
+
+
+
+
+    <p class="division-text dt_model" id="dt_model"><span> Model </span></p>
+
+    <div class="model-switch">
+      <button onclick="selectModel('bigram')" class="model-button" id="bigram-button">Bigram</button>
+      <button onclick="selectModel('lstm')" class="model-button" id="lstm-button">LSTM</button>
+    </div>
+
+
+
+
+    <p class="division-text dt_ds" id="dt_ds"><span> Dataset </span></p>
+
     <div class="dataset-switch">
       <button onclick="switchDataset('NIZAMI')" class="nizami-button" id="nizami-button">Nizami</button>
       <button onclick="switchDataset('SHAKESPEARE')" class="shakespeare-button" id="shakespeare-button">Shakespeare</button>
@@ -58,6 +72,7 @@
   <script src="/js/common.js"></script>
 
   <script src="https://cdn.jsdelivr.net/npm/onnxruntime-web/dist/ort.min.js"></script>
-  <script src="/js/bigram.js"></script>
+  <!-- <script src="/js/bigram.js"></script> -->
+  <script src="/js/lstm.js"></script>
 </body>
 </html>
