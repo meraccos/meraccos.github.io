@@ -1,15 +1,76 @@
 const DATASETS = {
     NIZAMI: {
         encodingFile: '/encodings/enc_nizami.txt',
-        modelFile: '/models/bigram_nizami.onnx',
     },
     SHAKESPEARE: {
         encodingFile: '/encodings/enc_tinyshakespeare.txt',
-        modelFile: '/models/bigram_shakespeare.onnx',
     },
 };
 
+const MODELS = {
+    Bigram: {
+        encodingFile: '/encodings/enc_nizami.txt',
+        modelFile: {
+            NIZAMI: '/models/bigram_nizami.onnx',
+            SHAKESPEARE: '/models/bigram_shakespeare.onnx',
+        },
+    },
+    LSTM: {
+        encodingFile: '/encodings/enc_nizami.txt',
+        modelFile: {
+            NIZAMI: '/models/lstm_nizami.onnx',
+            SHAKESPEARE: '/models/lstm_shakespeare.onnx',
+        },
+}};
+
 let currentDataset = DATASETS.SHAKESPEARE;
+let currentModel = 'bigram'
+
+function selectModel(model, dataset) {
+    currentDataset = DATASETS[dataset];
+    currentModel = MODELS[model].modelFile[dataset]
+}
+
+
+
+
+function switchDataset(dataset) {
+    const nizamiButton = document.querySelector('.nizami-button');
+    const shakespeareButton = document.querySelector('.shakespeare-button');
+
+    currentDataset = DATASETS[dataset];
+
+    if (dataset === 'NIZAMI') {
+        nizamiButton.disabled = true;
+        shakespeareButton.disabled = false;
+    } else {
+        nizamiButton.disabled = false;
+        shakespeareButton.disabled = true;
+    }
+}
+
+function switchModel(model) {
+    const bigramButton = document.getElementById('bigram-button');
+    const lstmButton = document.getElementById('lstm-button');
+
+    currentModel = model;
+
+    if (model === 'bigram') {
+        bigramButton.disabled = true;
+        lstmButton.disabled = false;
+    } else {
+        bigramButton.disabled = false;
+        lstmButton.disabled = true;
+    }
+}
+
+
+
+
+
+
+
+
 
 async function readCharacterEncodingFile() {
     const response = await fetch(currentDataset.encodingFile);
@@ -59,19 +120,4 @@ function multinomial(probs){
         }
     }
     return -1;
-}
-
-function switchDataset(dataset) {
-    const nizamiButton = document.querySelector('.nizami-button');
-    const shakespeareButton = document.querySelector('.shakespeare-button');
-
-    currentDataset = DATASETS[dataset];
-
-    if (dataset === 'NIZAMI') {
-        nizamiButton.disabled = true;
-        shakespeareButton.disabled = false;
-    } else {
-        nizamiButton.disabled = false;
-        shakespeareButton.disabled = true;
-    }
 }

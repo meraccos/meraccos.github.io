@@ -26,10 +26,13 @@ function toggleDarkMode() {
     const inputText = document.getElementById('inputText');
     const outputBox = document.getElementById('output');
     const generatorButton = document.getElementById('generate_button');
-    const nizamiButton = document.getElementById('nizami-button')
-    const shakespeareButton = document.getElementById('shakespeare-button')
-    const dt_ds = document.getElementById('dt_ds')
-    const dt_g = document.getElementById('dt_g')
+    const nizamiButton = document.getElementById('nizami-button');
+    const shakespeareButton = document.getElementById('shakespeare-button');
+    const bigramButton = document.getElementById('bigram-button');
+    const lstmButton = document.getElementById('lstm-button');
+    const dt_ds = document.getElementById('dt_ds');
+    const dt_g = document.getElementById('dt_g');
+    const dt_m = document.getElementById('dt_m')
 
     if (darkModeToggle.checked) {
         body.classList.add('white-mode');
@@ -38,8 +41,11 @@ function toggleDarkMode() {
         generatorButton && generatorButton.classList.add('white-mode');
         nizamiButton && nizamiButton.classList.add('white-mode');
         shakespeareButton && shakespeareButton.classList.add('white-mode');
+        bigramButton && bigramButton.classList.add('white-mode');
+        lstmButton && lstmButton.classList.add('white-mode');
         dt_ds && dt_ds.classList.add('white-mode');
         dt_g && dt_g.classList.add('white-mode');
+        dt_m && dt_m.classList.add('white-mode');
         setCookie('darkMode', 'enabled', 365, "/");
     } else {
         body.classList.remove('white-mode');
@@ -48,8 +54,11 @@ function toggleDarkMode() {
         generatorButton && generatorButton.classList.remove('white-mode');
         nizamiButton && nizamiButton.classList.remove('white-mode');
         shakespeareButton && shakespeareButton.classList.remove('white-mode');
+        bigramButton && bigramButton.classList.remove('white-mode');
+        lstmButton && lstmButton.classList.remove('white-mode');
         dt_ds && dt_ds.classList.remove('white-mode');
         dt_g && dt_g.classList.remove('white-mode');
+        dt_m && dt_m.classList.remove('white-mode');
         setCookie('darkMode', 'disabled', 365, "/");
     }
 };

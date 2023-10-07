@@ -1,4 +1,4 @@
-async function forward_lstm(x, h, c) {
+async function forward(x, h, c) {
     const session = await ort.InferenceSession.create("/models/lstm_nizami.onnx");
     const feeds = { "input.1": x, "onnx::Unsqueeze_1":h, "onnx::Unsqueeze_2":c};
     const results = await session.run(feeds);
@@ -41,7 +41,7 @@ function generateText() {
 
         for (let j = 0; j < userInput; j++) {
             const x_ = new ort.Tensor("int32", x, [1])
-            var { logits, h, c } = await forward_lstm(x_, h, c);
+            var { logits, h, c } = await forward(x_, h, c);
 
             const probs = softmax(logits);
             const sampled_idx = multinomial(probs);

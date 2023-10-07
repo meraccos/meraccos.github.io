@@ -242,6 +242,103 @@ transform: scale(0.95);
 }
 
 
+
+
+
+
+.model-switch {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 20px;
+    position: relative;
+}
+
+.bigram-button {
+    width: 100px;
+    height: 35px;
+    margin: 0 auto;
+    margin-right: 20px;
+    border-radius: 15px;
+    border-style:none;
+    background-color: #2b2a2a;
+    color: #BDBDBD;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.lstm-button {
+    width: 100px;
+    height: 35px;
+    margin: 0 auto;
+    margin-left: 0px;
+    border-radius: 15px;
+    border-style:none;
+    background-color: #2b2a2a;
+    color: #BDBDBD;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.bigram-button:hover {
+    background-color: #95999d;
+    color: #070707;
+}
+
+.lstm-button:hover {
+    background-color: #95999d;
+    color: #070707;
+}
+
+.bigram-button:disabled {
+    transform: scale(0.98);
+    background-color: #95999d;
+    color: #070707;
+    cursor:default;
+    }  
+
+.lstm-button:disabled {
+    transform: scale(0.98);
+    background-color: #95999d;
+    color: #070707;
+    cursor:default;
+    }  
+
+    
+
+.bigram-button.white-mode {
+    background-color: hsl(42, 20%, 83%);
+    color: #6d3b3b;
+}
+
+.lstm-button.white-mode {
+    background-color: hsl(42, 20%, 83%);
+    color: #6d3b3b;
+} 
+
+.bigram-button.white-mode:disabled {
+    transform: scale(0.98);
+    background-color: #a0a8b0;
+    color: #070707;
+    cursor:default;
+}
+
+.lstm-button.white-mode:disabled {
+    transform: scale(0.98);
+    background-color: #a0a8b0;
+    color: #070707;
+    cursor:default;
+}
+
+
+
+
+
+
+
+
+
 .division-text {
     width: 60%;
     align-items: center; 
@@ -262,6 +359,10 @@ transform: scale(0.95);
     padding-top: 20px;
 }
 
+.dt_ds {
+    padding-top: 20px;
+}
+
 .dt_ds.white-mode span {
     background:hsl(40, 63%, 93%);
 }
@@ -270,6 +371,9 @@ transform: scale(0.95);
     background:hsl(40, 63%, 93%);
 }
 
+.dt_m.white-mode span {
+    background:hsl(40, 63%, 93%);
+}
 
 
 
