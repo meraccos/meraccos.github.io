@@ -1,5 +1,5 @@
-async function forward(x, h, c) {
-    const session = await ort.InferenceSession.create("/models/lstm_nizami.onnx");
+async function forward_lstm(x, h, c) {
+    const session = await ort.InferenceSession.create(MODEL.modelFile);
     const feeds = { "input.1": x, "onnx::Unsqueeze_1":h, "onnx::Unsqueeze_2":c};
     const results = await session.run(feeds);
 
@@ -11,62 +11,35 @@ async function forward(x, h, c) {
     c = new ort.Tensor("float32", c, [1, 256])
     
     return { logits, h, c };
-}
+};
 
-function zeroTensor(n_zeros) {
-    data = [];
-    for (let j = 0; j < n_zeros; j++) {
-        data.push(0);
-    }
-
-    array = Float32Array.from(data);
-    tensor = new ort.Tensor("float32", array, [1, n_zeros])
-    return tensor;
-}
-
-function generateText() {
+async function generateLSTMText(userInput) {
     const button = document.getElementById('generate_button');
-    const inputElement = document.getElementById("inputText");
-    const userInput = inputElement.value;
     const outputElement = document.getElementById("output");
     let generatedText = "";
+    
+    button.disabled = true;
+    
+    var x = Int32Array.from([0]);
+    var h = zeroTensor(256);
+    var c = zeroTensor(256);
+    const characterDictionary = await readCharacterEncodingFile();
 
-    (async () => {
+    for (let j = 0; j < userInput; j++) {
+        const x_ = new ort.Tensor("int32", x, [1]);
+        var { logits, h, c } = await forward_lstm(x_, h, c);
 
-        button.disabled = true;
-        var x = Int32Array.from([0]);
-        var h = zeroTensor(256)
-        var c = zeroTensor(256)
-        const characterDictionary = await readCharacterEncodingFile();
+        const probs = softmax(logits);
+        const sampled_idx = multinomial(probs);
+        const sampled_char = characterDictionary[sampled_idx];
+        generatedText += sampled_char;
+        outputElement.innerHTML = generatedText;
 
-        for (let j = 0; j < userInput; j++) {
-            const x_ = new ort.Tensor("int32", x, [1])
-            var { logits, h, c } = await forward(x_, h, c);
+        x = Int32Array.from([sampled_idx]);
+    }
 
-            const probs = softmax(logits);
-            const sampled_idx = multinomial(probs);
-            const sampled_char = characterDictionary[sampled_idx];
-            generatedText += sampled_char;
-            outputElement.innerHTML = generatedText;
-
-            x = Int32Array.from([sampled_idx]);
-        }
-
-        button.disabled = false;
-    })();
+    button.disabled = false;
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 const inputElement = document.getElementById("inputText");
 inputElement.addEventListener("keydown", function (event) {
@@ -75,6 +48,9 @@ inputElement.addEventListener("keydown", function (event) {
         event.preventDefault();
     }
 });
+
+selectedModel = 'bigram';
+selectedDataset = 'nizami';
 
 document.getElementById("nizami-button").click();
 document.getElementById("bigram-button").click();

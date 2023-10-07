@@ -12,7 +12,7 @@ function getModel(model, dataset) {
             MODEL.modelFile = '/models/lstm_nizami.onnx'
         }
     } else if (dataset == 'shakespeare') {
-        MODEL.encodingFile =  '/encodings/enc_shakespeare.txt';
+        MODEL.encodingFile =  '/encodings/enc_tinyshakespeare.txt';
         if (model == 'bigram') {
             MODEL.modelFile = '/models/bigram_shakespeare.onnx'
         } else {
@@ -27,6 +27,7 @@ function switchDataset(dataset) {
     nizamiButton.disabled = (dataset === 'nizami');
     shakespeareButton.disabled = !nizamiButton.disabled;
     selectedDataset = dataset;
+    getModel(selectedModel, selectedDataset)
 }
 
 function switchModel(model) {
@@ -35,13 +36,8 @@ function switchModel(model) {
     bigramButton.disabled = (model === 'bigram');
     lstmButton.disabled = !bigramButton.disabled;
     selectedModel = model;
+    getModel(selectedModel, selectedDataset)
 }
-
-let selectedDataset = 'nizami';
-let selectedModel = 'bigram';
-
-getModel(selectedModel, selectedDataset);
-
 
 async function readCharacterEncodingFile() {
     const response = await fetch(MODEL.encodingFile);
@@ -76,5 +72,27 @@ function multinomial(probs){
 
     const randomValue = Math.random();
     const sampled_idx = cum_sums.findIndex((cum_sum) => cum_sum > randomValue);
-    return sampled_idx //test
+    return sampled_idx;
+}
+
+function zeroTensor(n_zeros) {
+    data = [];
+    for (let j = 0; j < n_zeros; j++) {
+        data.push(0);
+    };
+
+    array = Float32Array.from(data);
+    tensor = new ort.Tensor("float32", array, [1, n_zeros]);
+    return tensor;
+}
+
+function generateText() {
+    const button = document.getElementById('generate_button');
+    const inputElement = document.getElementById("inputText");
+    const userInput = inputElement.value;
+    if (selectedModel === 'lstm') {
+        generateLSTMText(userInput);
+    } else if (selectedModel === 'bigram') {
+        generateBigramText(userInput);
+    }
 }
