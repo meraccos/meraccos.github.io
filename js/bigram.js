@@ -43,3 +43,5 @@ inputElement.addEventListener("keydown", function (event) {
         event.preventDefault();
     }
 });
+
+document.getElementById("nizami-button").click();
