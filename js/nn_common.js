@@ -1,79 +1,50 @@
-const DATASETS = {
-    NIZAMI: {
-        encodingFile: '/encodings/enc_nizami.txt',
-    },
-    SHAKESPEARE: {
-        encodingFile: '/encodings/enc_tinyshakespeare.txt',
-    },
+const MODEL = {
+    encodingFile: undefined,
+    modelFile: undefined,
 };
 
-const MODELS = {
-    Bigram: {
-        encodingFile: '/encodings/enc_nizami.txt',
-        modelFile: {
-            NIZAMI: '/models/bigram_nizami.onnx',
-            SHAKESPEARE: '/models/bigram_shakespeare.onnx',
-        },
-    },
-    LSTM: {
-        encodingFile: '/encodings/enc_nizami.txt',
-        modelFile: {
-            NIZAMI: '/models/lstm_nizami.onnx',
-            SHAKESPEARE: '/models/lstm_shakespeare.onnx',
-        },
-}};
-
-let currentDataset = DATASETS.SHAKESPEARE;
-let currentModel = 'bigram'
-
-function selectModel(model, dataset) {
-    currentDataset = DATASETS[dataset];
-    currentModel = MODELS[model].modelFile[dataset]
+function getModel(model, dataset) {
+    if (dataset == 'nizami') {
+        MODEL.encodingFile =  '/encodings/enc_nizami.txt';
+        if (model == 'bigram') {
+            MODEL.modelFile = '/models/bigram_nizami.onnx'
+        } else {
+            MODEL.modelFile = '/models/lstm_nizami.onnx'
+        }
+    } else if (dataset == 'shakespeare') {
+        MODEL.encodingFile =  '/encodings/enc_shakespeare.txt';
+        if (model == 'bigram') {
+            MODEL.modelFile = '/models/bigram_shakespeare.onnx'
+        } else {
+            MODEL.modelFile = '/models/bigram_shakespeare.onnx'     // FIX THIS
+        }
+    }
 }
-
-
-
 
 function switchDataset(dataset) {
     const nizamiButton = document.querySelector('.nizami-button');
     const shakespeareButton = document.querySelector('.shakespeare-button');
-
-    currentDataset = DATASETS[dataset];
-
-    if (dataset === 'NIZAMI') {
-        nizamiButton.disabled = true;
-        shakespeareButton.disabled = false;
-    } else {
-        nizamiButton.disabled = false;
-        shakespeareButton.disabled = true;
-    }
+    nizamiButton.disabled = (dataset === 'nizami');
+    shakespeareButton.disabled = !nizamiButton.disabled;
+    selectedDataset = dataset;
 }
 
 function switchModel(model) {
     const bigramButton = document.getElementById('bigram-button');
     const lstmButton = document.getElementById('lstm-button');
-
-    currentModel = model;
-
-    if (model === 'bigram') {
-        bigramButton.disabled = true;
-        lstmButton.disabled = false;
-    } else {
-        bigramButton.disabled = false;
-        lstmButton.disabled = true;
-    }
+    bigramButton.disabled = (model === 'bigram');
+    lstmButton.disabled = !bigramButton.disabled;
+    selectedModel = model;
 }
 
+let selectedDataset = 'nizami';
+let selectedModel = 'bigram';
 
-
-
-
-
-
+getModel(selectedModel, selectedDataset);
 
 
 async function readCharacterEncodingFile() {
-    const response = await fetch(currentDataset.encodingFile);
+    const response = await fetch(MODEL.encodingFile);
     const data = await response.text();
     const lines = data;
     var characterDictionary = {};
@@ -88,19 +59,9 @@ async function readCharacterEncodingFile() {
 }
 
 function softmax(logits) {
-    var exp_logits = [];
-    var sum_exp_logits = 0.0;
-    var exp_logit = 0.0;
-    for (const logit of logits) {
-        exp_logit = Math.pow(Math.E, logit)
-        exp_logits.push(exp_logit);
-        sum_exp_logits += exp_logit;
-    }
-
-    var probs = [];
-    for (let j = 0; j < logits.length; j++) {
-        probs.push(exp_logits[j] / sum_exp_logits);
-    }
+    const exp_logits = logits.map(logit => Math.exp(logit));
+    const sum_exp_logits = exp_logits.reduce((sum, exp_logit) => sum + exp_logit, 0.0);
+    var probs = logits.map((logit) => Math.exp(logit) / sum_exp_logits);
     return probs
 }
 
@@ -114,10 +75,6 @@ function multinomial(probs){
     }
 
     const randomValue = Math.random();
-    for (let j = 0; j < cum_sums.length; j++){
-        if (cum_sums[j] > randomValue) {
-            return j;
-        }
-    }
-    return -1;
+    const sampled_idx = cum_sums.findIndex((cum_sum) => cum_sum > randomValue);
+    return sampled_idx
 }
