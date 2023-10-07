@@ -45,3 +45,4 @@ inputElement.addEventListener("keydown", function (event) {
 });
 
 document.getElementById("nizami-button").click();
+document.getElementById("bigram-button").click();
