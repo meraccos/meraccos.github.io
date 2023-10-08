@@ -3,13 +3,10 @@ async function forward_lstm(x, h, c) {
     const feeds = { "input.1": x, "onnx::Unsqueeze_1":h, "onnx::Unsqueeze_2":c};
     const results = await session.run(feeds);
 
-    h = results[87].data;
-    c = results[89].data;
+    h = new ort.Tensor("float32", results[87].data, [1, 256])
+    c = new ort.Tensor("float32", results[89].data, [1, 256])
     logits = results[90].data;
 
-    h = new ort.Tensor("float32", h, [1, 256])
-    c = new ort.Tensor("float32", c, [1, 256])
-    
     return { logits, h, c };
 };
 
