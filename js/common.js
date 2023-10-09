@@ -33,6 +33,8 @@ function toggleDarkMode() {
     const dt_ds = document.getElementById('dt_ds');
     const dt_g = document.getElementById('dt_g');
     const dt_m = document.getElementById('dt_m')
+    const contact_icon = document.getElementById('contact')
+    const container = document.getElementById('container');
 
     if (darkModeToggle.checked) {
         body.classList.add('white-mode');
@@ -46,6 +48,8 @@ function toggleDarkMode() {
         dt_ds && dt_ds.classList.add('white-mode');
         dt_g && dt_g.classList.add('white-mode');
         dt_m && dt_m.classList.add('white-mode');
+        container && container.classList.add('white-mode');
+        contact_icon && contact_icon.classList.add('white-mode');
         setCookie('darkMode', 'enabled', 365, "/");
     } else {
         body.classList.remove('white-mode');
@@ -59,6 +63,8 @@ function toggleDarkMode() {
         dt_ds && dt_ds.classList.remove('white-mode');
         dt_g && dt_g.classList.remove('white-mode');
         dt_m && dt_m.classList.remove('white-mode');
+        container && container.classList.remove('white-mode');
+        contact_icon && contact_icon.classList.remove('white-mode');
         setCookie('darkMode', 'disabled', 365, "/");
     }
 };

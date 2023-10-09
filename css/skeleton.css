@@ -25,6 +25,15 @@ h1 {
     margin: 0 auto;
 }
 
+.container a {
+    text-decoration: none;
+    color: #BDBDBD;
+}
+
+.container.white-mode a {
+    color: #6d3b3b;
+}
+
 .nav {
     display: flex;
     align-items: center;
