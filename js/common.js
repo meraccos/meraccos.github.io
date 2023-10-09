@@ -35,6 +35,8 @@ function toggleDarkMode() {
     const dt_m = document.getElementById('dt_m')
     const contact_icon = document.getElementById('contact')
     const container = document.getElementById('container');
+    const dark_animation = document.getElementById('dark-animation')
+    const white_animation = document.getElementById('white-animation')
 
     if (darkModeToggle.checked) {
         body.classList.add('white-mode');
@@ -50,7 +52,10 @@ function toggleDarkMode() {
         dt_m && dt_m.classList.add('white-mode');
         container && container.classList.add('white-mode');
         contact_icon && contact_icon.classList.add('white-mode');
+        white_animation && (white_animation.style.display = 'none');
+        dark_animation && (dark_animation.style.display = 'flex');
         setCookie('darkMode', 'enabled', 365, "/");
+        console.log('checked')
     } else {
         body.classList.remove('white-mode');
         inputText && inputText.classList.remove('white-mode');
@@ -65,6 +70,8 @@ function toggleDarkMode() {
         dt_m && dt_m.classList.remove('white-mode');
         container && container.classList.remove('white-mode');
         contact_icon && contact_icon.classList.remove('white-mode');
+        white_animation && (white_animation.style.display = 'flex');
+        dark_animation && (dark_animation.style.display = 'none');
         setCookie('darkMode', 'disabled', 365, "/");
     }
 };
