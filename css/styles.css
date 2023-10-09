@@ -81,6 +81,10 @@
     height: 120px;
 }
 
+.animation.error {
+    height: 400px;
+}
+
 .projects {
     text-align: left;
     font-size: 18px;
