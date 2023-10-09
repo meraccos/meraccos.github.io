@@ -30,6 +30,10 @@ h1 {
     color: #BDBDBD;
 }
 
+.container a:hover {
+    text-decoration: underline;
+}
+
 .container.white-mode a {
     color: #6d3b3b;
 }

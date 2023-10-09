@@ -1,74 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZHRFYB71LZ"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-ZHRFYB71LZ');
-  </script>
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-ZHRFYB71LZ"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-ZHRFYB71LZ");
+    </script>
 
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Meraj Mammadov</title>
-  <link rel="favicon" type="image/x-icon" href="/img/favicon.ico" />
-  <link rel="stylesheet" href="/css/skeleton.css" />
-  <link rel="stylesheet" href="/css/styles.css" />
-  <script src="/js/common.js" defer></script>
-  <link
-    href="https://fonts.googleapis.com/css?family=Lato:400,700"
-    rel="stylesheet"
-    type="text/css"
-  />
-</head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meraj Mammadov</title>
+    <link rel="favicon" type="image/x-icon" href="/img/favicon.ico" />
+    <link rel="stylesheet" href="/css/skeleton.css" />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <script src="/js/common.js" defer></script>
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:400,700"
+      rel="stylesheet"
+      type="text/css"
+    />
+  </head>
 
-<body>
-  <div class="container">
-    <h1>Meraj Mammadov</h1>
-    <nav class="nav">
-      <a href="Meraj_cv.pdf">cv</a>
-      <a href="/html/merajpt.html">merajpt</a>
-      <a href="#chess">chess</a>
-      <a href="/html/contact.html">contact</a>
+  <body>
+    <div class="container" id="container">
+      <h1><a href="/index.html">Meraj Mammadov</a></h1>
+      <nav class="nav">
+        <a href="/Meraj_cv.pdf">cv</a>
+        <a href="/html/merajpt.html">merajpt</a>
+        <a href="#chess">chess</a>
+        <a href="/html/contact.html">contact</a>
 
-      <div class="darkmode-container">
-        <input type="checkbox" id="dark-mode-toggle"/>
-        <label for="dark-mode-toggle">
-        </label>
-      </div>
+        <div class="darkmode-container">
+          <input type="checkbox" id="dark-mode-toggle" />
+          <label for="dark-mode-toggle"> </label>
+        </div>
+      </nav>
 
-    </nav>
+      <section class="about-me">
+        <div class="profile-description">
+          <p>
+            I am a first year Master's student of Mechanical Engineering at
+            Ulsan National Institute of Science and Engineering (UNIST), where I
+            also completed my Bachelor's Degree in Mechanical Engineering and
+            Computer Science & Engineering.
+          </p>
+          <p>
+            Currently, I am working in Autonomous Systems Laboratory (ASL) with
+            the group of Professor 
+            <a href="https://scholar.google.com/citations?user=q_Pbm3kAAAAJ&hl=en">Hyondong Oh</a>
+            .Prior to this, I had a chance to work in the Innovative
+            Thermodynamics Laboratory (ITEL) with Professor 
+            <a href="https://scholar.google.co.kr/citations?user=1JpaQ-QAAAAJ&hl=en">Jaeseon Lee</a>
+            .
+          </p>
+          <p>
+            I have also participated in several national and international
+            Physics Olympiads and been awarded with one Bronze, one Silver, and
+            one Gold medals in the span of 2 years.
+          </p>
+          <p>
+            I am currently working on reinforcement learning and its
+            applications on robot autonomy. I have a broad interest in various
+            topics, so please feel free to reach out for potential projects or
+            collaborations!
+          </p>
+        </div>
+        <img
+          src="/img/image.jpeg"
+          alt="Meraj Mammadov"
+          class="profile-picture"
+        />
+      </section>
 
-    <section class="about-me">
-      <div class="profile-description">
-        <p>
-          I am a first year Master's student of Mechanical Engineering at Ulsan
-          National Institute of Science and Engineering (UNIST), where I also 
-          completed my Bachelor's Degree in Mechanical Engineering and Computer 
-          Science & Engineering.
-        </p>
-        <p>
-          Currently, I am working in Autonomous Systems Laboratory (ASL) with
-          the group of Professor Hyondong Oh. Prior to this, I had a chance to work in the 
-          Innovative Thermodynamics Laboratory (ITEL) with Professor Jaeseon Lee.
-        </p>
-        <p>
-          I have also participated in several national and international Physics
-          Olympiads and been awarded with one Bronze, one Silver, and one Gold
-          medals in the span of 2 years.
-        </p>
-        <p>
-          I am currently working on reinforcement learning and its applications
-          on robot autonomy.  I have a broad interest in various topics, so please
-          feel free to reach out for potential projects or collaborations!
-        </p>
-      </div>
-      <img src="/img/image.jpeg" alt="Meraj Mammadov" class="profile-picture" />
-    </section>
-  
-<!-- 
+      <!-- 
     <section class="projects">
       <h2>Projects</h2>
       <div class="project">
@@ -77,6 +89,6 @@
         <p>Description of a very interesting project will be here.</p>
       </div>
     </section> -->
-  </div>
-</body>
+    </div>
+  </body>
 </html>
