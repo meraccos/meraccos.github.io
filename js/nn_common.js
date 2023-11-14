@@ -16,14 +16,14 @@ function getModel(model, dataset) {
         if (model == 'bigram') {
             MODEL.modelFile = '/models/bigram_shakespeare.onnx'
         } else {
-            MODEL.modelFile = '/models/lstm_shakespeare.onnx'     // FIX THIS
+            MODEL.modelFile = '/models/lstm_shakespeare.onnx'
         }
     }
 }
 
 function switchDataset(dataset) {
-    const nizamiButton = document.querySelector('.nizami-button');
-    const shakespeareButton = document.querySelector('.shakespeare-button');
+    const nizamiButton = document.getElementById('nizami-button');
+    const shakespeareButton = document.getElementById('shakespeare-button');
     nizamiButton.disabled = (dataset === 'nizami');
     shakespeareButton.disabled = !nizamiButton.disabled;
     selectedDataset = dataset;
@@ -55,19 +55,20 @@ async function readCharacterEncodingFile() {
 }
 
 function softmax(logits) {
-    const exp_logits = logits.map(logit => Math.exp(logit));
-    const sum_exp_logits = exp_logits.reduce((sum, exp_logit) => sum + exp_logit, 0.0);
-    var probs = logits.map((logit) => Math.exp(logit) / sum_exp_logits);
-    return probs
-}
+    const maxLogit = logits.reduce((a, b) => Math.max(a, b), -Infinity);
+    const scores = logits.map((l) => Math.exp(l - maxLogit));
+    const denom = scores.reduce((a, b) => a + b);
+    return scores.map((s) => s / denom);
+  }
 
-function multinomial(probs){
-    // Cumulative sum of the probs
-    var cum_sums = [];
-    var cur_sum = 0.0;
-    for (prob of probs) {
-        cur_sum += prob;
-        cum_sums.push(cur_sum);
+function multinomial(probs) {
+    const length = probs.length;
+    const cum_sums = new Array(length);
+    let cur_sum = 0.0;
+
+    for (let i = 0; i < length; i++) {
+        cur_sum += probs[i];
+        cum_sums[i] = cur_sum;
     }
 
     const randomValue = Math.random();
@@ -76,13 +77,8 @@ function multinomial(probs){
 }
 
 function zeroTensor(n_zeros) {
-    data = [];
-    for (let j = 0; j < n_zeros; j++) {
-        data.push(0);
-    };
-
-    array = Float32Array.from(data);
-    tensor = new ort.Tensor("float32", array, [1, n_zeros]);
+    const array = new Float32Array(n_zeros).fill(0);
+    const tensor = new ort.Tensor("float32", array, [1, n_zeros]);
     return tensor;
 }
 

@@ -30,9 +30,9 @@ function toggleDarkMode() {
     const shakespeareButton = document.getElementById('shakespeare-button');
     const bigramButton = document.getElementById('bigram-button');
     const lstmButton = document.getElementById('lstm-button');
-    const dt_ds = document.getElementById('dt_ds');
-    const dt_g = document.getElementById('dt_g');
-    const dt_m = document.getElementById('dt_m')
+    const dt = document.getElementById('dt');
+    const dt2 = document.getElementById('dt2');
+    const dt3 = document.getElementById('dt3')
     const contact_icon = document.getElementById('contact')
     const container = document.getElementById('container');
     const dark_animation = document.getElementById('dark-animation')
@@ -47,9 +47,9 @@ function toggleDarkMode() {
         shakespeareButton && shakespeareButton.classList.add('white-mode');
         bigramButton && bigramButton.classList.add('white-mode');
         lstmButton && lstmButton.classList.add('white-mode');
-        dt_ds && dt_ds.classList.add('white-mode');
-        dt_g && dt_g.classList.add('white-mode');
-        dt_m && dt_m.classList.add('white-mode');
+        dt && dt.classList.add('white-mode');
+        dt2 && dt2.classList.add('white-mode');
+        dt3 && dt3.classList.add('white-mode');
         container && container.classList.add('white-mode');
         contact_icon && contact_icon.classList.add('white-mode');
         white_animation && (white_animation.style.display = 'none');
@@ -65,9 +65,9 @@ function toggleDarkMode() {
         shakespeareButton && shakespeareButton.classList.remove('white-mode');
         bigramButton && bigramButton.classList.remove('white-mode');
         lstmButton && lstmButton.classList.remove('white-mode');
-        dt_ds && dt_ds.classList.remove('white-mode');
-        dt_g && dt_g.classList.remove('white-mode');
-        dt_m && dt_m.classList.remove('white-mode');
+        dt && dt.classList.remove('white-mode');
+        dt2 && dt2.classList.remove('white-mode');
+        dt3 && dt3.classList.remove('white-mode');
         container && container.classList.remove('white-mode');
         contact_icon && contact_icon.classList.remove('white-mode');
         white_animation && (white_animation.style.display = 'flex');

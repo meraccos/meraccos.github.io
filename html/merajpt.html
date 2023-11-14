@@ -13,7 +13,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Meraj Mammadov</title>
-  <link rel="favicon" type="image/x-icon" href="favicon.ico" />
+  <link rel="favicon" type="image/x-icon" href="/img/favicon.ico" />
   <link rel="stylesheet" href="/css/skeleton.css" />
   <link rel="stylesheet" href="/css/styles.css" />
   <script src="/js/nn_common.js"></script>
@@ -39,32 +39,25 @@
       </div>
     </nav>
 
-
-
-
-
-    <p class="division-text dt_m" id="dt_m"><span> Model </span></p>
-
-    <div class="model-switch">
-      <button onclick="switchModel('bigram')" class="bigram-button" id="bigram-button">Bigram</button>
-      <button onclick="switchModel('lstm')" class="lstm-button" id="lstm-button">LSTM</button>
+    <p class="dt top" id="dt"><span> Model </span></p>
+    
+    <div class="switch">
+      <button onclick="switchModel('bigram')" class="button left" id="bigram-button">Bigram</button>
+      <button onclick="switchModel('lstm')" class="button right" id="lstm-button">LSTM</button>
     </div>
 
+    <p class="dt" id="dt2"><span> Dataset </span></p>
 
-
-
-    <p class="division-text dt_ds" id="dt_ds"><span> Dataset </span></p>
-
-    <div class="dataset-switch">
-      <button onclick="switchDataset('nizami')" class="nizami-button" id="nizami-button">Nizami</button>
-      <button onclick="switchDataset('shakespeare')" class="shakespeare-button" id="shakespeare-button">Shakespeare</button>
+    <div class="switch">
+      <button onclick="switchDataset('nizami')" class="button left" id="nizami-button">Nizami</button>
+      <button onclick="switchDataset('shakespeare')" class="button right" id="shakespeare-button">Shakespeare</button>
     </div>
 
-    <p class="division-text dt_g" id="dt_g"><span> Generate </span></p>
+    <p class="dt" id="dt3"><span> Generate </span></p>
 
     <div class = generator id="generator">
       <input type="text" class="input_box" id="inputText" maxlength = 4 inputmode="numeric" placeholder="Number of chars">
-      <button onclick="generateText()" class="generate_button" id="generate_button">Generate</button>
+      <button onclick="generateText()" class="button gen" id="generate_button">Generate</button>
     </div>
     <p id="output" class="output_box"></p>
   </div>
