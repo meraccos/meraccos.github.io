@@ -44,7 +44,6 @@
     max-width: 55%;
 }
 
-
 .animation {
     display: flex;
     align-items: center;
@@ -75,7 +74,6 @@
 .projects h3 {
     font-style: italic;
 }
-
 
 .generator {
     display: flex;
@@ -140,9 +138,7 @@
 
 .output_box.white-mode {
     background-color: hsl(42, 20%, 83%);
-    color: #fff;
     color: #6d3b3b;
-    font-size: 16px;
 }
 
 .switch {
@@ -203,16 +199,16 @@
     cursor:default;
     }    
 
-.button.white-mode {
-    background-color: hsl(46, 20%, 83%);
-    color: #6d3b3b;
-}
-
 .button.white-mode:disabled {
     transform: scale(0.98);
     background-color: #a0a8b0;
     color: #070707;
     cursor:default;
+}
+
+.button.white-mode {
+    background-color: hsl(46, 20%, 83%);
+    color: #6d3b3b;
 }
 
 .dt {
@@ -265,7 +261,7 @@
 
     .content.contact {
         flex-direction: row;
-        
+
     }
   
     .profile-picture {
@@ -285,9 +281,6 @@
         max-height: calc(100vh - 450px);
     }
   }
-
-
-
 
 .darkmode-container {
     display: flex;
