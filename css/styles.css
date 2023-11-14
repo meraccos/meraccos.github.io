@@ -1,4 +1,4 @@
-.about-me {
+.content {
     display: flex;
     align-items: center;
     text-align: justify;
@@ -7,21 +7,8 @@
     margin-top: 20px;
 }
 
-.contactme {
-    display: flex;
-    align-items: center;
-    text-align: justify;
-    max-width: 1200px;
-    font-size: 18px;
-    margin-top: 20px;
-}
-
-.contact {
-    display: flex;
-    align-items: center;
-    text-align: justify;
-    max-width: 1200px;
-    font-size: 18px;
+.content.contact {
+    margin-top: auto;
     justify-content: center;
 }
 
@@ -271,7 +258,7 @@
         margin-top: 10px;
       }
 
-    .about-me {
+    .content {
       flex-direction: column;
       align-items: center;
     }
@@ -292,13 +279,7 @@
     .output_box {
         max-height: calc(100vh - 450px);
     }
-    .contactme {
-        text-align: center;
-    }
   }
-
-
-
 
 .darkmode-container {
     display: flex;
