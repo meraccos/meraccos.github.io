@@ -12,6 +12,11 @@
     justify-content: center;
 }
 
+.problem {
+    display:block;
+    padding-left: 20px;
+}
+
 .contact a {
     color: hsl(40, 63%, 93%);
     text-decoration: none;
