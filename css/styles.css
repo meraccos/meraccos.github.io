@@ -236,6 +236,15 @@
     background:hsl(40, 63%, 93%);
 }
 
+ol {
+    /* padding: auto; */
+}
+
+li {
+    /* padding: none; */
+    padding-top: 10px;
+}
+
 
 @media (max-width: 768px) {
     h1 {
@@ -262,7 +271,11 @@
 
     .content.contact {
         flex-direction: row;
+    }
 
+    .problem {
+        text-align:left;
+        align-items: baseline;
     }
   
     .profile-picture {
@@ -275,7 +288,7 @@
     .profile-description {
       max-width: 100%;
       margin-top: 20px;
-      /* text-align: center; */
+      text-align: center;
       order: 2;
     }
     .output_box {
