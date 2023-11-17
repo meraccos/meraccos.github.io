@@ -257,6 +257,7 @@
     .content {
       flex-direction: column;
       align-items: center;
+      text-align: center;
     }
 
     .content.contact {
@@ -274,7 +275,7 @@
     .profile-description {
       max-width: 100%;
       margin-top: 20px;
-      text-align: center;
+      /* text-align: center; */
       order: 2;
     }
     .output_box {
