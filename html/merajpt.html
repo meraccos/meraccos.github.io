@@ -1,71 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZHRFYB71LZ"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-ZHRFYB71LZ');
-  </script>
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-ZHRFYB71LZ"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-ZHRFYB71LZ");
+    </script>
 
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Meraj Mammadov</title>
-  <link rel="favicon" type="image/x-icon" href="/img/favicon.ico" />
-  <link rel="stylesheet" href="/css/skeleton.css" />
-  <link rel="stylesheet" href="/css/styles.css" />
-  <script src="/js/nn_common.js"></script>
-  <link
-    href="https://fonts.googleapis.com/css?family=Lato:400,700"
-    rel="stylesheet"
-    type="text/css"
-  />
-</head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meraj Mammadov</title>
+    <link rel="favicon" type="image/x-icon" href="/img/favicon.ico" />
+    <link rel="stylesheet" href="/css/skeleton.css" />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <script src="/js/nn_common.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:400,700"
+      rel="stylesheet"
+      type="text/css"
+    />
+  </head>
 
-<body>
-  <div class="container" id="container">
-    <h1><a href="/index.html">Meraj Mammadov</a></h1>
-    <nav class="nav">
-      <a href="/Meraj_cv.pdf">cv</a>
-      <a href="/html/merajpt.html">merajpt</a>
-      <a href="/html/enigma.html">enigma</a>
-      <a href="/html/contact.html">contact</a>
+  <body>
+    <div class="container" id="container">
+      <h1><a href="/index.html">Meraj Mammadov</a></h1>
+      <nav class="nav">
+        <a href="/Meraj_cv.pdf">cv</a>
+        <a href="/html/merajpt.html">merajpt</a>
+        <a href="/html/enigma.html">enigma</a>
+        <a href="/html/contact.html">contact</a>
 
-      <div class="darkmode-container">
-        <input type="checkbox" id="dark-mode-toggle"/>
-        <label for="dark-mode-toggle"></label>
+        <div class="darkmode-container">
+          <input type="checkbox" id="dark-mode-toggle" />
+          <label for="dark-mode-toggle"></label>
+        </div>
+      </nav>
+      <br />
+      <p class="content">
+        Here you can test some of the neural language models that I have built.
+        <i>Nizami</i> stands for a dataset built by collecting the works of
+        Nizami Ganjavi in Azerbaijani, and <i>Shakespeare</i> stands for the
+        same in English. I will add attention-based models in the future.
+      </p>
+
+      <p class="dt top" id="dt"><span> Model </span></p>
+
+      <div class="switch">
+        <button
+          onclick="switchModel('bigram')"
+          class="button left"
+          id="bigram-button"
+        >
+          Bigram
+        </button>
+        <button
+          onclick="switchModel('lstm')"
+          class="button right"
+          id="lstm-button"
+        >
+          LSTM
+        </button>
       </div>
-    </nav>
 
-    <p class="dt top" id="dt"><span> Model </span></p>
-    
-    <div class="switch">
-      <button onclick="switchModel('bigram')" class="button left" id="bigram-button">Bigram</button>
-      <button onclick="switchModel('lstm')" class="button right" id="lstm-button">LSTM</button>
+      <p class="dt" id="dt2"><span> Dataset </span></p>
+
+      <div class="switch">
+        <button
+          onclick="switchDataset('nizami')"
+          class="button left"
+          id="nizami-button"
+        >
+          Nizami
+        </button>
+        <button
+          onclick="switchDataset('shakespeare')"
+          class="button right"
+          id="shakespeare-button"
+        >
+          Shakespeare
+        </button>
+      </div>
+
+      <p class="dt" id="dt3"><span> Generate </span></p>
+
+      <div class="generator" id="generator">
+        <input
+          type="text"
+          class="input_box"
+          id="inputText"
+          maxlength="4"
+          inputmode="numeric"
+          placeholder="Number of chars"
+        />
+        <button
+          onclick="generateText()"
+          class="button gen"
+          id="generate_button"
+        >
+          Generate
+        </button>
+      </div>
+      <p id="output" class="output_box"></p>
     </div>
 
-    <p class="dt" id="dt2"><span> Dataset </span></p>
+    <script src="/js/common.js"></script>
 
-    <div class="switch">
-      <button onclick="switchDataset('nizami')" class="button left" id="nizami-button">Nizami</button>
-      <button onclick="switchDataset('shakespeare')" class="button right" id="shakespeare-button">Shakespeare</button>
-    </div>
-
-    <p class="dt" id="dt3"><span> Generate </span></p>
-
-    <div class = generator id="generator">
-      <input type="text" class="input_box" id="inputText" maxlength = 4 inputmode="numeric" placeholder="Number of chars">
-      <button onclick="generateText()" class="button gen" id="generate_button">Generate</button>
-    </div>
-    <p id="output" class="output_box"></p>
-  </div>
-
-  <script src="/js/common.js"></script>
-  
-  <script src="https://cdn.jsdelivr.net/npm/onnxruntime-web/dist/ort.min.js"></script>
-  <script src="/js/bigram.js"></script>
-  <script src="/js/lstm.js"></script>
-</body>
+    <script src="https://cdn.jsdelivr.net/npm/onnxruntime-web/dist/ort.min.js"></script>
+    <script src="/js/bigram.js"></script>
+    <script src="/js/lstm.js"></script>
+  </body>
 </html>
