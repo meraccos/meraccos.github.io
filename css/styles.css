@@ -11,8 +11,11 @@
 }
 
 .content.contact {
-    margin-top: auto;
     justify-content: center;
+}
+
+.profile-description {
+    max-width: 55%;
 }
 
 .problem {
@@ -37,7 +40,7 @@
     padding: 15px;
 }
 
-.profile-picture {
+.profile img {
     width: 350px !important;
     height: 350px !important;
 
@@ -46,10 +49,6 @@
     border-radius: 50%;
     object-fit: cover;
     margin-left: 85px;
-}
-
-.profile-description {
-    max-width: 55%;
 }
 
 .animation {
@@ -285,12 +284,12 @@ li {
         text-align:left;
         align-items: baseline;
     }
-  
-    .profile-picture {
-      margin-left: 0;
-      width: 200px !important;
-      height: 200px !important;
-      order: 1;
+
+    .profile img {
+        margin-left: 0;
+        width: 200px !important;
+        height: 200px !important;
+        order: 1;
     }
   
     .profile-description {
