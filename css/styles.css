@@ -239,12 +239,7 @@
     background:hsl(40, 63%, 93%);
 }
 
-ol {
-    /* padding: auto; */
-}
-
 li {
-    /* padding: none; */
     padding-top: 10px;
 }
 
