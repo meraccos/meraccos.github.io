@@ -31,5 +31,21 @@ html{
 }
 
 .slider {
-    width: 200px;
+    width: 180px;
+    padding-top: 3.22px;
+    padding-bottom: 3.3px;
+}
+
+.values {
+    display: inline;
+    vertical-align: middle;
+    padding-left: 15px;
+    /* align-items: center; */
+    /* height: 2000px; */
+}
+
+.value {
+    display:inline-block;
+    padding-top: 8.2px;
+    padding-bottom: 8.3px;
 }
