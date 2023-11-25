@@ -46,6 +46,7 @@ html{
     display: inline;
     vertical-align: middle;
     padding-left: 0px;
+    padding-right: 10px;
 }
 
 .value {
@@ -69,7 +70,7 @@ html{
     padding: 0px;
 }
 
-.button.gen:active {
+.button:active {
     transform: scale(0.95);
 }  
 
