@@ -55,6 +55,18 @@ v16.innerHTML = s16.value / 100;
 v17.innerHTML = s17.value / 100;
 v18.innerHTML = s18.value / 100;
 
+// var sliders = document.querySelectorAll(".slider")
+// var values = document.querySelectorAll('.value')
+// console.log(sliders)
+// console.log(values)
+
+// for (var i = 0; i < sliders.length; i++) {
+//     console.log('I am here')
+//     console.log(values[i])
+//     console.log(sliders[i])
+//     values[i].innerHTML = sliders[i].value / 100;
+// }
+
 
 s1.oninput = function() {
     v1.innerHTML = (this.value / 100).toFixed(2);

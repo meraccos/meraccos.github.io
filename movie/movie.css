@@ -38,14 +38,14 @@ html{
 
 .slider {
     width: 180px;
-    padding-top: 3.22px;
-    padding-bottom: 3.3px;
+    padding-top: 6.6px;
+    padding-bottom: 6.6px;
 }
 
 .values {
     display: inline;
     vertical-align: middle;
-    padding-left: 25px;
+    padding-left: 0px;
 }
 
 .value {
