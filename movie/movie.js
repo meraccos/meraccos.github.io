@@ -23,17 +23,13 @@ async function readCharacterEncodingFile() {
     return lines;
 }
 
-
-
-
-
 // main things going on here
-async function main() {
+async function recommend() {
     try {
         // Read the movie names file
         const movie_names = await readCharacterEncodingFile();
 
-        // Infer the model 
+        // Infer from the model 
         var data = Float32Array.from(ValuesArray);
         const tensor = new ort.Tensor("float32", data, [18]); 
         
@@ -48,14 +44,10 @@ async function main() {
         let top10Indices = indices.slice(0, 10);
         
         // Extract movie names from indices and print the result
-        let results = ''
         for (let i = 0; i < top10Indices.length; i++) {
             for (let j = 0; j < movie_names.length; j++) {
                 if (j == top10Indices[i]) {
-                    outputs[i].innerHTML = movie_names[j]
-                    results += movie_names[j]
-                    results += '<br>'
-                    
+                    outputs[i].innerHTML = i+1 + '.  ' + movie_names[j]   
                 }
             }  
         }
