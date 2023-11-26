@@ -17,13 +17,14 @@
 
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Meraj Mammadov</title>
+    <title>Movie Recommender</title>
     <link rel="favicon" type="image/x-icon" href="/img/favicon.ico" />
     <link rel="stylesheet" href="/css/skeleton.css" />
     <!-- <link rel="stylesheet" href="/css/styles.css" /> -->
     <link rel="stylesheet" href="/movie/movie.css" />
     <script src="/js/common.js" defer></script>
     <script src="/movie/movie.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/onnxruntime-web/dist/ort.min.js"></script>
     <link
       href="https://fonts.googleapis.com/css?family=Lato:400,700"
       rel="stylesheet"
@@ -109,13 +110,24 @@
         </div>
 
         <div class="middle">
-            <button class="button" id="button">
+            <button onclick="main()" class="button" id="button">
                 Recommend
             </button>
         </div>
 
         <div class="box">
-            <!-- ddd -->
+          <div class="outputs">
+            <p class="output" id="o1"></p>
+            <p class="output" id="o2"></p>
+            <p class="output" id="o3"></p>
+            <p class="output" id="o3"></p>
+            <p class="output" id="o4"></p>
+            <p class="output" id="o5"></p>
+            <p class="output" id="o6"></p>
+            <p class="output" id="o7"></p>
+            <p class="output" id="o8"></p>
+            <p class="output" id="o9"></p>
+          </div>
         </div>
     </div>
   </body>

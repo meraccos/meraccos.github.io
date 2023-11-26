@@ -78,3 +78,9 @@ html{
     background-color: #95999d;
     color: #070707;
 }
+
+.output {
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
