@@ -126,7 +126,11 @@ html{
     html {
         height:auto;
     }
+    body {
+        display: block;
+    }
     .movie_container {
         flex-direction: column;
+        width: 100%;
     }
 }
