@@ -79,8 +79,19 @@ html{
     color: #070707;
 }
 
+
 .output {
     padding-left: 20px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    margin:3px
+}
+.info {
+    padding-left: 80px;
+    padding-bottom: 5px;
+    /* padding: 0px; */
+    /* color: rgb(58, 100, 100); */
+    /* color: rgb(160, 44, 71); */
+    color: rgb(109, 68, 24);
+    margin: 0;
 }

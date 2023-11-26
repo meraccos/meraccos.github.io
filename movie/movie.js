@@ -1,5 +1,6 @@
-// Select the slider, value and output elements
+// Select the slider, value, output and info elements
 var outputs = document.querySelectorAll('.output');
+var infos = document.querySelectorAll('.info');
 var sliders = document.querySelectorAll(".slider")
 var values = document.querySelectorAll('.value')
 var ValuesArray = []
@@ -42,14 +43,11 @@ async function recommend() {
         let indices = Array.from({ length: output.length }, (_, i) => i);
         indices.sort((a, b) => output[b] - output[a]);
         let top10Indices = indices.slice(0, 10);
-        
-        // Extract movie names from indices and print the result
+
+        // Print out the movies
         for (let i = 0; i < top10Indices.length; i++) {
-            for (let j = 0; j < movie_names.length; j++) {
-                if (j == top10Indices[i]) {
-                    outputs[i].innerHTML = i+1 + '.  ' + movie_names[j]   
-                }
-            }  
+            outputs[i].innerHTML = i+1 + '.  ' + movie_names[top10Indices[i]]   
+            infos[i].innerHTML = 'Alignment: ' + i + ', &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp Rating: ' + i+1
         }
 
     } catch (error) {
