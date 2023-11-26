@@ -79,19 +79,37 @@ html{
     color: #070707;
 }
 
+.outputs {
+    width: 400px;
+}
 
-.output {
-    padding-left: 20px;
+.outbox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2px;
+}
+
+.movie_name {
+    width: 220px;
+    padding-left: 0px;
     padding-top: 7px;
     padding-bottom: 7px;
-    margin:3px
+    margin:3px;
 }
-.info {
-    padding-left: 80px;
+
+.rating {
+    width: 20px;
+    padding-left: 40px;
     padding-bottom: 5px;
-    /* padding: 0px; */
-    /* color: rgb(58, 100, 100); */
-    /* color: rgb(160, 44, 71); */
+    color: rgb(109, 68, 24);
+    margin: 0;
+}
+
+.align {
+    width: 20px;
+    padding-left: 20px;
+    padding-bottom: 5px;
     color: rgb(109, 68, 24);
     margin: 0;
 }

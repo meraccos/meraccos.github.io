@@ -1,6 +1,7 @@
 // Select the slider, value, output and info elements
-var outputs = document.querySelectorAll('.output');
-var infos = document.querySelectorAll('.info');
+var names = document.querySelectorAll('.movie_name');
+var ratings = document.querySelectorAll('.rating');
+var aligns = document.querySelectorAll('.align');
 var sliders = document.querySelectorAll(".slider")
 var values = document.querySelectorAll('.value')
 var ValuesArray = []
@@ -17,8 +18,16 @@ for (let i = 0; i < sliders.length; i++) {
 }
 
 // Function for reading the movie names
-async function readCharacterEncodingFile() {
+async function readMovieNames() {
     const response = await fetch('names.txt');
+    const data = await response.text();
+    const lines = data.split('\n');
+    return lines;
+}
+
+// Function for reading the movie ratings
+async function readMovieRatings() {
+    const response = await fetch('ratings.txt');
     const data = await response.text();
     const lines = data.split('\n');
     return lines;
@@ -28,7 +37,8 @@ async function readCharacterEncodingFile() {
 async function recommend() {
     try {
         // Read the movie names file
-        const movie_names = await readCharacterEncodingFile();
+        const movie_names = await readMovieNames();
+        const movie_ratings = await readMovieRatings();
 
         // Infer from the model 
         var data = Float32Array.from(ValuesArray);
@@ -44,10 +54,15 @@ async function recommend() {
         indices.sort((a, b) => output[b] - output[a]);
         let top10Indices = indices.slice(0, 10);
 
+        names[0].innerHTML = "<b> Movie Name";
+        ratings[0].innerHTML = "<b>Rating";
+        aligns[0].innerHTML = "<b>Match";
+
         // Print out the movies
         for (let i = 0; i < top10Indices.length; i++) {
-            outputs[i].innerHTML = i+1 + '.  ' + movie_names[top10Indices[i]]   
-            infos[i].innerHTML = 'Alignment: ' + i + ', &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp Rating: ' + i+1
+            names[i+1].innerHTML = i+1 + '.  ' + movie_names[top10Indices[i]];
+            ratings[i+1].innerHTML = parseFloat(movie_ratings[top10Indices[i]]).toFixed(2);
+            aligns[i+1].innerHTML = (output[top10Indices[i]]).toFixed(2);
         }
 
     } catch (error) {
