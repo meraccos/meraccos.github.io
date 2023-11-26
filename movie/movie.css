@@ -120,6 +120,9 @@ html{
     margin: 0;
 }
 
+.index {
+    padding-right: 3px;
+}
 
 @media (max-width: 768px) {
     html {
@@ -132,6 +135,7 @@ html{
 
     .index {
         padding-left: 13px;
+        padding-right: 2px;
     }
     
     .sliders {
