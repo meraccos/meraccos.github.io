@@ -127,10 +127,25 @@ html{
     }
     .box {
         width: 350px;
+        border: none;
     }
     
     .sliders {
         padding-left: 25px;
+    }
+    .outbox {
+        width: 350px;
+        padding: 0px;
+    }
+    .movie_name {
+        width: 200px;
+    }
+    .rating {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .align {
+        padding-right: 20px;
     }
     .slider {
         width: 140px;
