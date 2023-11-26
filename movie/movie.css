@@ -1,15 +1,15 @@
 html{
-    height: 100%;
+    /* height: 100%; */
     display: flex;
-    align-items: center;
+    /* align-items: center; */
     justify-content: center;
 }
-
+/* 
 .movie_container {
     display: flex;
     flex-direction: row;
     overflow: auto;
-}
+} */
 
 .box {
     background-color: #95999d;
