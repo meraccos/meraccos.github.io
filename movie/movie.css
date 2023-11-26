@@ -18,11 +18,15 @@ html{
     height: 660px;
     border: 2px solid #000;
     border-radius: 20px;
-    margin: 50px;
+    margin: 0px;
 
     display: flex;
     align-items: center;
     /* height: auto; */
+}
+
+.middle {
+    margin: 50px;
 }
 
 .middle {
