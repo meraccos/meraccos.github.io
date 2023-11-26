@@ -61,7 +61,7 @@ async function recommend() {
         // Print out the movies
         for (let i = 0; i < top10Indices.length; i++) {
             names[i+1].innerHTML = i+1 + '.  ' + movie_names[top10Indices[i]];
-            ratings[i+1].innerHTML = parseFloat(movie_ratings[top10Indices[i]]).toFixed(2);
+            ratings[i+1].innerHTML = movie_ratings[top10Indices[i]];
             aligns[i+1].innerHTML = (output[top10Indices[i]]).toFixed(2);
         }
 
