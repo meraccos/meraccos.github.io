@@ -129,6 +129,10 @@ html{
         width: 350px;
         border: none;
     }
+
+    .index {
+        padding-left: 13px;
+    }
     
     .sliders {
         padding-left: 25px;

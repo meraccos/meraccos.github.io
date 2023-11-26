@@ -1,4 +1,5 @@
 // Select the slider, value, output and info elements
+var numbering = document.querySelectorAll('.index');
 var names = document.querySelectorAll('.movie_name');
 var ratings = document.querySelectorAll('.rating');
 var aligns = document.querySelectorAll('.align');
@@ -60,7 +61,8 @@ async function recommend() {
 
         // Print out the movies
         for (let i = 0; i < top10Indices.length; i++) {
-            names[i+1].innerHTML = i+1 + '.  ' + movie_names[top10Indices[i]];
+            numbering[i+1].innerHTML = i+1 + '.  '
+            names[i+1].innerHTML = movie_names[top10Indices[i]];
             ratings[i+1].innerHTML = movie_ratings[top10Indices[i]];
             aligns[i+1].innerHTML = (output[top10Indices[i]]).toFixed(2);
         }
