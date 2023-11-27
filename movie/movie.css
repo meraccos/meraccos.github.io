@@ -142,9 +142,9 @@ html{
     .movie_container {
         flex-direction: column;
     }
-    .box {
+    /* .box {
         width: 350px;        
-    }
+    } */
     .slider {
         width: 140px;
     }
