@@ -93,14 +93,12 @@ html{
 }
 
 .outputs {
-    width: 380px;
+    width: 360px;
     height: 620px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    padding-left: 20px;
-    padding-right: 20px;
 }
 
 .outbox {
@@ -141,42 +139,25 @@ html{
     html {
         height:auto;
     }
+    .movie_container {
+        flex-direction: column;
+    }
     .box {
         width: 350px;        
-    }
-    .sliders {
-        padding-left: 25px;
-    }
-    .outputs {
-        align-items: center;
-        height: 630px;
-        padding-top: 30px;
-        padding-bottom: 30px;
-        padding-left: 0px;
-        padding-right: 0px;
-    }
-    .outbox {
-        width: 350px;
-        padding: 0px;
-    }
-    .movie_name {
-        width: 200px;
-    }
-    .index {
-        padding-left: 20px;
-    }
-    .rating {
-        padding-left: 20px;
-        padding-right: 10px;
-    }
-    .align {
-        padding-left: 8px;
-
     }
     .slider {
         width: 140px;
     }
-    .movie_container {
-        flex-direction: column;
+    .outputs {
+        width: 310px;
+    }
+    .outbox {
+        width: 310px;
+    }
+    .rating {
+        padding-left: 10px;
+    }
+    .align {
+        padding-left: 8px;
     }
 }
