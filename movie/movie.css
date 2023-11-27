@@ -86,7 +86,7 @@ html{
 
 .outputs {
     width: 360px;
-    height: 620px;
+    height: 600px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
