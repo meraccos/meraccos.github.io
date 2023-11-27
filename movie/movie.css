@@ -111,6 +111,7 @@ html{
 
 .movie_name {
     width: 200px;
+    margin: auto;
 }
 
 .rating {
