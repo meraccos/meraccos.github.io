@@ -35,54 +35,40 @@ html{
 }
 
 .genres {
-    height: 660px;
-    align-items: center;
-    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    height: 620px;
+    justify-content: space-between;
+    padding-left: 25px;
 }
 
 .genre {
-    padding-left: 25px;
-    padding-top: 0px;
-    padding-bottom: 0px;
+    margin: 0px;
 }
 
 .sliders {
     display: flex;
-    flex-flow: row wrap;
     flex-direction: column;
-    display: inline-block;
+    flex-flow: row wrap;
     height: 100%;
     padding-left: 35px;
-    height: 660px;
-    align-items: center;
+    height: 640px;
     justify-content: space-between;
-    flex-wrap: wrap;
-    text-align: center;
 }
 
 .slider {
     width: 180px;
-    /* height: 20px; */
-    margin: auto;
-    padding-top: 8.2px;
-    padding-bottom: 8.2px;
+    margin: 0px;
 }
 
 .values {
     display: flex;
     flex-direction: column;
-    vertical-align: middle;
+    justify-content: space-between;
     padding-left: 25px;
     padding-right: 15px;
-    height: 660px;
+    height: 620px;
 }
-
-.value {
-    display:inline-block;
-    padding-top: 8.2px;
-    padding-bottom: 8.3px;
-}
-
 
 .button {
     width: 140px;
