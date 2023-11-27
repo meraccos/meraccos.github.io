@@ -132,17 +132,16 @@ html{
         height:auto;
     }
     .box {
-        width: 350px;
-        border: none;
+        width: 350px;        
     }
-
-    .index {
-        padding-left: 13px;
-        padding-right: 2px;
-    }
-    
     .sliders {
         padding-left: 25px;
+    }
+    .outputs {
+        align-items: center;
+        height: 660px;
+        padding-top: 20px;
+        padding-bottom: 20px;
     }
     .outbox {
         width: 350px;
@@ -151,21 +150,21 @@ html{
     .movie_name {
         width: 200px;
     }
+    .index {
+        padding-left: 20px;
+    }
     .rating {
         padding-left: 20px;
-        padding-right: 20px;
+        padding-right: 35px;
     }
     .align {
         padding-right: 20px;
+        padding-left: 10px;
     }
     .slider {
         width: 140px;
     }
-    body {
-        display: block;
-    }
     .movie_container {
         flex-direction: column;
-        width: 100%;
     }
 }
