@@ -38,7 +38,7 @@ html{
     flex-direction: column;
     height: 620px;
     justify-content: space-between;
-    padding-left: 25px;
+    padding-left: 20px;
 }
 
 .genre {
@@ -65,7 +65,7 @@ html{
     flex-direction: column;
     justify-content: space-between;
     padding-left: 25px;
-    padding-right: 15px;
+    padding-right: 20px;
     height: 620px;
 }
 
@@ -99,8 +99,8 @@ html{
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    padding-left: 15px;
-    padding-right: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .outbox {
@@ -153,6 +153,7 @@ html{
         padding-top: 30px;
         padding-bottom: 30px;
         padding-left: 0px;
+        padding-right: 0px;
     }
     .outbox {
         width: 350px;
