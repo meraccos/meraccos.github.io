@@ -20,6 +20,7 @@ html{
 
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .middle {
@@ -92,12 +93,14 @@ html{
 }
 
 .outputs {
-    width: 400px;
+    width: 380px;
     height: 620px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    padding-left: 15px;
+    padding-right: 5px;
 }
 
 .outbox {
@@ -111,15 +114,21 @@ html{
 }
 
 .rating {
-    width: 20px;
-    padding-left: 40px;
+    width: 55px;
+    padding-left: 15px;
     color: rgb(109, 68, 24);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .align {
-    width: 20px;
+    width: 45px;
     padding-left: 20px;
     color: rgb(109, 68, 24);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .index {
@@ -142,6 +151,7 @@ html{
         height: 630px;
         padding-top: 30px;
         padding-bottom: 30px;
+        padding-left: 0px;
     }
     .outbox {
         width: 350px;
@@ -154,19 +164,12 @@ html{
         padding-left: 20px;
     }
     .rating {
-        width: 55px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
         padding-left: 20px;
         padding-right: 10px;
     }
     .align {
         padding-left: 8px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 45px;
+
     }
     .slider {
         width: 140px;
