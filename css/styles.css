@@ -245,22 +245,6 @@ li {
 
 
 @media (max-width: 768px) {
-    h1 {
-        font-size: 35px;
-        text-align: left;
-        padding-top: 30px;
-        text-align: center;
-    }
-
-    .nav {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 21px;
-        text-align: center;
-        margin-top: 10px;
-      }
-
     .content {
       flex-direction: column;
       align-items: center;
@@ -328,17 +312,17 @@ label:active:after {
     width: 32px;
 }
 
-input {
+.dark-mode-toggle {
     width:5px;
     height: 0;
     visibility: hidden;
 }
 
-input:checked + label {
+.dark-mode-toggle:checked + label {
     background: #cdd0c3;
 }
 
-input:checked + label:after {
+.dark-mode-toggle:checked + label:after {
     left: 46px;
     transform: translateX(-100%);
     background: #6d3b3b;
