@@ -50,3 +50,50 @@ h1 {
     margin-right: 3%;
     font-size: 24px;
 }
+
+
+
+/* Here on is the styles for the projects navigation menu */
+
+.dropbtn {
+    background-color: transparent;
+    color: #636363;
+    border: none;
+    cursor: pointer;
+    margin: auto;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+    text-decoration: underline;
+}
+
+.dropdown {
+    margin-right: 3%;
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position:absolute;
+    background-color: #636363;
+    min-width: 120px;
+    left: 50%;
+    transform: translateX(-50%);
+    overflow: auto;
+    /* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); */
+    z-index: 1;
+    border-radius: 0px 0px 10px 10px;
+
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    display: flex;
+    justify-content: center;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;}
