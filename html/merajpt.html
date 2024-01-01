@@ -33,14 +33,24 @@
     <div class="container" id="container">
       <h1><a href="/index.html">Meraj Mammadov</a></h1>
       <nav class="nav">
+        <a href="/index.html">home</a>
         <a href="/Meraj_cv.pdf">cv</a>
-        <a href="/html/merajpt.html">merajpt</a>
+
+        <div class="dropdown">
+          <button onclick="ProjectsMenuFunction()" class="dropbtn">projects</button>
+          <div id="myDropdown" class="dropdown-content">
+            <a href="/html/merajpt.html">merajpt</a>
+            <a href="/movie/movie.html">movie</a>
+            <a href="/html/life.html">life</a>
+          </div>
+        </div>
+
         <a href="/html/enigma.html">enigma</a>
         <a href="/html/contact.html">contact</a>
 
         <div class="darkmode-container">
-          <input type="checkbox" id="dark-mode-toggle" />
-          <label for="dark-mode-toggle"></label>
+          <input type="checkbox" class="dark-mode-toggle" id="dark-mode-toggle" />
+          <label for="dark-mode-toggle"> </label>
         </div>
       </nav>
       <br />
