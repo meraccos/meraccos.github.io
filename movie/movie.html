@@ -20,7 +20,7 @@
     <title>Movie Recommender</title>
     <link rel="favicon" type="image/x-icon" href="/favicon.ico" />
     <link rel="stylesheet" href="/css/skeleton.css" />
-    <!-- <link rel="stylesheet" href="/css/styles.css" /> -->
+    <link rel="stylesheet" href="/css/styles.css" />
     <link rel="stylesheet" href="/movie/movie.css" />
     <script src="/js/common.js" defer></script>
     <script src="/movie/movie.js" defer></script>
@@ -33,6 +33,31 @@
   </head>
 
   <body>
+
+    <div class="container" id="container">
+      <h1><a href="/index.html">Meraj Mammadov</a></h1>
+      <nav class="nav">
+        <a href="/index.html">home</a>
+        <a href="/Meraj_cv.pdf">cv</a>
+
+        <div class="dropdown">
+          <button onclick="ProjectsMenuFunction()" class="dropbtn">projects</button>
+          <div id="myDropdown" class="dropdown-content">
+            <a href="/html/merajpt.html">merajpt</a>
+            <a href="/movie/movie.html">movie</a>
+            <a href="/html/life.html">life</a>
+          </div>
+        </div>
+
+        <a href="/html/enigma.html">enigma</a>
+        <a href="/html/contact.html">contact</a>
+
+        <div class="darkmode-container">
+          <input type="checkbox" class="dark-mode-toggle" id="dark-mode-toggle" />
+          <label for="dark-mode-toggle"> </label>
+        </div>
+      </nav>
+
     <div class="movie_container">
         <div class="box">
             <div class="genres">
@@ -110,7 +135,7 @@
         </div>
 
         <div class="middle">
-            <button onclick="recommend()" class="button" id="button">
+            <button onclick="recommend()" class="movie_button" id="movie_button">
                 Recommend
             </button>
         </div>

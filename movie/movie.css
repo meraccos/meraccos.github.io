@@ -1,11 +1,12 @@
 html{
     height: 100%;
     display: flex;
-    align-items: center;
+    /* align-items: center; */
     justify-content: center;
 }
 
 .movie_container {
+    padding-top: 50px;
     display: flex;
     flex-direction: row;
 }
@@ -61,7 +62,7 @@ html{
     margin: 50px;
 }
 
-.button {
+.movie_button {
     width: 140px;
     height: 80px;
     margin: 0 auto;
@@ -75,11 +76,11 @@ html{
     padding: 0px;
 }
 
-.button:active {
+.movie_button:active {
     transform: scale(0.95);
 }  
 
-.button:hover {
+.movie_button:hover {
     background-color: #95999d;
     color: #070707;
 }
