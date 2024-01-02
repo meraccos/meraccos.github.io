@@ -38,6 +38,10 @@ function toggleDarkMode() {
     const dark_animation = document.getElementById('dark-animation')
     const white_animation = document.getElementById('white-animation')
 
+    // Movies
+    const movieOutputBox = document.getElementById('outputs-box')
+    const movieInputBox = document.getElementById('inputs-box')
+
     if (darkModeToggle.checked) {
         body.classList.add('white-mode');
         inputText && inputText.classList.add('white-mode');
@@ -52,6 +56,8 @@ function toggleDarkMode() {
         dt3 && dt3.classList.add('white-mode');
         container && container.classList.add('white-mode');
         contact_icon && contact_icon.classList.add('white-mode');
+        movieOutputBox && movieOutputBox.classList.add('white-mode');
+        movieInputBox && movieInputBox.classList.add('white-mode');
         white_animation && (white_animation.style.display = 'none');
         dark_animation && (dark_animation.style.display = 'flex');
         setCookie('darkMode', 'enabled', 365, "/");
@@ -70,6 +76,8 @@ function toggleDarkMode() {
         dt3 && dt3.classList.remove('white-mode');
         container && container.classList.remove('white-mode');
         contact_icon && contact_icon.classList.remove('white-mode');
+        movieOutputBox && movieOutputBox.classList.remove('white-mode');
+        movieInputBox && movieInputBox.classList.remove('white-mode');
         white_animation && (white_animation.style.display = 'flex');
         dark_animation && (dark_animation.style.display = 'none');
         setCookie('darkMode', 'disabled', 365, "/");
