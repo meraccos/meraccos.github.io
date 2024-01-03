@@ -37,11 +37,15 @@ function toggleDarkMode() {
     const container = document.getElementById('container');
     const dark_animation = document.getElementById('dark-animation')
     const white_animation = document.getElementById('white-animation')
+    const projectMenu = document.getElementById('myDropdown')
+    const projectButton = document.getElementById('dropbtn')
 
     // Movies
     const movieOutputBox = document.getElementById('outputs-box')
     const movieInputBox = document.getElementById('inputs-box')
     const movieButton = document.getElementById('movie_button')
+    const movieAlign = document.getElementsByClassName('align')
+    const movieRating = document.getElementsByClassName('rating')
 
     if (darkModeToggle.checked) {
         body.classList.add('white-mode');
@@ -57,9 +61,15 @@ function toggleDarkMode() {
         dt3 && dt3.classList.add('white-mode');
         container && container.classList.add('white-mode');
         contact_icon && contact_icon.classList.add('white-mode');
+        projectMenu && projectMenu.classList.add('white-mode');
+        projectButton && projectButton.classList.add('white-mode');
         movieOutputBox && movieOutputBox.classList.add('white-mode');
         movieInputBox && movieInputBox.classList.add('white-mode');
         movieButton && movieButton.classList.add('white-mode');
+        for (var i = 0; i < movieAlign.length; i++) {
+            movieAlign[i] && movieAlign[i].classList.add('white-mode');
+            movieRating[i] && movieRating[i].classList.add('white-mode');
+        }
         white_animation && (white_animation.style.display = 'none');
         dark_animation && (dark_animation.style.display = 'flex');
         setCookie('darkMode', 'enabled', 365, "/");
@@ -78,9 +88,15 @@ function toggleDarkMode() {
         dt3 && dt3.classList.remove('white-mode');
         container && container.classList.remove('white-mode');
         contact_icon && contact_icon.classList.remove('white-mode');
+        projectMenu && projectMenu.classList.remove('white-mode');
+        projectButton && projectButton.classList.remove('white-mode');
         movieOutputBox && movieOutputBox.classList.remove('white-mode');
         movieInputBox && movieInputBox.classList.remove('white-mode');
         movieButton && movieButton.classList.remove('white-mode');
+        for (var i = 0; i < movieAlign.length; i++) {
+            movieAlign[i] && movieAlign[i].classList.remove('white-mode');
+            movieRating[i] && movieRating[i].classList.remove('white-mode');
+        }
         white_animation && (white_animation.style.display = 'flex');
         dark_animation && (dark_animation.style.display = 'none');
         setCookie('darkMode', 'disabled', 365, "/");

@@ -71,6 +71,10 @@ h1 {
     text-decoration: underline;
 }
 
+.dropbtn.white-mode {
+    color: #6d3b3b;
+}
+
 .dropdown {
     margin-top: 0;
     margin-right: 3%;
@@ -99,6 +103,10 @@ h1 {
     display: flex;
     justify-content: center;
     margin: auto;
+}
+
+.dropdown-content.white-mode{
+    background-color: #b7b2b2;
 }
 
 .dropdown a:hover {background-color: #ddd;}

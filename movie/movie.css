@@ -15,18 +15,18 @@ html{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #95999d;
-    color: #000;
+    /* background-color: #95999d; */
+    background-color: #2b2a2a;
+    /* color: #000; */
+    color: #BDBDBD;
     width: 400px;
     height: 660px;
     border-radius: 20px;
-    border: solid;
 }
 
 .box.white-mode {
     background-color: hsl(42, 20%, 83%);
-    border-width: 0.1px;
-    border-color: #000000;
+    color: #000;
 }
 
 .genres {
@@ -67,6 +67,8 @@ html{
     display: flex;
     align-items: center;
     margin: 50px;
+    margin-left: 30px;
+    margin-right: 30px;
 }
 
 .movie_button {
@@ -123,6 +125,10 @@ html{
     justify-content: center;
     width: 55px;
     padding-left: 15px;
+    color: rgb(195, 133, 66);
+}
+
+.rating.white-mode {
     color: rgb(109, 68, 24);
 }
 
@@ -132,6 +138,10 @@ html{
     justify-content: center;
     width: 45px;
     padding-left: 20px;
+    color: rgb(195, 133, 66);
+}
+
+.align.white-mode {
     color: rgb(109, 68, 24);
 }
 
