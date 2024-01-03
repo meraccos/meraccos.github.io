@@ -20,10 +20,13 @@ html{
     width: 400px;
     height: 660px;
     border-radius: 20px;
+    border: solid;
 }
 
 .box.white-mode {
-    background-color: aqua;
+    background-color: hsl(42, 20%, 83%);
+    border-width: 0.1px;
+    border-color: #000000;
 }
 
 .genres {
@@ -87,6 +90,11 @@ html{
 .movie_button:hover {
     background-color: #95999d;
     color: #070707;
+}
+
+.movie_button.white-mode {
+    color: #6d3b3b;
+    background-color: hsl(46, 20%, 83%);
 }
 
 .outputs {

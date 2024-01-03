@@ -41,6 +41,7 @@ function toggleDarkMode() {
     // Movies
     const movieOutputBox = document.getElementById('outputs-box')
     const movieInputBox = document.getElementById('inputs-box')
+    const movieButton = document.getElementById('movie_button')
 
     if (darkModeToggle.checked) {
         body.classList.add('white-mode');
@@ -58,6 +59,7 @@ function toggleDarkMode() {
         contact_icon && contact_icon.classList.add('white-mode');
         movieOutputBox && movieOutputBox.classList.add('white-mode');
         movieInputBox && movieInputBox.classList.add('white-mode');
+        movieButton && movieButton.classList.add('white-mode');
         white_animation && (white_animation.style.display = 'none');
         dark_animation && (dark_animation.style.display = 'flex');
         setCookie('darkMode', 'enabled', 365, "/");
@@ -78,6 +80,7 @@ function toggleDarkMode() {
         contact_icon && contact_icon.classList.remove('white-mode');
         movieOutputBox && movieOutputBox.classList.remove('white-mode');
         movieInputBox && movieInputBox.classList.remove('white-mode');
+        movieButton && movieButton.classList.remove('white-mode');
         white_animation && (white_animation.style.display = 'flex');
         dark_animation && (dark_animation.style.display = 'none');
         setCookie('darkMode', 'disabled', 365, "/");
