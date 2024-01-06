@@ -1,16 +1,64 @@
+const darkModeToggle = document.getElementById('dark-mode-toggle');
+
 // Nav menu on mobile
 var mobileMenuBtn = document.querySelector("#mobile-menu-btn");
 var mobileMenu = document.querySelector(".mobile-menu");
 var contents = document.querySelector(".content");
+var darkanimation = document.querySelector("#dark-animation")
+var whiteanimation = document.querySelector("#white-animation")
+var contact = document.querySelector(".contact")
+var problem = document.querySelector("#problem")
+var dt = document.querySelector("#dt")
+var references = document.querySelector("#references")
 
 mobileMenuBtn.addEventListener("click", () => {
     if (mobileMenu.style.display === "none") {
       mobileMenu.style.display = "flex";
-      contents.style.display = "none"
+      if (contents) {
+        contents.style.display = "none"
+      }
+      if (darkanimation) {
+        darkanimation.style.display = "none"
+        whiteanimation.style.display = "none"
+      }
+      if (references) {
+        references.style.display = "none"
+      }
+      if (contact) {
+        contact.style.display = "none"
+      }
+      if (dt) {
+        dt.style.display = "none"
+      }
+      if (problem) {
+        problem.style.display = "none"
+      }
+      
     } 
     else {
       mobileMenu.style.display = "none";
-      contents.style.display = "flex"
+      if (contents) {
+        contents.style.display = "flex"
+      }      
+      if (references) {
+        references.style.display = "block"
+      }
+      if (contact) {
+        contact.style.display = "flex"
+      }
+      if (problem) {
+        problem.style.display = "flex"
+      }
+      if (dt) {
+        dt.style.display = "block"
+      }
+      if (darkanimation) {
+        if (darkModeToggle.checked) {
+            darkanimation.style.display = "flex"
+          } else {
+            whiteanimation.style.display = "flex"
+          }
+      }
     }
   });
 
@@ -38,7 +86,6 @@ function getCookie(name) {
 }
 
 // All the dark-white mode style changes
-const darkModeToggle = document.getElementById('dark-mode-toggle');
 
 function toggleDarkMode() {
     const body = document.body;
