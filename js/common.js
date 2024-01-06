@@ -9,13 +9,31 @@ var whiteanimation = document.querySelector("#white-animation")
 var contact = document.querySelector(".contact")
 var problem = document.querySelector("#problem")
 var dt = document.querySelector("#dt")
+var dt2 = document.querySelector("#dt2")
+var dt3 = document.querySelector("#dt3")
 var references = document.querySelector("#references")
+var modelswitch = document.querySelector("#switch1")
+var modelswitch2 = document.querySelector("#switch2")
+var generator = document.querySelector("#generator")
+var output = document.querySelector("#output")
 
 mobileMenuBtn.addEventListener("click", () => {
     if (mobileMenu.style.display === "none") {
       mobileMenu.style.display = "flex";
       if (contents) {
         contents.style.display = "none"
+      }
+      if (generator) {
+        generator.style.display = "none"
+      }
+      if (output) {
+        output.style.display = "none"
+      }
+      if (modelswitch) {
+        modelswitch.style.display = "none"
+      }
+      if (modelswitch2) {
+        modelswitch2.style.display = "none"
       }
       if (darkanimation) {
         darkanimation.style.display = "none"
@@ -30,6 +48,12 @@ mobileMenuBtn.addEventListener("click", () => {
       if (dt) {
         dt.style.display = "none"
       }
+      if (dt2) {
+        dt2.style.display = "none"
+      }
+      if (dt3) {
+        dt3.style.display = "none"
+      }
       if (problem) {
         problem.style.display = "none"
       }
@@ -39,7 +63,19 @@ mobileMenuBtn.addEventListener("click", () => {
       mobileMenu.style.display = "none";
       if (contents) {
         contents.style.display = "flex"
+      }   
+      if (generator) {
+        generator.style.display = "flex"
+      }     
+      if (output) {
+        output.style.display = "flex"
       }      
+      if (modelswitch) {
+        modelswitch.style.display = "flex"
+      }
+      if (modelswitch2) {
+        modelswitch2.style.display = "flex"
+      }
       if (references) {
         references.style.display = "block"
       }
@@ -51,6 +87,12 @@ mobileMenuBtn.addEventListener("click", () => {
       }
       if (dt) {
         dt.style.display = "block"
+      }
+      if (dt2) {
+        dt2.style.display = "block"
+      }
+      if (dt3) {
+        dt3.style.display = "block"
       }
       if (darkanimation) {
         if (darkModeToggle.checked) {
