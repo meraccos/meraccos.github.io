@@ -113,12 +113,89 @@ h1 {
 
 .show {display: block;}
 
+.menu-button {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: right;
+    cursor: pointer;
+    padding-left: 5px;
+}
+
+.line {
+    background-color: #ffffff;
+    height: 2px;
+    border-radius: 20px;
+    margin: 5px;
+}
+
+.line.white-mode {
+    background-color: #121212;
+}
+
 .mobile {
     display: none;
 }
 
 .mobile-menu {
     display: none;
+    font-size: 21px;
+    flex-direction: column;
+    min-height: 40vh;
+    padding-top: 3vh;
+    text-align: center;
+    justify-content: space-between;
+}
+
+/* Dark mode toggle */
+
+.darkmode-container {
+    display: flex;
+    align-items: center;
+    color: transparent;
+}
+
+.desktop-label {
+    width: 50px;
+    height: 24px;
+    position: relative;
+    display: block;
+    background: #4e4949;
+    border-radius: 200px;
+    top: 3px;
+    box-shadow: inset 0px 5px 15px rgba(0,0,0,0,4), inset 0px -5px 15px rgba(255,255,255,0.4);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.desktop-label:after {
+    content: "";
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    background: #8d8b89;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.desktop-label:active:after {
+    width: 32px;
+}
+
+.dark-mode-toggle {
+    visibility: hidden;
+}
+
+.dark-mode-toggle:checked + label {
+    background: #cdd0c3;
+}
+
+.dark-mode-toggle:checked + label:after {
+    left: 46px;
+    transform: translateX(-100%);
+    background: #6d3b3b;
 }
 
 
@@ -140,8 +217,34 @@ h1 {
     .nav {
         display: flex;
         justify-content: space-between;
-        /* padding-left: 10px; */
-        /* padding-right: 10px; */
+        padding-left: 5px;
+        padding-right: 5px;
     }
 
+    .desktop-label, .desktop-label:after {
+        background: transparent;
+        height: auto;
+    }
+
+    .dark-mode-toggle, .dark-mode-toggle:checked + label {
+        background: transparent;
+    }
+
+    .darkmode-container {
+        color: #ffffff;
+    }
+    .darkmode-container.white-mode {
+        color: #121212;
+    }
+
+    .dark-mode-toggle {
+        display: none;
+    }
+
+    .desktop-label {
+        justify-content: center;
+        text-align: center;
+        margin: 0px;
+        position: static;
+    }
 }

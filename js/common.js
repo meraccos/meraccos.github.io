@@ -5,7 +5,7 @@ var contents = document.querySelector(".content");
 
 mobileMenuBtn.addEventListener("click", () => {
     if (mobileMenu.style.display === "none") {
-      mobileMenu.style.display = "block";
+      mobileMenu.style.display = "flex";
       contents.style.display = "none"
     } 
     else {
@@ -58,6 +58,8 @@ function toggleDarkMode() {
     const white_animation = document.getElementById('white-animation')
     const projectMenu = document.getElementById('myDropdown')
     const projectButton = document.getElementById('dropbtn')
+    const darkmodeContainer = document.getElementById('darkmode-container')
+    const menuLines = document.getElementsByClassName('line')
 
     // Movies
     const movieOutputBox = document.getElementById('outputs-box')
@@ -85,9 +87,13 @@ function toggleDarkMode() {
         movieOutputBox && movieOutputBox.classList.add('white-mode');
         movieInputBox && movieInputBox.classList.add('white-mode');
         movieButton && movieButton.classList.add('white-mode');
+        darkmodeContainer.classList.add('white-mode')
         for (var i = 0; i < movieAlign.length; i++) {
             movieAlign[i] && movieAlign[i].classList.add('white-mode');
             movieRating[i] && movieRating[i].classList.add('white-mode');
+        }
+        for (var i = 0; i < menuLines.length; i++) {
+            menuLines[i] && menuLines[i].classList.add('white-mode');
         }
         white_animation && (white_animation.style.display = 'none');
         dark_animation && (dark_animation.style.display = 'flex');
@@ -112,9 +118,13 @@ function toggleDarkMode() {
         movieOutputBox && movieOutputBox.classList.remove('white-mode');
         movieInputBox && movieInputBox.classList.remove('white-mode');
         movieButton && movieButton.classList.remove('white-mode');
+        darkmodeContainer.classList.remove('white-mode')
         for (var i = 0; i < movieAlign.length; i++) {
             movieAlign[i] && movieAlign[i].classList.remove('white-mode');
             movieRating[i] && movieRating[i].classList.remove('white-mode');
+        }
+        for (var i = 0; i < menuLines.length; i++) {
+            menuLines[i] && menuLines[i].classList.remove('white-mode');
         }
         white_animation && (white_animation.style.display = 'flex');
         dark_animation && (dark_animation.style.display = 'none');
