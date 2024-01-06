@@ -33,16 +33,48 @@
     <div class="container" id="container">
       <h1><a href="/index.html">Meraj Mammadov</a></h1>
       <nav class="nav">
-        <a href="/Meraj_cv.pdf">cv</a>
-        <a href="/html/merajpt.html">merajpt</a>
-        <a href="/html/enigma.html">enigma</a>
-        <a href="/html/contact.html">contact</a>
 
-        <div class="darkmode-container">
-          <input type="checkbox" id="dark-mode-toggle" />
-          <label for="dark-mode-toggle"> </label>
+        <a href="/index.html" class="desktop">home</a>
+        <a href="/Meraj_cv.pdf" class="desktop">cv</a>
+
+        <div class="dropdown desktop">
+          <button onclick="ProjectsMenuFunction()" class="dropbtn" id="dropbtn">projects</button>
+          <div id="myDropdown" class="dropdown-content">
+            <a href="/html/merajpt.html">merajpt</a>
+            <a href="/movie/movie.html">movie</a>
+            <a href="/html/life.html">life</a>
+          </div>
+        </div>
+
+        <a href="/html/enigma.html" class="desktop">enigma</a>
+        <a href="/html/contact.html" class="desktop">contact</a>
+
+        <strong id="mobile-menu-btn" class="menu-button mobile">
+          <div class="line" style="width: 30px;"></div>
+          <div class="line" style="width: 25px;"></div>
+          <div class="line" style="width: 20px;"></div>
+        </strong>
+
+        <div class="darkmode-container" id="darkmode-container">
+          <input type="checkbox" class="dark-mode-toggle" id="dark-mode-toggle" />
+          <label for="dark-mode-toggle" id="desktop-label" class="desktop-label" style="font-size: 45px;"> &#9788 </label>
         </div>
       </nav>
+
+
+      <div class="mobile-menu">
+        <a href="/index.html" class="mobile">home</a>
+        <a href="/Meraj_cv.pdf" class="mobile">cv</a>
+        <!-- <p class="dt" id="dt"><span> Projects </span></p> -->
+        <a href="/html/merajpt.html" class="mobile">merajpt</a>
+        <a href="/movie/movie.html" class="mobile">movie</a>
+        <a href="/html/life.html" class="mobile">life</a>
+        <a href="/html/enigma.html" class="mobile">enigma</a>
+        <a href="/html/contact.html" class="mobile">contact</a>
+      </div>
+
+
+
 
       <section class="content profile">
         <div class="profile-description">
