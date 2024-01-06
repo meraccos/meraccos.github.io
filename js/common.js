@@ -16,6 +16,8 @@ var modelswitch = document.querySelector("#switch1")
 var modelswitch2 = document.querySelector("#switch2")
 var generator = document.querySelector("#generator")
 var output = document.querySelector("#output")
+var moviecontainer = document.querySelector(".movie_container")
+
 
 mobileMenuBtn.addEventListener("click", () => {
     if (mobileMenu.style.display === "none") {
@@ -25,6 +27,9 @@ mobileMenuBtn.addEventListener("click", () => {
       }
       if (generator) {
         generator.style.display = "none"
+      }
+      if (moviecontainer) {
+        moviecontainer.style.display = "none"
       }
       if (output) {
         output.style.display = "none"
@@ -67,6 +72,9 @@ mobileMenuBtn.addEventListener("click", () => {
       if (generator) {
         generator.style.display = "flex"
       }     
+      if (moviecontainer) {
+        moviecontainer.style.display = "flex"
+      }
       if (output) {
         output.style.display = "flex"
       }      

@@ -1,8 +1,8 @@
 html{
     height: 100%;
-    display: flex;
+    /* display: flex; */
     /* align-items: center; */
-    justify-content: center;
+    /* justify-content: center; */
 }
 
 .movie_container {
@@ -15,9 +15,7 @@ html{
     display: flex;
     align-items: center;
     justify-content: center;
-    /* background-color: #95999d; */
     background-color: #2b2a2a;
-    /* color: #000; */
     color: #BDBDBD;
     width: 400px;
     height: 660px;
@@ -156,6 +154,7 @@ html{
     }
     .movie_container {
         flex-direction: column;
+        align-items: center;
     }
     .box {
         width: 350px;        

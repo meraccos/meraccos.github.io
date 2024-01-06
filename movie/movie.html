@@ -1,218 +1,237 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head> 
-    <!-- Google tag (gtag.js) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-ZHRFYB71LZ"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-      gtag("config", "G-ZHRFYB71LZ");
-    </script>
 
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Movie Recommender</title>
-    <link rel="favicon" type="image/x-icon" href="/favicon.ico" />
-    <link rel="stylesheet" href="/css/skeleton.css" />
-    <link rel="stylesheet" href="/css/styles.css" />
-    <link rel="stylesheet" href="/movie/movie.css" />
-    <script src="/js/common.js" defer></script>
-    <script src="/movie/movie.js" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/onnxruntime-web/dist/ort.min.js"></script>
-    <link
-      href="https://fonts.googleapis.com/css?family=Lato:400,700"
-      rel="stylesheet"
-      type="text/css"
-    />
-  </head>
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZHRFYB71LZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+    gtag("config", "G-ZHRFYB71LZ");
+  </script>
 
-  <body>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Movie Recommender</title>
+  <link rel="favicon" type="image/x-icon" href="/favicon.ico" />
+  <link rel="stylesheet" href="/css/skeleton.css" />
+  <link rel="stylesheet" href="/css/styles.css" />
+  <link rel="stylesheet" href="/movie/movie.css" />
+  <script src="/js/common.js" defer></script>
+  <script src="/movie/movie.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/onnxruntime-web/dist/ort.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet" type="text/css" />
+</head>
 
-    <div class="container" id="container">
-      <h1><a href="/index.html">Meraj Mammadov</a></h1>
-      <nav class="nav">
-        <a href="/index.html">home</a>
-        <a href="/Meraj_cv.pdf">cv</a>
+<body>
+  <div class="container" id="container">
+    <h1><a href="/index.html">Meraj Mammadov</a></h1>
+    <nav class="nav">
 
-        <div class="dropdown">
-          <button onclick="ProjectsMenuFunction()" class="dropbtn" id="dropbtn">projects</button>
-          <div id="myDropdown" class="dropdown-content">
-            <a href="/html/merajpt.html">merajpt</a>
-            <a href="/movie/movie.html">movie</a>
-            <a href="/html/life.html">life</a>
-          </div>
+      <a href="/index.html" class="desktop">home</a>
+      <a href="/Meraj_cv.pdf" class="desktop">cv</a>
+
+      <div class="dropdown desktop">
+        <button onclick="ProjectsMenuFunction()" class="dropbtn" id="dropbtn">projects</button>
+        <div id="myDropdown" class="dropdown-content">
+          <a href="/html/merajpt.html">merajpt</a>
+          <a href="/movie/movie.html">movie</a>
+          <a href="/html/life.html">life</a>
         </div>
+      </div>
 
-        <a href="/html/enigma.html">enigma</a>
-        <a href="/html/contact.html">contact</a>
+      <a href="/html/enigma.html" class="desktop">enigma</a>
+      <a href="/html/contact.html" class="desktop">contact</a>
 
-        <div class="darkmode-container">
-          <input type="checkbox" class="dark-mode-toggle" id="dark-mode-toggle" />
-          <label for="dark-mode-toggle"> </label>
-        </div>
-      </nav>
+      <strong id="mobile-menu-btn" class="menu-button mobile">
+        <div class="line" style="width: 30px;"></div>
+        <div class="line" style="width: 25px;"></div>
+        <div class="line" style="width: 20px;"></div>
+      </strong>
+
+      <div class="darkmode-container" id="darkmode-container">
+        <input type="checkbox" class="dark-mode-toggle" id="dark-mode-toggle" />
+        <label for="dark-mode-toggle" id="desktop-label" class="desktop-label" style="font-size: 45px;"> &#9788 </label>
+      </div>
+    </nav>
+
+
+    <div class="mobile-menu">
+      <a href="/index.html" class="mobile">home</a>
+      <a href="/Meraj_cv.pdf" class="mobile">cv</a>
+      <!-- <p class="dt" id="dt"><span> Projects </span></p> -->
+      <a href="/html/merajpt.html" class="mobile">merajpt</a>
+      <a href="/movie/movie.html" class="mobile">movie</a>
+      <a href="/html/life.html" class="mobile">life</a>
+      <a href="/html/enigma.html" class="mobile">enigma</a>
+      <a href="/html/contact.html" class="mobile">contact</a>
     </div>
+
+    <section class="content">
+      <p>
+        This is a movie recommendation system built by training an NLP model to extract genre distribution of each movie
+        by reading in their IMDB description. Pull the sliders according to your preference and enjoy the recommended movies!
+      </p>
+    </section>
 
     <div class="movie_container">
-        <div class="box" id="inputs-box">
-            <div class="genres">
-                <p class="genre"> Action </p>
-                <p class="genre"> Adventure </p>
-                <p class="genre"> Animation </p>
-                <p class="genre"> Biography </p>
-                <p class="genre"> Comedy </p>
-                <p class="genre"> Crime </p>
-                <p class="genre"> Drama </p>
-                <p class="genre"> Family </p>
-                <p class="genre"> Fantasy </p>
-                <p class="genre"> History </p>
-                <p class="genre"> Horror </p>
-                <p class="genre"> Musical </p>
-                <p class="genre"> Mystery </p>
-                <p class="genre"> Romance </p>
-                <p class="genre"> Sci-Fi </p>
-                <p class="genre"> Thriller </p>
-                <p class="genre"> War </p>
-                <p class="genre"> Western </p>
-            </div>
-
-            <div class="sliders">
-              <input type="range" min="0" max="100" value="0.0" class="slider" id="s1">
-              <input type="range" min="0" max="100" value="0.0" class="slider" id="s2">
-              <input type="range" min="0" max="100" value="0.0" class="slider" id="s3">
-
-              <input type="range" min="0" max="100" value="0.0" class="slider" id="s4">
-              <input type="range" min="0" max="100" value="0.0" class="slider" id="s5">
-              <input type="range" min="0" max="100" value="0.0" class="slider" id="s6">
-
-              <input type="range" min="0" max="100" value="0.0" class="slider" id="s7">
-              <input type="range" min="0" max="100" value="0.0" class="slider" id="s8">
-              <input type="range" min="0" max="100" value="0.0" class="slider" id="s9">
-
-              <input type="range" min="0" max="100" value="0.0" class="slider" id="s10">
-              <input type="range" min="0" max="100" value="0.0" class="slider" id="s11">
-              <input type="range" min="0" max="100" value="0.0" class="slider" id="s12">
-
-              <input type="range" min="0" max="100" value="0.0" class="slider" id="s13">
-              <input type="range" min="0" max="100" value="0.0" class="slider" id="s14">
-              <input type="range" min="0" max="100" value="0.0" class="slider" id="s15">
-
-              <input type="range" min="0" max="100" value="0.0" class="slider" id="s16">
-              <input type="range" min="0" max="100" value="0.0" class="slider" id="s17">
-              <input type="range" min="0" max="100" value="0.0" class="slider" id="s18">
-            </div>
-
-            <div class="values">
-                <span class="value" id="v1"></span>
-                <span class="value" id="v2"></span>
-                <span class="value" id="v3"></span>
-
-                <span class="value" id="v4"></span>
-                <span class="value" id="v5"></span>
-                <span class="value" id="v6"></span>
-
-                <span class="value" id="v7"></span>
-                <span class="value" id="v8"></span>
-                <span class="value" id="v9"></span>
-                
-                <span class="value" id="v10"></span>
-                <span class="value" id="v11"></span>
-                <span class="value" id="v12"></span>
-
-                <span class="value" id="v13"></span>
-                <span class="value" id="v14"></span>
-                <span class="value" id="v15"></span>
-
-                <span class="value" id="v16"></span>
-                <span class="value" id="v17"></span>
-                <span class="value" id="v18"></span>
-            </div>
+      <div class="box" id="inputs-box">
+        <div class="genres">
+          <p class="genre"> Action </p>
+          <p class="genre"> Adventure </p>
+          <p class="genre"> Animation </p>
+          <p class="genre"> Biography </p>
+          <p class="genre"> Comedy </p>
+          <p class="genre"> Crime </p>
+          <p class="genre"> Drama </p>
+          <p class="genre"> Family </p>
+          <p class="genre"> Fantasy </p>
+          <p class="genre"> History </p>
+          <p class="genre"> Horror </p>
+          <p class="genre"> Musical </p>
+          <p class="genre"> Mystery </p>
+          <p class="genre"> Romance </p>
+          <p class="genre"> Sci-Fi </p>
+          <p class="genre"> Thriller </p>
+          <p class="genre"> War </p>
+          <p class="genre"> Western </p>
         </div>
 
-        <div class="middle">
-            <button onclick="recommend()" class="movie_button" id="movie_button">
-                Recommend
-            </button>
+        <div class="sliders">
+          <input type="range" min="0" max="100" value="0.0" class="slider" id="s1">
+          <input type="range" min="0" max="100" value="0.0" class="slider" id="s2">
+          <input type="range" min="0" max="100" value="0.0" class="slider" id="s3">
+
+          <input type="range" min="0" max="100" value="0.0" class="slider" id="s4">
+          <input type="range" min="0" max="100" value="0.0" class="slider" id="s5">
+          <input type="range" min="0" max="100" value="0.0" class="slider" id="s6">
+
+          <input type="range" min="0" max="100" value="0.0" class="slider" id="s7">
+          <input type="range" min="0" max="100" value="0.0" class="slider" id="s8">
+          <input type="range" min="0" max="100" value="0.0" class="slider" id="s9">
+
+          <input type="range" min="0" max="100" value="0.0" class="slider" id="s10">
+          <input type="range" min="0" max="100" value="0.0" class="slider" id="s11">
+          <input type="range" min="0" max="100" value="0.0" class="slider" id="s12">
+
+          <input type="range" min="0" max="100" value="0.0" class="slider" id="s13">
+          <input type="range" min="0" max="100" value="0.0" class="slider" id="s14">
+          <input type="range" min="0" max="100" value="0.0" class="slider" id="s15">
+
+          <input type="range" min="0" max="100" value="0.0" class="slider" id="s16">
+          <input type="range" min="0" max="100" value="0.0" class="slider" id="s17">
+          <input type="range" min="0" max="100" value="0.0" class="slider" id="s18">
         </div>
 
-        <div class="box" id="outputs-box">
-          <div class="outputs">
-            <div class="outbox">
-              <p class="index" id="idx0" style="margin: 0px;"></p>
-              <p class="movie_name" id="o0" style="margin: 0px;"></p>
-              <p class="align" id="a0" style="margin: 0px;"></p>
-              <p class="rating" id="i0" style="margin: 0px;"></p>
-            </div>
-            <div class="outbox">
-              <p class="index" id="idx1"></p>
-              <p class="movie_name" id="o1"></p>
-              <p class="align" id="a1"></p>
-              <p class="rating" id="i1"></p>
-            </div>
-            <div class="outbox">
-              <p class="index" id="idx2"></p>
-              <p class="movie_name" id="o2"></p>
-              <p class="align" id="a2"></p>
-              <p class="rating" id="i2"></p>
-            </div>
-            <div class="outbox">
-              <p class="index" id="idx3"></p>
-              <p class="movie_name" id="o3"></p>
-              <p class="align" id="a3"></p>
-              <p class="rating" id="i3"></p>
-            </div>
-            <div class="outbox">
-              <p class="index" id="idx4"></p>
-              <p class="movie_name" id="o4"></p>
-              <p class="align" id="a4"></p>
-              <p class="rating" id="i4"></p>
-            </div>
-            <div class="outbox">
-              <p class="index" id="idx5"></p>
-              <p class="movie_name" id="o5"></p>
-              <p class="align" id="a5"></p>
-              <p class="rating" id="i5"></p>
-            </div>
-            <div class="outbox">
-              <p class="index" id="idx6"></p>
-              <p class="movie_name" id="o6"></p>
-              <p class="align" id="a6"></p>
-              <p class="rating" id="i6"></p>
-            </div>
-            <div class="outbox">
-              <p class="index" id="idx7"></p>
-              <p class="movie_name" id="o7"></p>
-              <p class="align" id="a7"></p>
-              <p class="rating" id="i7"></p>
-            </div>
-            <div class="outbox">
-              <p class="index" id="idx8"></p>
-              <p class="movie_name" id="o8"></p>
-              <p class="align" id="a8"></p>
-              <p class="rating" id="i8"></p>
-            </div>
-            <div class="outbox">
-              <p class="index" id="idx9"></p>
-              <p class="movie_name" id="o9"></p>
-              <p class="align" id="a9"></p>
-              <p class="rating" id="i9"></p>
-            </div>
-            <div class="outbox">
-              <p class="index" id="idx10" style="margin-bottom: 0px;"></p>
-              <p class="movie_name" id="o10" style="margin-bottom: 0px;"></p>
-              <p class="align" id="a10" style="margin-bottom: 0px;"></p>
-              <p class="rating" id="i10" style="margin-bottom: 0px;"></p>
-            </div>
+        <div class="values">
+          <span class="value" id="v1"></span>
+          <span class="value" id="v2"></span>
+          <span class="value" id="v3"></span>
+
+          <span class="value" id="v4"></span>
+          <span class="value" id="v5"></span>
+          <span class="value" id="v6"></span>
+
+          <span class="value" id="v7"></span>
+          <span class="value" id="v8"></span>
+          <span class="value" id="v9"></span>
+
+          <span class="value" id="v10"></span>
+          <span class="value" id="v11"></span>
+          <span class="value" id="v12"></span>
+
+          <span class="value" id="v13"></span>
+          <span class="value" id="v14"></span>
+          <span class="value" id="v15"></span>
+
+          <span class="value" id="v16"></span>
+          <span class="value" id="v17"></span>
+          <span class="value" id="v18"></span>
+        </div>
+      </div>
+
+      <div class="middle">
+        <button onclick="recommend()" class="movie_button" id="movie_button">
+          Recommend
+        </button>
+      </div>
+
+      <div class="box" id="outputs-box">
+        <div class="outputs">
+          <div class="outbox">
+            <p class="index" id="idx0" style="margin: 0px;"></p>
+            <p class="movie_name" id="o0" style="margin: 0px;"></p>
+            <p class="align" id="a0" style="margin: 0px;"></p>
+            <p class="rating" id="i0" style="margin: 0px;"></p>
+          </div>
+          <div class="outbox">
+            <p class="index" id="idx1"></p>
+            <p class="movie_name" id="o1"></p>
+            <p class="align" id="a1"></p>
+            <p class="rating" id="i1"></p>
+          </div>
+          <div class="outbox">
+            <p class="index" id="idx2"></p>
+            <p class="movie_name" id="o2"></p>
+            <p class="align" id="a2"></p>
+            <p class="rating" id="i2"></p>
+          </div>
+          <div class="outbox">
+            <p class="index" id="idx3"></p>
+            <p class="movie_name" id="o3"></p>
+            <p class="align" id="a3"></p>
+            <p class="rating" id="i3"></p>
+          </div>
+          <div class="outbox">
+            <p class="index" id="idx4"></p>
+            <p class="movie_name" id="o4"></p>
+            <p class="align" id="a4"></p>
+            <p class="rating" id="i4"></p>
+          </div>
+          <div class="outbox">
+            <p class="index" id="idx5"></p>
+            <p class="movie_name" id="o5"></p>
+            <p class="align" id="a5"></p>
+            <p class="rating" id="i5"></p>
+          </div>
+          <div class="outbox">
+            <p class="index" id="idx6"></p>
+            <p class="movie_name" id="o6"></p>
+            <p class="align" id="a6"></p>
+            <p class="rating" id="i6"></p>
+          </div>
+          <div class="outbox">
+            <p class="index" id="idx7"></p>
+            <p class="movie_name" id="o7"></p>
+            <p class="align" id="a7"></p>
+            <p class="rating" id="i7"></p>
+          </div>
+          <div class="outbox">
+            <p class="index" id="idx8"></p>
+            <p class="movie_name" id="o8"></p>
+            <p class="align" id="a8"></p>
+            <p class="rating" id="i8"></p>
+          </div>
+          <div class="outbox">
+            <p class="index" id="idx9"></p>
+            <p class="movie_name" id="o9"></p>
+            <p class="align" id="a9"></p>
+            <p class="rating" id="i9"></p>
+          </div>
+          <div class="outbox">
+            <p class="index" id="idx10" style="margin-bottom: 0px;"></p>
+            <p class="movie_name" id="o10" style="margin-bottom: 0px;"></p>
+            <p class="align" id="a10" style="margin-bottom: 0px;"></p>
+            <p class="rating" id="i10" style="margin-bottom: 0px;"></p>
           </div>
         </div>
+      </div>
     </div>
-  </body>
+</body>
+
 </html>
 
 <!-- ids not required? -->
