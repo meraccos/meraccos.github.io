@@ -33,10 +33,11 @@
     <div class="container" id="container">
       <h1><a href="/index.html">Meraj Mammadov</a></h1>
       <nav class="nav">
-        <a href="/index.html">home</a>
-        <a href="/Meraj_cv.pdf">cv</a>
 
-        <div class="dropdown">
+        <a href="/index.html" class="desktop">home</a>
+        <a href="/Meraj_cv.pdf" class="desktop">cv</a>
+
+        <div class="dropdown desktop">
           <button onclick="ProjectsMenuFunction()" class="dropbtn" id="dropbtn">projects</button>
           <div id="myDropdown" class="dropdown-content">
             <a href="/html/merajpt.html">merajpt</a>
@@ -45,14 +46,28 @@
           </div>
         </div>
 
-        <a href="/html/enigma.html">enigma</a>
-        <a href="/html/contact.html">contact</a>
+        <a href="/html/enigma.html" class="desktop">enigma</a>
+        <a href="/html/contact.html" class="desktop">contact</a>
 
         <div class="darkmode-container">
           <input type="checkbox" class="dark-mode-toggle" id="dark-mode-toggle" />
           <label for="dark-mode-toggle"> </label>
         </div>
+
+        <strong id="mobile-menu-btn" class="menu-button mobile">&#9781;</strong>
+        <!-- <strong id="mobile-menu-btn" class="mobile">&#9776;</strong> -->
       </nav>
+
+
+      <div class="mobile-menu">
+        <a href="/index.html" class="mobile">home</a>
+        <a href="/Meraj_cv.pdf" class="mobile">cv</a>
+        <p>About Us</p>
+        <p>Contact</p>
+      </div>
+
+
+
 
       <section class="content profile">
         <div class="profile-description">

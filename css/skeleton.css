@@ -113,6 +113,14 @@ h1 {
 
 .show {display: block;}
 
+.mobile {
+    display: none;
+}
+
+.mobile-menu {
+    display: none;
+}
+
 
 @media (max-width: 768px) {
     h1 {
@@ -122,7 +130,18 @@ h1 {
         text-align: center;
     }
 
-    .nav {
+    .desktop {
         display: none;
     }
+    .mobile {
+        display: block;
+    }
+
+    .nav {
+        display: flex;
+        justify-content: space-between;
+        /* padding-left: 10px; */
+        /* padding-right: 10px; */
+    }
+
 }

@@ -1,4 +1,20 @@
-const darkModeToggle = document.getElementById('dark-mode-toggle');
+// Nav menu on mobile
+var mobileMenuBtn = document.querySelector("#mobile-menu-btn");
+var mobileMenu = document.querySelector(".mobile-menu");
+var contents = document.querySelector(".content");
+
+mobileMenuBtn.addEventListener("click", () => {
+    if (mobileMenu.style.display === "none") {
+      mobileMenu.style.display = "block";
+      contents.style.display = "none"
+    } 
+    else {
+      mobileMenu.style.display = "none";
+      contents.style.display = "flex"
+    }
+  });
+
+// Handling the cookies
 
 function setCookie(name, value, days, path) {
     const expirationDate = new Date();
@@ -20,6 +36,9 @@ function getCookie(name) {
     }
     return null;
 }
+
+// All the dark-white mode style changes
+const darkModeToggle = document.getElementById('dark-mode-toggle');
 
 function toggleDarkMode() {
     const body = document.body;
