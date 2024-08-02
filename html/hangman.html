@@ -1,116 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Google tag (gtag.js) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-ZHRFYB71LZ"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-      gtag("config", "G-ZHRFYB71LZ");
-    </script>
 
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Meraj Mammadov</title>
-    <link rel="favicon" type="image/x-icon" href="/favicon.ico" />
-    <link rel="stylesheet" href="/css/skeleton.css" />
-    <link rel="stylesheet" href="/css/styles.css" />
-    <link rel="stylesheet" href="/css/hangman.css" />
-    <script src="/js/common.js" defer></script>
-    <link
-      href="https://fonts.googleapis.com/css?family=Lato:400,700"
-      rel="stylesheet"
-      type="text/css"
-    />
-  </head>
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZHRFYB71LZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+    gtag("config", "G-ZHRFYB71LZ");
+  </script>
 
-  <body>
-    <div class="container" id="container">
-      <h1><a href="/index.html">Meraj Mammadov</a></h1>
-      <nav class="nav">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Meraj Mammadov</title>
+  <link rel="favicon" type="image/x-icon" href="/favicon.ico" />
+  <link rel="stylesheet" href="/css/skeleton.css" />
+  <link rel="stylesheet" href="/css/styles.css" />
+  <link rel="stylesheet" href="/css/hangman.css" />
+  <script src="/js/common.js" defer></script>
+  <script src="/js/hangman.js" defer></script>
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet" type="text/css" />
+</head>
 
-        <a href="/index.html" class="desktop">home</a>
-        <a href="/Meraj_cv.pdf" class="desktop">cv</a>
+<body>
+  <div class="container" id="container">
+    <h1><a href="/index.html">Meraj Mammadov</a></h1>
+    <nav class="nav">
 
-        <div class="dropdown desktop">
-          <button onclick="ProjectsMenuFunction()" class="dropbtn" id="dropbtn">projects</button>
-          <div id="myDropdown" class="dropdown-content">
-            <a href="/html/merajpt.html">merajpt</a>
-            <a href="/movie/movie.html">movie</a>
-            <a href="/html/life.html">life</a>
-            <a href="/html/hangman.html">hangman</a>
-          </div>
+      <a href="/index.html" class="desktop">home</a>
+      <a href="/Meraj_cv.pdf" class="desktop">cv</a>
+
+      <div class="dropdown desktop">
+        <button onclick="ProjectsMenuFunction()" class="dropbtn" id="dropbtn">projects</button>
+        <div id="myDropdown" class="dropdown-content">
+          <a href="/html/merajpt.html">merajpt</a>
+          <a href="/movie/movie.html">movie</a>
+          <a href="/html/life.html">life</a>
+          <a href="/html/hangman.html">hangman</a>
         </div>
-
-        <a href="/html/enigma.html" class="desktop">enigma</a>
-        <a href="/html/contact.html" class="desktop">contact</a>
-
-        <strong id="mobile-menu-btn" class="menu-button mobile">
-          <div class="line" style="width: 30px;"></div>
-          <div class="line" style="width: 25px;"></div>
-          <div class="line" style="width: 20px;"></div>
-        </strong>
-
-        <div class="darkmode-container" id="darkmode-container">
-          <input type="checkbox" class="dark-mode-toggle" id="dark-mode-toggle" />
-          <label for="dark-mode-toggle" id="desktop-label" class="desktop-label" style="font-size: 45px;"> &#9788 </label>
-        </div>
-      </nav>
-
-
-      <div class="mobile-menu" style="display: none;">
-        <a href="/index.html" class="mobile">home</a>
-        <a href="/Meraj_cv.pdf" class="mobile">cv</a>
-        <!-- <p class="dt" id="dt"><span> Projects </span></p> -->
-        <a href="/html/merajpt.html" class="mobile">merajpt</a>
-        <a href="/movie/movie.html" class="mobile">movie</a>
-        <a href="/html/life.html" class="mobile">life</a>
-        <a href="/html/hangman.html">hangman</a>
-        <a href="/html/enigma.html" class="mobile">enigma</a>
-        <a href="/html/contact.html" class="mobile">contact</a>
       </div>
 
-      
-      <br />
-      <section class="content">
-        <p>
-          Here you can play an information theoretic Hangman game. You can 
-          choose to play as a guesser or as a guider. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta ut ullam iure odio mollitia officia sint doloribus dolore inventore, non eaque. Ea provident commodi quisquam aliquam id tempora at, labore perferendis sapiente et debitis nemo illo tempore saepe. Impedit numquam aperiam nihil deleniti, provident facilis ullam eius. Impedit, corrupti doloribus.
+      <a href="/html/enigma.html" class="desktop">enigma</a>
+      <a href="/html/contact.html" class="desktop">contact</a>
 
-        </p>
+      <strong id="mobile-menu-btn" class="menu-button mobile">
+        <div class="line" style="width: 30px;"></div>
+        <div class="line" style="width: 25px;"></div>
+        <div class="line" style="width: 20px;"></div>
+      </strong>
 
-      </section>
-      <div class="hangman">
-        <div class="settings">
-          Number of characters: 
+      <div class="darkmode-container" id="darkmode-container">
+        <input type="checkbox" class="dark-mode-toggle" id="dark-mode-toggle" />
+        <label for="dark-mode-toggle" id="desktop-label" class="desktop-label" style="font-size: 45px;"> &#9788 </label>
+      </div>
+    </nav>
+
+
+    <div class="mobile-menu" style="display: none;">
+      <a href="/index.html" class="mobile">home</a>
+      <a href="/Meraj_cv.pdf" class="mobile">cv</a>
+      <!-- <p class="dt" id="dt"><span> Projects </span></p> -->
+      <a href="/html/merajpt.html" class="mobile">merajpt</a>
+      <a href="/movie/movie.html" class="mobile">movie</a>
+      <a href="/html/life.html" class="mobile">life</a>
+      <a href="/html/hangman.html">hangman</a>
+      <a href="/html/enigma.html" class="mobile">enigma</a>
+      <a href="/html/contact.html" class="mobile">contact</a>
+    </div>
+
+
+    <br />
+    <section class="content">
+      <p>
+        Here you can play an information theoretic Hangman game. You can
+        choose to play as a guesser or as a guider. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta ut
+        ullam iure odio mollitia officia sint doloribus dolore inventore, non eaque. Ea provident commodi quisquam
+        aliquam id tempora at, labore perferendis sapiente et debitis nemo illo tempore saepe. Impedit.
+
+      </p>
+
+    </section>
+    <div class="hangman">
+      <div class="settings">
+        <div class="setting">
+          Number of characters:
           <!-- input box -->
-          <input
-            type="number"
-            class="num_of_chars_box"
-            placeholder="7"
-          />
+          <input type="number" class="num_of_chars_box" id="num_of_chars_box" placeholder="7" />
+        </div>
 
+        <div class="setting">
           You play as:
           <!-- select from two-->
-          <select class="user_side_selector num_of_chars_box">
+          <select class="user_setting" id="user_setting">
             <option value="guider">Guider</option>
             <option value="guesser">Guesser</option>
           </select>
-         
-          <button class="start_game_button" onclick="startGame()">Start Game</button>
         </div>
+
+        <div class="setting" id="agent_setting">
+          You play as:
+          <!-- select from two-->
+          <select class="agent_setting">
+            <option value="guider">Guider</option>
+            <option value="guesser">Guesser</option>
+          </select>
+        </div>
+
+        <button class="start_game_button" onclick="startGame()">Start Game</button>
       </div>
 
-      <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-      />
+      <div class="display">
+        <button class="letter" id="letter1" onclick="guessLetter('a')">e</button>
+        <button class="letter" id="letter2" onclick="guessLetter('b')">_</button>
+        <button class="letter" id="letter3" onclick="guessLetter('c')">e</button>
+        <button class="letter" id="letter4" onclick="guessLetter('d')">_</button>
+        <button class="letter" id="letter5" onclick="guessLetter('e')">e</button>
+        <button class="letter" id="letter6" onclick="guessLetter('f')">_</button>
+        <button class="letter" id="letter7" onclick="guessLetter('g')">_</button>
+        <button class="letter" id="letter8" onclick="guessLetter('h')">_</button>
+        <button class="letter" id="letter9" onclick="guessLetter('i')">_</button>
+        <button class="letter" id="letter10" onclick="guessLetter('j')">_</button>
+        <button class="letter" id="letter11" onclick="guessLetter('k')">_</button>
+        <button class="letter" id="letter12" onclick="guessLetter('l')">_</button>
+        <button class="letter" id="letter13" onclick="guessLetter('m')">_</button>
+        <button class="letter" id="letter14" onclick="guessLetter('n')">_</button>
+        <button class="letter" id="letter15" onclick="guessLetter('o')">_</button>
     </div>
-  </body>
+
+    <div class="game_status_and_guess">
+      <div class="game_status">
+        <p>Cost: </p>
+        <p id="game_status">0</p>
+      </div>
+      <!-- <p class="game_status">Status: </p> -->
+      <p class="guess">Guess: </p>
+    </div>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  </div>
+</body>
+
 </html>
