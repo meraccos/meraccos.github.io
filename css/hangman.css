@@ -1,9 +1,43 @@
+.hangman {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
 .settings {
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 16px;
-    width: 70%;
+    /* width: 70%; */
+}
+
+.setting {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 10px;
+
+}
+
+.user_setting {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #545151;
+    border-radius: 5px;
+    background: #121212;
+    color: #e4dfdf;
+    font-size: 1.2rem;
+    font-weight: bold;
+    /* width: 15%; */
+    max-width: 300px;
+    margin: 0 auto;
+    /* margin-left: 0px; */
 }
 
 .num_of_chars_box {
@@ -23,4 +57,36 @@
     max-width: 300px;
     margin: 0 auto;
     /* margin-left: 0px; */
+}
+
+.game_status_and_guess {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 9px;
+}
+
+.game_status {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+
+.letter {
+    background-color: #121212;
+    border: none;
+    color: #e4dfdf;
+    padding: 0.7rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .settings {
+        flex-direction: column;
+    }
+    .letter {
+        padding: 0.3rem;
+    }
 }
