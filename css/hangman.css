@@ -1,0 +1,26 @@
+.settings {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    width: 70%;
+}
+
+.num_of_chars_box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #545151;
+    border-radius: 5px;
+    background: #121212;
+    color: #e4dfdf;
+    font-size: 1.2rem;
+    font-weight: bold;
+    width: 15%;
+    max-width: 300px;
+    margin: 0 auto;
+    /* margin-left: 0px; */
+}

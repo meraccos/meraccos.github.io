@@ -21,6 +21,7 @@
     <link rel="favicon" type="image/x-icon" href="/favicon.ico" />
     <link rel="stylesheet" href="/css/skeleton.css" />
     <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/hangman.css" />
     <script src="/js/common.js" defer></script>
     <link
       href="https://fonts.googleapis.com/css?family=Lato:400,700"
@@ -79,46 +80,37 @@
       <br />
       <section class="content">
         <p>
-          Work under progress... But hey! Soon you will be able to play against an Information Theoric Hangman game here!
+          Here you can play an information theoretic Hangman game. You can 
+          choose to play as a guesser or as a guider. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta ut ullam iure odio mollitia officia sint doloribus dolore inventore, non eaque. Ea provident commodi quisquam aliquam id tempora at, labore perferendis sapiente et debitis nemo illo tempore saepe. Impedit numquam aperiam nihil deleniti, provident facilis ullam eius. Impedit, corrupti doloribus.
+
         </p>
+
       </section>
+      <div class="hangman">
+        <div class="settings">
+          Number of characters: 
+          <!-- input box -->
+          <input
+            type="number"
+            class="num_of_chars_box"
+            placeholder="7"
+          />
+
+          You play as:
+          <!-- select from two-->
+          <select class="user_side_selector num_of_chars_box">
+            <option value="guider">Guider</option>
+            <option value="guesser">Guesser</option>
+          </select>
+         
+          <button class="start_game_button" onclick="startGame()">Start Game</button>
+        </div>
+      </div>
 
       <link
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
       />
-
-      <section class="animation error" id="dark-animation">
-        <script
-          src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
-          type="module"
-        ></script>
-
-        <dotlottie-player
-          src="https://lottie.host/20cfab54-eda1-41f8-80da-983a5e401cb5/hxWo9EsI9B.json"
-          background="transparent"
-          speed="1"
-          style="width: 300px; height: 300px"
-          loop
-          autoplay
-        ></dotlottie-player>
-      </section>
-
-      <section class="animation error" id="white-animation">
-        <script
-          src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
-          type="module"
-        ></script>
-
-        <dotlottie-player
-          src="https://lottie.host/c6d25603-ae69-42eb-9d0e-a91ba5109495/lhYwK8MBmZ.json"
-          background="transparent"
-          speed="1"
-          style="width: 300px; height: 300px"
-          loop
-          autoplay
-        ></dotlottie-player>
-      </section>
     </div>
   </body>
 </html>
