@@ -113,21 +113,21 @@
       </div>
 
       <div class="display">
-        <button class="letter" id="letter1" onclick="guessLetter('a')">e</button>
-        <button class="letter" id="letter2" onclick="guessLetter('b')">_</button>
-        <button class="letter" id="letter3" onclick="guessLetter('c')">e</button>
-        <button class="letter" id="letter4" onclick="guessLetter('d')">_</button>
-        <button class="letter" id="letter5" onclick="guessLetter('e')">e</button>
-        <button class="letter" id="letter6" onclick="guessLetter('f')">_</button>
-        <button class="letter" id="letter7" onclick="guessLetter('g')">_</button>
-        <button class="letter" id="letter8" onclick="guessLetter('h')">_</button>
-        <button class="letter" id="letter9" onclick="guessLetter('i')">_</button>
-        <button class="letter" id="letter10" onclick="guessLetter('j')">_</button>
-        <button class="letter" id="letter11" onclick="guessLetter('k')">_</button>
-        <button class="letter" id="letter12" onclick="guessLetter('l')">_</button>
-        <button class="letter" id="letter13" onclick="guessLetter('m')">_</button>
-        <button class="letter" id="letter14" onclick="guessLetter('n')">_</button>
-        <button class="letter" id="letter15" onclick="guessLetter('o')">_</button>
+        <button class="letter" id="letter1" onclick="replaceLetter('1')">e</button>
+        <button class="letter" id="letter2" onclick="replaceLetter('2')">_</button>
+        <button class="letter" id="letter3" onclick="replaceLetter('3')">e</button>
+        <button class="letter" id="letter4" onclick="replaceLetter('4')">_</button>
+        <button class="letter" id="letter5" onclick="replaceLetter('5')">e</button>
+        <button class="letter" id="letter6" onclick="replaceLetter('6')">_</button>
+        <button class="letter" id="letter7" onclick="replaceLetter('7')">_</button>
+        <button class="letter" id="letter8" onclick="replaceLetter('8')">_</button>
+        <button class="letter" id="letter9" onclick="replaceLetter('9')">_</button>
+        <button class="letter" id="letter10" onclick="replaceLetter('10')">_</button>
+        <button class="letter" id="letter11" onclick="replaceLetter('11')">_</button>
+        <button class="letter" id="letter12" onclick="replaceLetter('12')">_</button>
+        <button class="letter" id="letter13" onclick="replaceLetter('13')">_</button>
+        <button class="letter" id="letter14" onclick="replaceLetter('14')">_</button>
+        <button class="letter" id="letter15" onclick="replaceLetter('15')">_</button>
     </div>
 
     <div class="game_status_and_guess">
@@ -135,8 +135,10 @@
         <p>Cost: </p>
         <p id="game_status">0</p>
       </div>
-      <!-- <p class="game_status">Status: </p> -->
-      <p class="guess">Guess: </p>
+
+      <p class="guess" id="guess">Guess:  _ </p>
+      
+      <button class="guess_button" onclick="guessNext()">Guess next character</button>
     </div>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
