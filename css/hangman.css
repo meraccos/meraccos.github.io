@@ -66,7 +66,14 @@
     padding: 9px;
 }
 
-.game_status {
+.cost {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+
+.entropy {
     display: flex;
     justify-content: center;
     align-items: center;
