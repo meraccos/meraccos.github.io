@@ -71,7 +71,6 @@
       <a href="/html/contact.html" class="mobile">contact</a>
     </div>
 
-
     <br />
     <section class="content">
       <p>
@@ -79,7 +78,6 @@
         choose to play as a guesser or as a guider. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta ut
         ullam iure odio mollitia officia sint doloribus dolore inventore, non eaque. Ea provident commodi quisquam
         aliquam id tempora at, labore perferendis sapiente et debitis nemo illo tempore saepe. Impedit.
-
       </p>
 
     </section>
@@ -100,24 +98,24 @@
           </select>
         </div>
 
-        <div class="setting" id="agent_setting">
+        <!-- <div class="setting" id="agent_setting">
           You play as:
-          <!-- select from two-->
+
           <select class="agent_setting">
             <option value="guider">Guider</option>
             <option value="guesser">Guesser</option>
           </select>
-        </div>
+        </div> -->
 
         <button class="start_game_button" onclick="startGame()">Start Game</button>
       </div>
 
       <div class="display">
-        <button class="letter" id="letter1" onclick="replaceLetter('1')">e</button>
+        <button class="letter" id="letter1" onclick="replaceLetter('1')">_</button>
         <button class="letter" id="letter2" onclick="replaceLetter('2')">_</button>
-        <button class="letter" id="letter3" onclick="replaceLetter('3')">e</button>
+        <button class="letter" id="letter3" onclick="replaceLetter('3')">_</button>
         <button class="letter" id="letter4" onclick="replaceLetter('4')">_</button>
-        <button class="letter" id="letter5" onclick="replaceLetter('5')">e</button>
+        <button class="letter" id="letter5" onclick="replaceLetter('5')">_</button>
         <button class="letter" id="letter6" onclick="replaceLetter('6')">_</button>
         <button class="letter" id="letter7" onclick="replaceLetter('7')">_</button>
         <button class="letter" id="letter8" onclick="replaceLetter('8')">_</button>
@@ -131,9 +129,14 @@
     </div>
 
     <div class="game_status_and_guess">
-      <div class="game_status">
+      <div class="cost">
         <p>Cost: </p>
-        <p id="game_status">0</p>
+        <p id="cost">0</p>
+      </div>
+
+      <div class="entropy">
+        <p>Entropy: </p>
+        <p id="entropy">0</p>
       </div>
 
       <p class="guess" id="guess">Guess:  _ </p>
