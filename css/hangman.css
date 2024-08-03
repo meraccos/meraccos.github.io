@@ -22,22 +22,34 @@
 }
 
 .user_setting {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    padding: 10px;
-    border: 1px solid #545151;
-    border-radius: 5px;
-    background: #121212;
-    color: #e4dfdf;
-    font-size: 1.2rem;
-    font-weight: bold;
-    /* width: 15%; */
-    max-width: 300px;
+    
+    width: 100px;
+    height: 35px;
     margin: 0 auto;
-    /* margin-left: 0px; */
+    border-radius: 15px;
+    border-style:none;
+    background-color: #2b2a2a;
+    color: #BDBDBD;
+    font-size: 14px;
+    cursor: pointer;
+    text-align: center;
+    padding: 0px;
+    margin: 12px;
+    margin-bottom: 20px;
+}
+
+.start_game_button {
+    width: 100px;
+    height: 35px;
+    margin: 0 auto;
+    border-radius: 15px;
+    border-style:none;
+    background-color: #2b2a2a;
+    color: #BDBDBD;
+    font-size: 14px;
+    cursor: pointer;
+    text-align: center;
+    padding: 0px;
 }
 
 .num_of_chars_box {
