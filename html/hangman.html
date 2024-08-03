@@ -84,13 +84,14 @@
     <div class="hangman">
       <div class="settings">
         <div class="setting">
-          Number of characters:
+          <p>Number of characters: </p>
+          
           <!-- input box -->
           <input type="text" class="num_of_chars_box" id="num_of_chars_box" placeholder="7" />
         </div>
 
         <div class="setting">
-          You play as:
+          <p>You play as: </p>
           <!-- select from two-->
           <select class="user_setting" id="user_setting">
             <option value="guider">Guider</option>
@@ -98,16 +99,9 @@
           </select>
         </div>
 
-        <!-- <div class="setting" id="agent_setting">
-          You play as:
-
-          <select class="agent_setting">
-            <option value="guider">Guider</option>
-            <option value="guesser">Guesser</option>
-          </select>
-        </div> -->
-
-        <button class="button" onclick="startGame()">Start Game</button>
+        <div class="setting">
+          <button class="button" onclick="startGame()">Start Game</button>
+        </div>
       </div>
 
       <div class="display">
