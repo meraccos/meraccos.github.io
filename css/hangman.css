@@ -7,7 +7,7 @@
 }
 .settings {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     font-size: 16px;
     /* width: 70%; */
@@ -18,24 +18,7 @@
     justify-content: center;
     align-items: center;
     margin: 0 10px;
-
-}
-
-.user_setting {
-    
-    width: 100px;
-    height: 35px;
-    margin: 0 auto;
-    border-radius: 15px;
-    border-style:none;
-    background-color: #2b2a2a;
-    color: #BDBDBD;
-    font-size: 14px;
-    cursor: pointer;
-    text-align: center;
-    padding: 0px;
-    margin: 12px;
-    margin-bottom: 20px;
+    /* margin: 0 auto; */
 }
 
 .button {
@@ -50,6 +33,22 @@
     cursor: pointer;
     text-align: center;
     padding: 0px;
+}
+
+.user_setting {
+    width: 100px;
+    height: 35px;
+    margin: 0 auto;
+    border-radius: 15px;
+    border-style:none;
+    background-color: #2b2a2a;
+    color: #BDBDBD;
+    font-size: 14px;
+    cursor: pointer;
+    text-align: center;
+    padding: 0px;
+    margin: 12px;
+    /* margin-bottom: 20px; */
 }
 
 .num_of_chars_box {
@@ -68,7 +67,7 @@
     font-weight: bold;
     width: 8%;
     max-width: 300px;
-    margin: 0 auto;
+    /* margin: 0 auto; */
     /* margin-left: 0px; */
 }
 
