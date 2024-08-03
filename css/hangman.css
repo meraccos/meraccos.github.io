@@ -73,6 +73,10 @@
     margin: 20px;
 }
 
+.guess {
+    margin:20px;
+}
+
 .letter {
     background-color: #121212;
     border: none;
