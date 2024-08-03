@@ -44,6 +44,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
     margin-top: 20px;
     margin-bottom: 20px;
     padding: 10px;
@@ -53,7 +54,7 @@
     color: #e4dfdf;
     font-size: 1.2rem;
     font-weight: bold;
-    width: 15%;
+    width: 8%;
     max-width: 300px;
     margin: 0 auto;
     /* margin-left: 0px; */
