@@ -53,13 +53,26 @@
     /* margin-bottom: 20px; */
 }
 
-.dt {
-    margin-bottom: 10px;
-    /* margin-top: 10px; */
+.dt.hide_at_start {
+    margin-bottom: 20px;
+    margin-top: 5px;
+}
+.dt.upper {
+    margin-bottom: 20px;
+    margin-top: 5px;
+}
+
+.guess_and_cost {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    margin-top: 10px;
 }
 
 .hide_at_start {
     display: none; /* or any other styles you want to apply */
+    margin: 0 auto;
 }
 
 .num_of_chars_box {
@@ -90,18 +103,18 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 20px;
+    margin: 15px;
 }
 
 .entropy {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 20px;
+    margin: 15px;
 }
 
 .guess {
-    margin:20px;
+    margin:15px;
 }
 
 .letter {
@@ -117,7 +130,7 @@
     border-color:#2b2a2a;
     border-radius: 5px;
 
-    /* width: 1.5rem; */
+    /* width: 20.5rem; */
     /* height: 30px; */
     
     color: #e4dfdf;
@@ -128,14 +141,7 @@
     margin: 0 auto;
     margin-top: 15px;
     margin-bottom: 15px;
-    width: auto;
-}
-
-.guess_and_cost {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 20px;
+    width: 1.5rem;
 }
 
 @media (max-width: 768px) {
@@ -150,5 +156,8 @@
     }
     .button {
         margin-top: 15px;
+    }
+    .guess, .entropy, .cost {
+        margin: 10px;
     }
 }
