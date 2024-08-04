@@ -85,9 +85,7 @@
     <div class="hangman">
       <div class="settings">
         <div class="setting">
-          <p>Number of characters: </p>
-          
-          <!-- input box -->
+          <p>Number of characters: </p>          
           <input type="text" class="num_of_chars_box" id="num_of_chars_box" placeholder="7" />
         </div>
 
@@ -127,19 +125,21 @@
 
     <p class="dt hide_at_start" id="dt2"><span> Performance </span></p>
 
-    <div class="game_status_and_guess hide_at_start">
-      <div class="cost hide_at_start">
-        <p class="hide_at_start">Cost: </p>
-        <p class="hide_at_start" id="cost">0</p>
+    <div class="guess_and_cost">
+      <div class="game_status_and_guess hide_at_start">
+        <div class="cost hide_at_start">
+          <p class="hide_at_start">Cost: </p>
+          <p class="hide_at_start" id="cost">0</p>
+        </div>
+  
+        <div class="entropy hide_at_start"">
+          <p class="hide_at_start">Entropy: </p>
+          <p class="hide_at_start" id="entropy">0</p>
+        </div>
+  
+        <p class="guess hide_at_start" id="guess">Guess: _ </p>
+        
       </div>
-
-      <div class="entropy hide_at_start"">
-        <p class="hide_at_start">Entropy: </p>
-        <p class="hide_at_start" id="entropy">0</p>
-      </div>
-
-      <p class="guess hide_at_start" id="guess">Next guess:  _ </p>
-      
       <button class="button hide_at_start" onclick="guessNext()">Guess</button>
     </div>
 

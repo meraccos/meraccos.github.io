@@ -33,6 +33,8 @@
     cursor: pointer;
     text-align: center;
     padding: 0px;
+    margin-top: 12px;
+    margin-bottom: 12px;
 }
 
 .user_setting {
@@ -72,11 +74,9 @@
     color: #e4dfdf;
     font-size: 1.2rem;
     font-weight: bold;
-    width: 8%;
+    width: 9%;
     max-width: 300px;
     margin-left: 15px;
-    /* margin: 0 auto; */
-    /* margin-left: 0px; */
 }
 
 .game_status_and_guess {
@@ -131,7 +131,17 @@
     width: auto;
 }
 
+.guess_and_cost {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+
 @media (max-width: 768px) {
+    .guess_and_cost {
+        flex-direction: column;
+    }
     .settings {
         flex-direction: column;
     }
