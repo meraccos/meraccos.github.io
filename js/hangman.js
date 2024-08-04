@@ -222,6 +222,13 @@ function getMatchingWords(currentState) {
 
 function replaceLetter(idx) {
     var letterIdx = document.getElementById('letter' + idx);
+
+    // if the letter is not the lastGuess or _, return
+    if (letterIdx.innerHTML !== '_' && letterIdx.innerHTML !== lastGuess) {
+        return;
+    }
+
+
     // if the letter is guessed and not equal to the last guess, return
     if (letterIdx.innerHTML !== '_') {
         letterIdx.innerHTML = "_";
