@@ -8,6 +8,7 @@
 //   });
 
 var numOfChars = 7;
+var cost = 0;
 var lastGuess = '_';
 
 var wordsArray = [];
@@ -59,17 +60,31 @@ async function startGame() {
     for (var i = 0; i < elements.length; i++) {
         elements[i].style.display = 'inline';
     }
-
-    console.log(wordsArray);
 }
 
 function guessNext() {
     // get the current state and matching words
     var currentState = getCurrentState();
-    var [matchingWords, matchingCounts] = getMatchingWords(currentState);
+    [matchingWords, matchingCounts] = getMatchingWords(currentState);
     
     console.log('Current state:', currentState);
     console.log('Matching words', matchingWords);
+
+    // if the last guess failed, cut the matched words.
+    if (!currentState.includes(lastGuess)) {
+        var newMatchingWords = [];
+        var newMatchingCounts = [];
+        for (var i = 0; i < matchingWords.length; i++) {
+            var word = matchingWords[i];
+            if (!word.includes(lastGuess)) {
+                newMatchingWords.push(word);
+                newMatchingCounts.push(matchingCounts[i]);
+            }
+        }
+        matchingWords = newMatchingWords;
+        matchingCounts = newMatchingCounts;
+        cost += 1;
+    }
 
     // if there is only one word left, guess the next letter that is available
     if (matchingWords.length === 1) {
@@ -114,6 +129,10 @@ function guessNext() {
     var guess = document.getElementById('guess');
     guess.innerHTML = 'Guess: ' + nextGuess;
     lastGuess = nextGuess;
+
+    // log the cost
+    var costElement = document.getElementById('cost');
+    costElement.innerHTML = cost;
 
     // update the available characters
     availableChars.splice(min_entropy_idx, 1);
@@ -191,6 +210,11 @@ function getMatchingWords(currentState) {
 
 function replaceLetter(idx) {
     var letterIdx = document.getElementById('letter' + idx);
+    // if the letter is guessed and not equal to the last guess, return
+    if (letterIdx.innerHTML !== '_') {
+        letterIdx.innerHTML = "_";
+        return;
+    }
     letterIdx.innerHTML = lastGuess;
 }
 
@@ -216,7 +240,6 @@ async function initVocab(wordsFileName, countsFileName) {
 
         return [wordsArray, countsArray];
     } catch (error) {
-        console.error('Error fetching the data:', error);
         return null;
     }
 }
