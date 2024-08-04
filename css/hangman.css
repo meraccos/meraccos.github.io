@@ -56,6 +56,10 @@
     /* margin-top: 10px; */
 }
 
+.hide_at_start {
+    display: none; /* or any other styles you want to apply */
+}
+
 .num_of_chars_box {
     display: flex;
     justify-content: center;
