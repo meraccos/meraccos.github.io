@@ -54,6 +54,12 @@ async function startGame() {
                           'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't',
                           'u', 'v', 'w', 'x', 'y', 'z'];
 
+    // get all the elements with class "hide_at_start" and display them
+    var elements = document.getElementsByClassName('hide_at_start');
+    for (var i = 0; i < elements.length; i++) {
+        elements[i].style.display = 'inline';
+    }
+
     console.log(wordsArray);
 }
 
@@ -99,6 +105,11 @@ function guessNext() {
         var min_entropy_idx = exp_entropies.indexOf(min_entropy);
         var nextGuess = availableChars[min_entropy_idx];
     }
+
+    if (nextGuess === undefined) {
+        nextGuess = "_";
+    }
+
     // log the guess
     var guess = document.getElementById('guess');
     guess.innerHTML = 'Guess: ' + nextGuess;
