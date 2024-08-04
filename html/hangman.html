@@ -75,17 +75,18 @@
     <br />
     <section class="content">
       <p>
-        Here you can play an information theoretic Hangman game. You can
-        choose to play as a guesser or as a guider. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta ut
-        ullam iure odio mollitia officia sint doloribus dolore inventore, non eaque. Ea provident commodi quisquam
-        aliquam id tempora at, labore perferendis sapiente et debitis nemo illo tempore saepe. Impedit.
+        Here you can play a simple information theoretic Hangman game. You can choose to play as a guider or as a
+        guesser. If guider, pick a word, press the guess button and guide the agent to find it by pressing on the
+        matching letter locations (skip if there is no match). If guesser, try to guess the word by entering characters
+        one-by-one and pressing the check button.
       </p>
 
     </section>
     <div class="hangman">
+      <p class="dt upper" id="dt"><span> Settings</span></p>
       <div class="settings">
         <div class="setting">
-          <p>Number of characters: </p>          
+          <p>Number of characters: </p>
           <input type="text" class="num_of_chars_box" id="num_of_chars_box" placeholder="7" />
         </div>
 
@@ -121,29 +122,29 @@
         <button class="letter" id="letter13" onclick="replaceLetter('13')">_</button>
         <button class="letter" id="letter14" onclick="replaceLetter('14')">_</button>
         <button class="letter" id="letter15" onclick="replaceLetter('15')">_</button>
-    </div>
-
-    <p class="dt hide_at_start" id="dt2"><span> Performance </span></p>
-
-    <div class="guess_and_cost">
-      <div class="game_status_and_guess hide_at_start">
-        <div class="cost hide_at_start">
-          <p class="hide_at_start">Cost: </p>
-          <p class="hide_at_start" id="cost">0</p>
-        </div>
-  
-        <div class="entropy hide_at_start"">
-          <p class="hide_at_start">Entropy: </p>
-          <p class="hide_at_start" id="entropy">0</p>
-        </div>
-  
-        <p class="guess hide_at_start" id="guess">Guess: _ </p>
-        
       </div>
-      <button class="button hide_at_start" onclick="guessNext()">Guess</button>
-    </div>
 
-  </div>
+      <p class="dt hide_at_start" id="dt2"><span> Performance </span></p>
+
+      <div class="guess_and_cost">
+        <div class="game_status_and_guess hide_at_start">
+          <div class="cost hide_at_start">
+            <p class="hide_at_start" >Cost: </p>
+            <p class="hide_at_start" id="cost">0</p>
+          </div>
+
+          <div class="entropy hide_at_start"">
+          <p class=" hide_at_start">Entropy: </p>
+            <p class="hide_at_start" id="entropy">0</p>
+          </div>
+
+          <p class="guess hide_at_start" id="guess">Guess: _ </p>
+
+        </div>
+        <button class="button hide_at_start" onclick="guessNext()">Guess</button>
+      </div>
+
+    </div>
 </body>
 
 </html>
