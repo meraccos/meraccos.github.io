@@ -18,7 +18,6 @@ var generator = document.querySelector("#generator")
 var output = document.querySelector("#output")
 var moviecontainer = document.querySelector(".movie_container")
 
-
 mobileMenuBtn.addEventListener("click", () => {
     if (mobileMenu.style.display === "none") {
       mobileMenu.style.display = "flex";
@@ -165,6 +164,13 @@ function toggleDarkMode() {
     const movieAlign = document.getElementsByClassName('align')
     const movieRating = document.getElementsByClassName('rating')
 
+    // Hangman
+    const numOfChars = document.getElementById('num_of_chars_box')
+    const startButton = document.getElementById('start-button')
+    const userSetting = document.getElementById('user_setting')
+    const guessButton = document.getElementById('guess-button')
+    const letters = document.getElementsByClassName('letter')
+
     if (darkModeToggle.checked) {
         body.classList.add('white-mode');
         inputText && inputText.classList.add('white-mode');
@@ -184,6 +190,10 @@ function toggleDarkMode() {
         movieOutputBox && movieOutputBox.classList.add('white-mode');
         movieInputBox && movieInputBox.classList.add('white-mode');
         movieButton && movieButton.classList.add('white-mode');
+        numOfChars && numOfChars.classList.add('white-mode');
+        startButton && startButton.classList.add('white-mode');
+        userSetting && userSetting.classList.add('white-mode');
+        guessButton && guessButton.classList.add('white-mode');
         darkmodeContainer.classList.add('white-mode')
         for (var i = 0; i < movieAlign.length; i++) {
             movieAlign[i] && movieAlign[i].classList.add('white-mode');
@@ -192,10 +202,12 @@ function toggleDarkMode() {
         for (var i = 0; i < menuLines.length; i++) {
             menuLines[i] && menuLines[i].classList.add('white-mode');
         }
+        for (var i = 0; i < letters.length; i++) {
+            letters[i] && letters[i].classList.add('white-mode');
+        }
         white_animation && (white_animation.style.display = 'none');
         dark_animation && (dark_animation.style.display = 'flex');
         setCookie('darkMode', 'enabled', 365, "/");
-        console.log('checked')
     } else {
         body.classList.remove('white-mode');
         inputText && inputText.classList.remove('white-mode');
@@ -215,6 +227,10 @@ function toggleDarkMode() {
         movieOutputBox && movieOutputBox.classList.remove('white-mode');
         movieInputBox && movieInputBox.classList.remove('white-mode');
         movieButton && movieButton.classList.remove('white-mode');
+        numOfChars && numOfChars.classList.remove('white-mode');
+        startButton && startButton.classList.remove('white-mode');
+        userSetting && userSetting.classList.remove('white-mode');
+        guessButton && guessButton.classList.remove('white-mode');
         darkmodeContainer.classList.remove('white-mode')
         for (var i = 0; i < movieAlign.length; i++) {
             movieAlign[i] && movieAlign[i].classList.remove('white-mode');
@@ -222,6 +238,9 @@ function toggleDarkMode() {
         }
         for (var i = 0; i < menuLines.length; i++) {
             menuLines[i] && menuLines[i].classList.remove('white-mode');
+        }
+        for (var i = 0; i < letters.length; i++) {
+            letters[i] && letters[i].classList.remove('white-mode');
         }
         white_animation && (white_animation.style.display = 'flex');
         dark_animation && (dark_animation.style.display = 'none');

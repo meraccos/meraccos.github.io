@@ -92,6 +92,33 @@
     margin-left: 15px;
 }
 
+.num_of_chars_box.white-mode {
+    background: hsl(46, 20%, 83%);
+    color: #6d3b3b;
+    border: none;
+}
+
+.button.white-mode {
+    background-color: hsl(46, 20%, 83%);
+    color: #6d3b3b;
+}
+
+.user_setting.white-mode {
+    background-color: hsl(46, 20%, 83%);
+    color: #6d3b3b;
+}
+
+.button.hide_at_start.white-mode {
+    background-color: hsl(46, 20%, 83%);
+    color: #6d3b3b;
+}
+
+.letter.white-mode {
+    background-color: hsl(46, 20%, 83%);
+    color: #6d3b3b;
+    border: none;
+}
+
 .game_status_and_guess {
     display: flex;
     justify-content: center;
@@ -141,7 +168,7 @@
     margin: 0 auto;
     margin-top: 15px;
     margin-bottom: 15px;
-    width: 1.5rem;
+    width: 1.6rem;
 }
 
 @media (max-width: 768px) {
