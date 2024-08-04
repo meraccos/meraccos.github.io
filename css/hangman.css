@@ -148,17 +148,13 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* margin: 0 5px; */
-    
+
     background-color: #1b1b1b;
     border: none;
     border-width: 1px;
     border-style: solid;
     border-color:#2b2a2a;
     border-radius: 5px;
-
-    /* width: 20.5rem; */
-    /* height: 30px; */
     
     color: #e4dfdf;
     font-size: 1.2rem;
