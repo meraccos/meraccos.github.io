@@ -27,6 +27,13 @@ async function startGame() {
     if (isNaN(numOfChars)) {
         numOfChars = 7;
     }
+    if (numOfChars < 4) {
+        numOfChars = 4;
+    }
+    if (numOfChars > 15) {
+        numOfChars = 15;
+    }
+    numOfCharsBox.value = numOfChars;
 
     // show all the letter_idx for idx=1 to numOfChars
     for (var i = 1; i <= numOfChars; i++) {
