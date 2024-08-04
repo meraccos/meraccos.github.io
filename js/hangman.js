@@ -60,6 +60,9 @@ async function startGame() {
     for (var i = 0; i < elements.length; i++) {
         elements[i].style.display = 'inline';
     }
+
+    // init the cost
+    cost = 0;
 }
 
 function guessNext() {
@@ -71,7 +74,7 @@ function guessNext() {
     console.log('Matching words', matchingWords);
 
     // if the last guess failed, cut the matched words.
-    if (!currentState.includes(lastGuess)) {
+    if (!currentState.includes(lastGuess) && lastGuess !== '_') {
         var newMatchingWords = [];
         var newMatchingCounts = [];
         for (var i = 0; i < matchingWords.length; i++) {
@@ -159,6 +162,11 @@ function probeChar(char, words, counts) {
         }
     }
 
+    // if there is no positive word, return high entropy
+    if (positive_counts.length === 0) {
+        return 10.0;
+    }
+
     var sum_positives = positive_counts.reduce((a, b) => parseInt(a, 10) + parseInt(b, 10), 0);
     var sum_negatives = negative_counts.reduce((a, b) => parseInt(a, 10) + parseInt(b, 10), 0);
 
@@ -183,6 +191,10 @@ function probeChar(char, words, counts) {
     }
 
     var exp_entropy = prob_positive * entropy_positive + prob_negative * entropy_negative;
+    // console.log(`Char: ${char}, Positive: ${prob_positive}, Negative: ${prob_negative}, Entropy: ${exp_entropy}`);
+    // console.log(`Positive: ${positive_words}, Negative: ${negative_words}`);
+    // console.log(`Positive entropy: ${entropy_positive}, Negative entropy: ${entropy_negative}`);
+    // console.log('\n');
 
     return exp_entropy;
 }
