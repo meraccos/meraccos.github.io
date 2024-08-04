@@ -16,6 +16,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Meraj Mammadov</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
   <link rel="favicon" type="image/x-icon" href="/favicon.ico" />
   <link rel="stylesheet" href="/css/skeleton.css" />
   <link rel="stylesheet" href="/css/styles.css" />
@@ -26,10 +27,10 @@
 </head>
 
 <body>
+
   <div class="container" id="container">
     <h1><a href="/index.html">Meraj Mammadov</a></h1>
     <nav class="nav">
-
       <a href="/index.html" class="desktop">home</a>
       <a href="/Meraj_cv.pdf" class="desktop">cv</a>
 
@@ -104,7 +105,9 @@
         </div>
       </div>
 
-      <div class="display">
+      <p class="dt hide_at_start" id="dt"><span> Display</span></p>
+
+      <div class="display hide_at_start">
         <button class="letter" id="letter1" onclick="replaceLetter('1')">_</button>
         <button class="letter" id="letter2" onclick="replaceLetter('2')">_</button>
         <button class="letter" id="letter3" onclick="replaceLetter('3')">_</button>
@@ -122,23 +125,24 @@
         <button class="letter" id="letter15" onclick="replaceLetter('15')">_</button>
     </div>
 
-    <div class="game_status_and_guess">
-      <div class="cost">
-        <p>Cost: </p>
-        <p id="cost">0</p>
+    <p class="dt hide_at_start" id="dt2"><span> Performance </span></p>
+
+    <div class="game_status_and_guess hide_at_start">
+      <div class="cost hide_at_start">
+        <p class="hide_at_start">Cost: </p>
+        <p class="hide_at_start" id="cost">0</p>
       </div>
 
-      <div class="entropy">
-        <p>Entropy: </p>
-        <p id="entropy">0</p>
+      <div class="entropy hide_at_start"">
+        <p class="hide_at_start">Entropy: </p>
+        <p class="hide_at_start" id="entropy">0</p>
       </div>
 
-      <p class="guess" id="guess">Next guess:  _ </p>
+      <p class="guess hide_at_start" id="guess">Next guess:  _ </p>
       
-      <button class="button" onclick="guessNext()">Guess</button>
+      <button class="button hide_at_start" onclick="guessNext()">Guess</button>
     </div>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
   </div>
 </body>
 
