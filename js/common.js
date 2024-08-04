@@ -17,6 +17,7 @@ var modelswitch2 = document.querySelector("#switch2")
 var generator = document.querySelector("#generator")
 var output = document.querySelector("#output")
 var moviecontainer = document.querySelector(".movie_container")
+var hangman = document.querySelector(".hangman")
 
 mobileMenuBtn.addEventListener("click", () => {
     if (mobileMenu.style.display === "none") {
@@ -61,6 +62,9 @@ mobileMenuBtn.addEventListener("click", () => {
       if (problem) {
         problem.style.display = "none"
       }
+      if (hangman) {
+        hangman.style.display = "none"
+      }
       
     } 
     else {
@@ -100,6 +104,11 @@ mobileMenuBtn.addEventListener("click", () => {
       }
       if (dt3) {
         dt3.style.display = "block"
+      }
+      if (hangman) {
+        hangman.style.display = "flex"
+        dt2.style.display = "none"
+        dt3.style.display = "none"
       }
       if (darkanimation) {
         if (darkModeToggle.checked) {
