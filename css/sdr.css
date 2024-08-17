@@ -6,44 +6,10 @@
     margin-top: 30px;
     margin-bottom: 30px;
     object-fit: contain;
-}
-
-.gallery {
-    display: flex;
-    justify-content: space-between;
-    width: 80%;
-    margin: auto;
-}
-
-.left-side {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    justify-content: center;
-}
-
-.right-side {
-    flex: 1;
-    display: flex;
-}
-
-.image3 {
-    width: 100%;
-    height: 100%;
-
-    object-fit: contain;
-}
-
-.left-side .image3 {
-    height: 40%; 
-    margin-bottom: 15px;
+    border-radius: 12px;
 }
 
 @media (max-width: 768px) {
-    .gallery {
-        flex-direction: column;
-    }
-
     .sdr-image {
         width: 80%;
     }
