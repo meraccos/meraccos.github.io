@@ -3,7 +3,8 @@ const darkModeToggle = document.getElementById('dark-mode-toggle');
 // Nav menu on mobile
 var mobileMenuBtn = document.querySelector("#mobile-menu-btn");
 var mobileMenu = document.querySelector(".mobile-menu");
-var contents = document.querySelector(".content");
+var contents = document.querySelectorAll(".content");
+var images = document.querySelectorAll(".sdr-image");
 var darkanimation = document.querySelector("#dark-animation")
 var whiteanimation = document.querySelector("#white-animation")
 var contact = document.querySelector(".contact")
@@ -22,9 +23,12 @@ var hangman = document.querySelector(".hangman")
 mobileMenuBtn.addEventListener("click", () => {
     if (mobileMenu.style.display === "none") {
       mobileMenu.style.display = "flex";
-      if (contents) {
-        contents.style.display = "none"
-      }
+      contents.forEach(content => {
+        content.style.display = "none";
+      });
+      images.forEach(image => {
+        image.style.display = "none";
+      });
       if (generator) {
         generator.style.display = "none"
       }
@@ -69,9 +73,12 @@ mobileMenuBtn.addEventListener("click", () => {
     } 
     else {
       mobileMenu.style.display = "none";
-      if (contents) {
-        contents.style.display = "flex"
-      }   
+      contents.forEach(content => {
+        content.style.display = "flex";
+      });
+      images.forEach(image => {
+        image.style.display = "flex";
+      });
       if (generator) {
         generator.style.display = "flex"
       }     
