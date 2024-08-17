@@ -6,7 +6,6 @@
     margin-top: 30px;
     margin-bottom: 30px;
     object-fit: contain;
-    border-radius: 10px; 
 }
 
 .gallery {
@@ -33,7 +32,6 @@
     height: 100%;
 
     object-fit: contain;
-    border-radius: 10px; 
 }
 
 .left-side .image3 {
@@ -51,10 +49,7 @@
     }
 
     .content {
-        flex-direction: column;
-        align-items: center;
         text-align:justify;
-        margin-top: 10px;
         font-size: 16px;
       }
 }
