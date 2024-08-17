@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-ZHRFYB71LZ"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-ZHRFYB71LZ");
+    </script>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meraj Mammadov</title>
+    <link rel="favicon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="/css/skeleton.css" />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/sdr.css" />
+    <script src="/js/common.js" defer></script>
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:400,700"
+      rel="stylesheet"
+      type="text/css"
+    />
+  </head>
+
+  <body>
+    <div class="container" id="container">
+      <h1><a href="/index.html">Meraj Mammadov</a></h1>
+      <nav class="nav">
+
+        <a href="/index.html" class="desktop">home</a>
+        <a href="/Meraj_cv.pdf" class="desktop">cv</a>
+
+        <div class="dropdown desktop">
+          <button onclick="ProjectsMenuFunction()" class="dropbtn" id="dropbtn">projects</button>
+          <div id="myDropdown" class="dropdown-content">
+            <a href="/html/merajpt.html">merajpt</a>
+            <a href="/movie/movie.html">movie</a>
+            <!-- <a href="/html/life.html">life</a> -->
+            <a href="/html/sdr.html">sdr</a>
+            <a href="/html/hangman.html">hangman</a>
+          </div>
+        </div>
+
+        <a href="/html/enigma.html" class="desktop">enigma</a>
+        <a href="/html/contact.html" class="desktop">contact</a>
+
+        <strong id="mobile-menu-btn" class="menu-button mobile">
+          <div class="line" style="width: 30px;"></div>
+          <div class="line" style="width: 25px;"></div>
+          <div class="line" style="width: 20px;"></div>
+        </strong>
+
+        <div class="darkmode-container" id="darkmode-container">
+          <input type="checkbox" class="dark-mode-toggle" id="dark-mode-toggle" />
+          <label for="dark-mode-toggle" id="desktop-label" class="desktop-label" style="font-size: 45px;"> &#9788 </label>
+        </div>
+      </nav>
+
+
+      <div class="mobile-menu" style="display: none;">
+        <a href="/index.html" class="mobile">home</a>
+        <a href="/Meraj_cv.pdf" class="mobile">cv</a>
+        <!-- <p class="dt" id="dt"><span> Projects </span></p> -->
+        <a href="/html/merajpt.html" class="mobile">merajpt</a>
+        <a href="/movie/movie.html" class="mobile">movie</a>
+        <!-- <a href="/html/life.html" class="mobile">life</a> -->
+        <a href="/html/sdr.html" class="mobile">sdr</a>
+        <a href="/html/hangman.html">hangman</a>
+        <a href="/html/enigma.html" class="mobile">enigma</a>
+        <a href="/html/contact.html" class="mobile">contact</a>
+      </div>
+
+      
+      <br />
+      <section class="content">
+        <p>
+          I recently came across the Software Defined Radio (SDR) community. It turns out 
+          that you can use a small USB dongle to capture and decode signals from a wide range of
+          radio frequencies. Sure you can do boring things like listening to FM radio or tracking airplanes, but you can also
+          capture cool images of the Earth from weather satellites! Korea happens to have a geostationary weather satellite
+          GEO-KOMPSAT 2A (GK-2A) near me that actively sends data to the ground, so I decided to give it a try. The weather satellites
+          usually work at very high frequencies with very weak signals, so it is a challenging task to capture them properly. This short
+          post walks you through my setup and the process of capturing the images. Feel free to reach out to me for more technical details.
+        </p>
+      </section>
+
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      />
+
+      <section class="content">
+        Here is the first setup that I tried, a simple dipole antenna on a tripod with
+        an aluminum dish as a reflector. It quickly turned out that both of them were too weak
+        to capture the weak signals from the satellite at the required frequency (~1.7 GHz). 
+      </section>
+      <img src="/img/sdr_2.JPG" alt="Image 1" class="sdr-image">
+
+      <section class="content">
+        To improve the reception, I built this Yagi-Uda antenna with dimensions specific 
+        to the frequency of the satellite signals. The signal strength was improved, but
+        the antenna alone has a very narrow beamwidth and requires a wider reflector.
+      </section>
+      <img src="/img/yagi.jpg" alt="Image 1" class="sdr-image">
+
+      <section class="content">
+        So, I built a bigger reflector out of an old umbrella and some aluminum foil. Although this 
+        is the design that finally seemed to work, I still had to spend some frustrating hours with no signs of life. The setup seems to be 
+        too sensitive to small changes in the antenna's alignment.
+      </section>
+      <img src="/img/sdr_1.JPG" alt="Image 1" class="sdr-image">
+
+      <section class="content">
+        I am lucky to live in a place with the satellite almost over my head (48.7 degrees elevation), 
+        which makes this setup enough to capture the signals. The received images are in grayscale. After some 
+        post-processing, the final image looks like this:
+      </section>
+      <img src="/img/output2.png" alt="Image 1" class="sdr-image">
+      
+      <section class="content">
+        The satellite sends the images about every 10 minutes. I am waiting for the weather in Korea to get colder a bit to leave my setup outside 
+        for a longer period of time and capture more images. Enough of them captured, I will try to make a timelapse video :) Feel free to reach 
+        out to me if you would like to know more about the setup or the process.
+      </section>
+    </div>
+  </body>
+</html>
