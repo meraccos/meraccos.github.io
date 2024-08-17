@@ -68,8 +68,13 @@ async function startGame() {
         elements[i].style.display = 'inline';
     }
 
-    // init the cost
+    // init the vars
     cost = 0;
+    lastGuess = '_';
+
+    // log the cost
+    var costElement = document.getElementById('cost');
+    costElement.innerHTML = cost;
 }
 
 function guessNext() {
