@@ -22,7 +22,6 @@ h1 {
 
 .container {
     max-width: 1000px;
-    min-width: 95%;
     margin: 0 auto;
     padding: 20px;
     flex-grow: 1;
@@ -223,6 +222,8 @@ h1 {
         text-align: center;
     }
 
+    .container {
+        min-width: 95%;
     .desktop {
         display: none;
     }
