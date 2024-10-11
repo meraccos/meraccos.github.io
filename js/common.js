@@ -19,6 +19,7 @@ var generator = document.querySelector("#generator")
 var output = document.querySelector("#output")
 var moviecontainer = document.querySelector(".movie_container")
 var hangman = document.querySelector(".hangman")
+var footer = document.querySelector(".footer")
 
 mobileMenuBtn.addEventListener("click", () => {
     if (mobileMenu.style.display === "none") {
@@ -69,7 +70,9 @@ mobileMenuBtn.addEventListener("click", () => {
       if (hangman) {
         hangman.style.display = "none"
       }
-      
+      if (footer) {
+        footer.style.display = "none"
+      }
     } 
     else {
       mobileMenu.style.display = "none";
@@ -116,6 +119,9 @@ mobileMenuBtn.addEventListener("click", () => {
         hangman.style.display = "flex"
         dt2.style.display = "none"
         dt3.style.display = "none"
+      }
+      if (footer) {
+        footer.style.display = "block"
       }
       if (darkanimation) {
         if (darkModeToggle.checked) {
