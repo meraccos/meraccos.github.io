@@ -25,128 +25,128 @@
   <script src="/js/hangman.js" defer></script>
   <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet" type="text/css" />
 </head>
+  <body>
+    <div class="container" id="container">
+      <h1><a href="/index.html">Meraj Mammadov</a></h1>
+      <nav class="nav">
+        <a href="/index.html" class="desktop">home</a>
+        <a href="/Meraj_cv.pdf" class="desktop">cv</a>
 
-<body>
-
-  <div class="container" id="container">
-    <h1><a href="/index.html">Meraj Mammadov</a></h1>
-    <nav class="nav">
-      <a href="/index.html" class="desktop">home</a>
-      <a href="/Meraj_cv.pdf" class="desktop">cv</a>
-
-      <div class="dropdown desktop">
-        <button onclick="ProjectsMenuFunction()" class="dropbtn" id="dropbtn">projects</button>
-        <div id="myDropdown" class="dropdown-content">
-          <a href="/html/merajpt.html">merajpt</a>
-          <a href="/movie/movie.html">movie</a>
-          <!-- <a href="/html/life.html">life</a> -->
-          <a href="/html/sdr.html">sdr</a>
-          <a href="/html/hangman.html">hangman</a>
-        </div>
-      </div>
-
-      <a href="/html/enigma.html" class="desktop">enigma</a>
-      <a href="/html/contact.html" class="desktop">contact</a>
-
-      <strong id="mobile-menu-btn" class="menu-button mobile">
-        <div class="line" style="width: 30px;"></div>
-        <div class="line" style="width: 25px;"></div>
-        <div class="line" style="width: 20px;"></div>
-      </strong>
-
-      <div class="darkmode-container" id="darkmode-container">
-        <input type="checkbox" class="dark-mode-toggle" id="dark-mode-toggle" />
-        <label for="dark-mode-toggle" id="desktop-label" class="desktop-label" style="font-size: 45px;"> &#9788 </label>
-      </div>
-    </nav>
-
-
-    <div class="mobile-menu" style="display: none;">
-      <a href="/index.html" class="mobile">home</a>
-      <a href="/Meraj_cv.pdf" class="mobile">cv</a>
-      <!-- <p class="dt" id="dt"><span> Projects </span></p> -->
-      <a href="/html/merajpt.html" class="mobile">merajpt</a>
-      <a href="/movie/movie.html" class="mobile">movie</a>
-      <!-- <a href="/html/life.html" class="mobile">life</a> -->
-      <a href="/html/sdr.html" class="mobile">sdr</a>
-      <a href="/html/hangman.html">hangman</a>
-      <a href="/html/enigma.html" class="mobile">enigma</a>
-      <a href="/html/contact.html" class="mobile">contact</a>
-    </div>
-
-    <br />
-    <section class="content">
-      <p>
-        Here you can play a simple information theoretic Hangman game. You can choose to play as a guider or as a
-        guesser. If guider, pick a word, press the guess button and guide the agent to find it by pressing on the
-        matching letter locations (skip if there is no match). If guesser, try to guess the word by entering characters
-        one-by-one and pressing the check button.
-      </p>
-
-    </section>
-    <div class="hangman">
-      <p class="dt upper" id="dt"><span> Settings</span></p>
-      <div class="settings">
-        <div class="setting">
-          <p>Number of characters: </p>
-          <input type="text" inputmode="numeric" class="num_of_chars_box" id="num_of_chars_box" placeholder="7" />
+        <div class="dropdown desktop">
+          <button onclick="ProjectsMenuFunction()" class="dropbtn" id="dropbtn">projects</button>
+          <div id="myDropdown" class="dropdown-content">
+            <a href="/html/merajpt.html">merajpt</a>
+            <a href="/movie/movie.html">movie</a>
+            <!-- <a href="/html/life.html">life</a> -->
+            <a href="/html/sdr.html">sdr</a>
+            <a href="/html/hangman.html">hangman</a>
+          </div>
         </div>
 
-        <div class="setting">
-          <p>You play as: </p>
-          <!-- select from two-->
-          <select class="user_setting" id="user_setting">
-            <option value="guider">Guider</option>
-            <option value="guesser">Guesser</option>
-          </select>
-        </div>
+        <a href="/html/enigma.html" class="desktop">enigma</a>
+        <a href="/html/contact.html" class="desktop">contact</a>
 
-        <div class="setting">
-          <button class="button" id="start-button" onclick="startGame()">Start Game</button>
+        <strong id="mobile-menu-btn" class="menu-button mobile">
+          <div class="line" style="width: 30px;"></div>
+          <div class="line" style="width: 25px;"></div>
+          <div class="line" style="width: 20px;"></div>
+        </strong>
+
+        <div class="darkmode-container" id="darkmode-container">
+          <input type="checkbox" class="dark-mode-toggle" id="dark-mode-toggle" />
+          <label for="dark-mode-toggle" id="desktop-label" class="desktop-label" style="font-size: 45px;"> &#9788 </label>
         </div>
+      </nav>
+
+
+      <div class="mobile-menu" style="display: none;">
+        <a href="/index.html" class="mobile">home</a>
+        <a href="/Meraj_cv.pdf" class="mobile">cv</a>
+        <!-- <p class="dt" id="dt"><span> Projects </span></p> -->
+        <a href="/html/merajpt.html" class="mobile">merajpt</a>
+        <a href="/movie/movie.html" class="mobile">movie</a>
+        <!-- <a href="/html/life.html" class="mobile">life</a> -->
+        <a href="/html/sdr.html" class="mobile">sdr</a>
+        <a href="/html/hangman.html">hangman</a>
+        <a href="/html/enigma.html" class="mobile">enigma</a>
+        <a href="/html/contact.html" class="mobile">contact</a>
       </div>
 
-      <p class="dt hide_at_start" id="dt2"><span> Display</span></p>
+      <br />
+      <section class="content">
+        <p>
+          Here you can play a simple information theoretic Hangman game. You can choose to play as a guider or as a
+          guesser. If guider, pick a word, press the guess button and guide the agent to find it by pressing on the
+          matching letter locations (skip if there is no match). If guesser, try to guess the word by entering characters
+          one-by-one and pressing the check button.
+        </p>
 
-      <div class="display hide_at_start">
-        <button class="letter" id="letter1" onclick="replaceLetter('1')">_</button>
-        <button class="letter" id="letter2" onclick="replaceLetter('2')">_</button>
-        <button class="letter" id="letter3" onclick="replaceLetter('3')">_</button>
-        <button class="letter" id="letter4" onclick="replaceLetter('4')">_</button>
-        <button class="letter" id="letter5" onclick="replaceLetter('5')">_</button>
-        <button class="letter" id="letter6" onclick="replaceLetter('6')">_</button>
-        <button class="letter" id="letter7" onclick="replaceLetter('7')">_</button>
-        <button class="letter" id="letter8" onclick="replaceLetter('8')">_</button>
-        <button class="letter" id="letter9" onclick="replaceLetter('9')">_</button>
-        <button class="letter" id="letter10" onclick="replaceLetter('10')">_</button>
-        <button class="letter" id="letter11" onclick="replaceLetter('11')">_</button>
-        <button class="letter" id="letter12" onclick="replaceLetter('12')">_</button>
-        <button class="letter" id="letter13" onclick="replaceLetter('13')">_</button>
-        <button class="letter" id="letter14" onclick="replaceLetter('14')">_</button>
-        <button class="letter" id="letter15" onclick="replaceLetter('15')">_</button>
-      </div>
-
-      <p class="dt hide_at_start" id="dt3"><span> Performance </span></p>
-
-      <div class="guess_and_cost">
-        <div class="game_status_and_guess hide_at_start">
-          <div class="cost hide_at_start">
-            <p class="hide_at_start" >Cost: </p>
-            <p class="hide_at_start" id="cost">0</p>
+      </section>
+      <div class="hangman">
+        <p class="dt upper" id="dt"><span> Settings</span></p>
+        <div class="settings">
+          <div class="setting">
+            <p>Number of characters: </p>
+            <input type="text" inputmode="numeric" class="num_of_chars_box" id="num_of_chars_box" placeholder="7" />
           </div>
 
-          <div class="entropy hide_at_start"">
-          <p class=" hide_at_start">Entropy: </p>
-            <p class="hide_at_start" id="entropy">0</p>
+          <div class="setting">
+            <p>You play as: </p>
+            <!-- select from two-->
+            <select class="user_setting" id="user_setting">
+              <option value="guider">Guider</option>
+              <option value="guesser">Guesser</option>
+            </select>
           </div>
 
-          <p class="guess hide_at_start" id="guess">Guess: _ </p>
-
+          <div class="setting">
+            <button class="button" id="start-button" onclick="startGame()">Start Game</button>
+          </div>
         </div>
-        <button class="button hide_at_start" id="guess-button" onclick="guessNext()">Guess</button>
+
+        <p class="dt hide_at_start" id="dt2"><span> Display</span></p>
+
+        <div class="display hide_at_start">
+          <button class="letter" id="letter1" onclick="replaceLetter('1')">_</button>
+          <button class="letter" id="letter2" onclick="replaceLetter('2')">_</button>
+          <button class="letter" id="letter3" onclick="replaceLetter('3')">_</button>
+          <button class="letter" id="letter4" onclick="replaceLetter('4')">_</button>
+          <button class="letter" id="letter5" onclick="replaceLetter('5')">_</button>
+          <button class="letter" id="letter6" onclick="replaceLetter('6')">_</button>
+          <button class="letter" id="letter7" onclick="replaceLetter('7')">_</button>
+          <button class="letter" id="letter8" onclick="replaceLetter('8')">_</button>
+          <button class="letter" id="letter9" onclick="replaceLetter('9')">_</button>
+          <button class="letter" id="letter10" onclick="replaceLetter('10')">_</button>
+          <button class="letter" id="letter11" onclick="replaceLetter('11')">_</button>
+          <button class="letter" id="letter12" onclick="replaceLetter('12')">_</button>
+          <button class="letter" id="letter13" onclick="replaceLetter('13')">_</button>
+          <button class="letter" id="letter14" onclick="replaceLetter('14')">_</button>
+          <button class="letter" id="letter15" onclick="replaceLetter('15')">_</button>
+        </div>
+
+        <p class="dt hide_at_start" id="dt3"><span> Performance </span></p>
+
+        <div class="guess_and_cost">
+          <div class="game_status_and_guess hide_at_start">
+            <div class="cost hide_at_start">
+              <p class="hide_at_start" >Cost: </p>
+              <p class="hide_at_start" id="cost">0</p>
+            </div>
+
+            <div class="entropy hide_at_start"">
+            <p class=" hide_at_start">Entropy: </p>
+              <p class="hide_at_start" id="entropy">0</p>
+            </div>
+
+            <p class="guess hide_at_start" id="guess">Guess: _ </p>
+
+          </div>
+          <button class="button hide_at_start" id="guess-button" onclick="guessNext()">Guess</button>
+        </div>
+
       </div>
-
-    </div>
-</body>
-
+      <footer class="footer">
+        <p>&copy; 2024 Meraj Mammadov</p>
+      </footer>
+  </body>
 </html>
