@@ -22,7 +22,7 @@ h1 {
 
 .container {
     max-width: 1000px;
-    margin: 0 auto;
+    margin: 0;
     padding: 20px;
     flex-grow: 1;
 }
@@ -221,9 +221,6 @@ h1 {
         padding-top: 30px;
         text-align: center;
     }
-
-    .container {
-        min-width: 88%;
     .desktop {
         display: none;
     }
