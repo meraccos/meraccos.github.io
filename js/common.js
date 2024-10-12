@@ -55,114 +55,21 @@ function getCookie(name) {
     return null;
 }
 
-// All the dark-white mode style changes
-
 function toggleDarkMode() {
     const body = document.body;
-    const inputText = document.getElementById('inputText');
-    const outputBox = document.getElementById('output');
-    const generatorButton = document.getElementById('generate_button');
-    const nizamiButton = document.getElementById('nizami-button');
-    const shakespeareButton = document.getElementById('shakespeare-button');
-    const bigramButton = document.getElementById('bigram-button');
-    const lstmButton = document.getElementById('lstm-button');
-    const dt = document.getElementById('dt');
-    const dt2 = document.getElementById('dt2');
-    const dt3 = document.getElementById('dt3')
-    const contact_icon = document.getElementById('contact')
     const dark_animation = document.getElementById('dark-animation')
     const white_animation = document.getElementById('white-animation')
-    const projectMenu = document.getElementById('myDropdown')
-    const projectButton = document.getElementById('dropbtn')
-    const darkmodeContainer = document.getElementById('darkmode-container')
-    const menuLines = document.getElementsByClassName('line')
-
-    // Movies
-    const movieOutputBox = document.getElementById('outputs-box')
-    const movieInputBox = document.getElementById('inputs-box')
-    const movieButton = document.getElementById('movie_button')
-    const movieAlign = document.getElementsByClassName('align')
-    const movieRating = document.getElementsByClassName('rating')
-
-    // Hangman
-    const numOfChars = document.getElementById('num_of_chars_box')
-    const startButton = document.getElementById('start-button')
-    const userSetting = document.getElementById('user_setting')
-    const guessButton = document.getElementById('guess-button')
-    const letters = document.getElementsByClassName('letter')
 
     if (darkModeToggle.checked) {
-        body.classList.add('white-mode');
-        inputText && inputText.classList.add('white-mode');
-        outputBox && outputBox.classList.add('white-mode');
-        generatorButton && generatorButton.classList.add('white-mode');
-        nizamiButton && nizamiButton.classList.add('white-mode');
-        shakespeareButton && shakespeareButton.classList.add('white-mode');
-        bigramButton && bigramButton.classList.add('white-mode');
-        lstmButton && lstmButton.classList.add('white-mode');
-        dt && dt.classList.add('white-mode');
-        dt2 && dt2.classList.add('white-mode');
-        dt3 && dt3.classList.add('white-mode');
-        contact_icon && contact_icon.classList.add('white-mode');
-        projectMenu && projectMenu.classList.add('white-mode');
-        projectButton && projectButton.classList.add('white-mode');
-        movieOutputBox && movieOutputBox.classList.add('white-mode');
-        movieInputBox && movieInputBox.classList.add('white-mode');
-        movieButton && movieButton.classList.add('white-mode');
-        numOfChars && numOfChars.classList.add('white-mode');
-        startButton && startButton.classList.add('white-mode');
-        userSetting && userSetting.classList.add('white-mode');
-        guessButton && guessButton.classList.add('white-mode');
-        darkmodeContainer.classList.add('white-mode')
-        for (var i = 0; i < movieAlign.length; i++) {
-            movieAlign[i] && movieAlign[i].classList.add('white-mode');
-            movieRating[i] && movieRating[i].classList.add('white-mode');
-        }
-        for (var i = 0; i < menuLines.length; i++) {
-            menuLines[i] && menuLines[i].classList.add('white-mode');
-        }
-        for (var i = 0; i < letters.length; i++) {
-            letters[i] && letters[i].classList.add('white-mode');
-        }
-        white_animation && (white_animation.style.display = 'none');
-        dark_animation && (dark_animation.style.display = 'flex');
-        setCookie('darkMode', 'enabled', 365, "/");
+      body.classList.add('white-mode');
+      setCookie('darkMode', 'enabled', 365, "/");
+      white_animation && (white_animation.style.display = 'none');
+      dark_animation && (dark_animation.style.display = 'flex');
     } else {
-        body.classList.remove('white-mode');
-        inputText && inputText.classList.remove('white-mode');
-        outputBox && outputBox.classList.remove('white-mode');
-        generatorButton && generatorButton.classList.remove('white-mode');
-        nizamiButton && nizamiButton.classList.remove('white-mode');
-        shakespeareButton && shakespeareButton.classList.remove('white-mode');
-        bigramButton && bigramButton.classList.remove('white-mode');
-        lstmButton && lstmButton.classList.remove('white-mode');
-        dt && dt.classList.remove('white-mode');
-        dt2 && dt2.classList.remove('white-mode');
-        dt3 && dt3.classList.remove('white-mode');
-        contact_icon && contact_icon.classList.remove('white-mode');
-        projectMenu && projectMenu.classList.remove('white-mode');
-        projectButton && projectButton.classList.remove('white-mode');
-        movieOutputBox && movieOutputBox.classList.remove('white-mode');
-        movieInputBox && movieInputBox.classList.remove('white-mode');
-        movieButton && movieButton.classList.remove('white-mode');
-        numOfChars && numOfChars.classList.remove('white-mode');
-        startButton && startButton.classList.remove('white-mode');
-        userSetting && userSetting.classList.remove('white-mode');
-        guessButton && guessButton.classList.remove('white-mode');
-        darkmodeContainer.classList.remove('white-mode')
-        for (var i = 0; i < movieAlign.length; i++) {
-            movieAlign[i] && movieAlign[i].classList.remove('white-mode');
-            movieRating[i] && movieRating[i].classList.remove('white-mode');
-        }
-        for (var i = 0; i < menuLines.length; i++) {
-            menuLines[i] && menuLines[i].classList.remove('white-mode');
-        }
-        for (var i = 0; i < letters.length; i++) {
-            letters[i] && letters[i].classList.remove('white-mode');
-        }
-        white_animation && (white_animation.style.display = 'flex');
-        dark_animation && (dark_animation.style.display = 'none');
-        setCookie('darkMode', 'disabled', 365, "/");
+      body.classList.remove('white-mode');
+      setCookie('darkMode', 'disabled', 365, "/");
+      white_animation && (white_animation.style.display = 'flex');
+      dark_animation && (dark_animation.style.display = 'none');
     }
 };
 

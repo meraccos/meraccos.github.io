@@ -22,7 +22,7 @@ html{
     border-radius: 20px;
 }
 
-.box.white-mode {
+.white-mode .box {
     background-color: hsl(42, 20%, 83%);
     color: #000;
 }
@@ -92,7 +92,7 @@ html{
     color: #070707;
 }
 
-.movie_button.white-mode {
+.white-mode .movie_button {
     color: #6d3b3b;
     background-color: hsl(46, 20%, 83%);
 }
@@ -126,7 +126,7 @@ html{
     color: rgb(195, 133, 66);
 }
 
-.rating.white-mode {
+.white-mode .rating {
     color: rgb(109, 68, 24);
 }
 
@@ -139,7 +139,7 @@ html{
     color: rgb(195, 133, 66);
 }
 
-.align.white-mode {
+.white-mode .align {
     color: rgb(109, 68, 24);
 }
 
