@@ -200,7 +200,7 @@ body.white-mode a {
 }
 
 
-.footer {
+footer {
     text-align: center;
     font-size: calc(8px + 0.5vw);
     min-height: 50px;
