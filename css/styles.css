@@ -26,7 +26,7 @@
     text-decoration: none;
 }
 
-.contact.white-mode a {
+.white-mode .contact a {
     color: #3f1010;
 }
 
@@ -116,13 +116,13 @@
     outline: none;
 }
 
-.input_box.white-mode {
+.white-mode .input_box {
     background-color: hsl(40, 63%, 93%);
     border-bottom: 1px solid #605f5f;
     color: #070606;
 }
 
-.input_box.white-mode:focus {
+.white-mode .input_box:focus {
     border-bottom: 2px solid #605f5f;
     outline: none;
 }
@@ -142,7 +142,7 @@
     overflow-y: auto;
 }
 
-.output_box.white-mode {
+.white-mode .output_box {
     background-color: hsl(42, 20%, 83%);
     color: #6d3b3b;
 }
@@ -193,7 +193,7 @@
     color: #070707;
 }
 
-.button.white-mode:hover {
+.white-mode .button:hover {
     background-color: #a0a8b0;
     color: #070707;
 }
@@ -205,14 +205,14 @@
     cursor:default;
     }    
 
-.button.white-mode:disabled {
+.white-mode .button:disabled {
     transform: scale(0.98);
     background-color: #a0a8b0;
     color: #070707;
     cursor:default;
 }
 
-.button.white-mode {
+.white-mode .button {
     background-color: hsl(46, 20%, 83%);
     color: #6d3b3b;
 }
@@ -234,7 +234,7 @@
     padding:0 10px; 
 }
 
-.dt.white-mode span {
+.white-mode .dt span {
     background:hsl(40, 63%, 93%);
 }
 

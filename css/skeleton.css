@@ -74,7 +74,7 @@ body.white-mode a {
     text-decoration: underline;
 }
 
-.dropbtn.white-mode {
+.white-mode .dropbtn {
     color: #6d3b3b;
 }
 
@@ -108,7 +108,7 @@ body.white-mode a {
     margin: auto;
 }
 
-.dropdown-content.white-mode{
+.white-mode .dropdown-content{
     background-color: #b7b2b2;
 }
 
@@ -130,7 +130,7 @@ body.white-mode a {
     margin: 5px;
 }
 
-.line.white-mode {
+.white-mode .line {
     background-color: #121212;
 }
 
@@ -243,7 +243,7 @@ footer {
     .darkmode-container {
         color: #ffffff;
     }
-    .darkmode-container.white-mode {
+    .white-mode .darkmode-container {
         color: #121212;
     }
 

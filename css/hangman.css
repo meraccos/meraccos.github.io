@@ -92,28 +92,28 @@
     margin-left: 15px;
 }
 
-.num_of_chars_box.white-mode {
+.white-mode .num_of_chars_box {
     background: hsl(46, 20%, 83%);
     color: #6d3b3b;
     border: none;
 }
 
-.button.white-mode {
+.white-mode .button {
     background-color: hsl(46, 20%, 83%);
     color: #6d3b3b;
 }
 
-.user_setting.white-mode {
+.white-mode .user_setting {
     background-color: hsl(46, 20%, 83%);
     color: #6d3b3b;
 }
 
-.button.hide_at_start.white-mode {
+.white-mode .button.hide_at_start {
     background-color: hsl(46, 20%, 83%);
     color: #6d3b3b;
 }
 
-.letter.white-mode {
+.white-mode .letter {
     background-color: hsl(46, 20%, 83%);
     color: #6d3b3b;
     border: none;
