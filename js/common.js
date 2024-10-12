@@ -3,133 +3,25 @@ const darkModeToggle = document.getElementById('dark-mode-toggle');
 // Nav menu on mobile
 var mobileMenuBtn = document.querySelector("#mobile-menu-btn");
 var mobileMenu = document.querySelector(".mobile-menu");
-var contents = document.querySelectorAll(".content");
-var images = document.querySelectorAll(".sdr-image");
 var darkanimation = document.querySelector("#dark-animation")
 var whiteanimation = document.querySelector("#white-animation")
-var contact = document.querySelector(".contact")
-var problem = document.querySelector("#problem")
-var dt = document.querySelector("#dt")
-var dt2 = document.querySelector("#dt2")
-var dt3 = document.querySelector("#dt3")
-var references = document.querySelector("#references")
-var modelswitch = document.querySelector("#switch1")
-var modelswitch2 = document.querySelector("#switch2")
-var generator = document.querySelector("#generator")
-var output = document.querySelector("#output")
-var moviecontainer = document.querySelector(".movie_container")
-var hangman = document.querySelector(".hangman")
 var footer = document.querySelector("footer")
 var main = document.querySelector("main")
 
 mobileMenuBtn.addEventListener("click", () => {
+    footer.style.display = "none"
+    main.style.display = "none"
     if (mobileMenu.style.display === "none") {
       mobileMenu.style.display = "flex";
-      contents.forEach(content => {
-        content.style.display = "none";
-      });
-      images.forEach(image => {
-        image.style.display = "none";
-      });
-      if (generator) {
-        generator.style.display = "none"
-      }
-      if (moviecontainer) {
-        moviecontainer.style.display = "none"
-      }
-      if (output) {
-        output.style.display = "none"
-      }
-      if (modelswitch) {
-        modelswitch.style.display = "none"
-      }
-      if (modelswitch2) {
-        modelswitch2.style.display = "none"
-      }
       if (darkanimation) {
         darkanimation.style.display = "none"
         whiteanimation.style.display = "none"
       }
-      if (references) {
-        references.style.display = "none"
-      }
-      if (contact) {
-        contact.style.display = "none"
-      }
-      if (dt) {
-        dt.style.display = "none"
-      }
-      if (dt2) {
-        dt2.style.display = "none"
-      }
-      if (dt3) {
-        dt3.style.display = "none"
-      }
-      if (problem) {
-        problem.style.display = "none"
-      }
-      if (hangman) {
-        hangman.style.display = "none"
-      }
-      if (footer) {
-        footer.style.display = "none"
-      }
-      if (main) {
-        main.style.display = "none"
-      }
     } 
     else {
+      main.style.display = "block"
+      footer.style.display = "block"
       mobileMenu.style.display = "none";
-      contents.forEach(content => {
-        content.style.display = "flex";
-      });
-      images.forEach(image => {
-        image.style.display = "flex";
-      });
-      if (generator) {
-        generator.style.display = "flex"
-      }     
-      if (moviecontainer) {
-        moviecontainer.style.display = "flex"
-      }
-      if (output) {
-        output.style.display = "flex"
-      }      
-      if (modelswitch) {
-        modelswitch.style.display = "flex"
-      }
-      if (modelswitch2) {
-        modelswitch2.style.display = "flex"
-      }
-      if (references) {
-        references.style.display = "block"
-      }
-      if (contact) {
-        contact.style.display = "flex"
-      }
-      if (problem) {
-        problem.style.display = "flex"
-      }
-      if (dt) {
-        dt.style.display = "block"
-      }
-      if (dt2) {
-        dt2.style.display = "block"
-      }
-      if (dt3) {
-        dt3.style.display = "block"
-      }
-      if (hangman) {
-        hangman.style.display = "flex"
-        dt2.style.display = "none"
-        dt3.style.display = "none"
-      }
-      if (footer) {
-        footer.style.display = "block"
-      }
-      if (main) {
-        main.style.display = "block"
-      }
       if (darkanimation) {
         if (darkModeToggle.checked) {
             darkanimation.style.display = "flex"
