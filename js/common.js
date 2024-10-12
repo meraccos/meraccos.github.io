@@ -19,7 +19,8 @@ var generator = document.querySelector("#generator")
 var output = document.querySelector("#output")
 var moviecontainer = document.querySelector(".movie_container")
 var hangman = document.querySelector(".hangman")
-var footer = document.querySelector(".footer")
+var footer = document.querySelector("footer")
+var main = document.querySelector("main")
 
 mobileMenuBtn.addEventListener("click", () => {
     if (mobileMenu.style.display === "none") {
@@ -73,6 +74,9 @@ mobileMenuBtn.addEventListener("click", () => {
       if (footer) {
         footer.style.display = "none"
       }
+      if (main) {
+        main.style.display = "none"
+      }
     } 
     else {
       mobileMenu.style.display = "none";
@@ -123,6 +127,9 @@ mobileMenuBtn.addEventListener("click", () => {
       if (footer) {
         footer.style.display = "block"
       }
+      if (main) {
+        main.style.display = "block"
+      }
       if (darkanimation) {
         if (darkModeToggle.checked) {
             darkanimation.style.display = "flex"
@@ -171,7 +178,6 @@ function toggleDarkMode() {
     const dt2 = document.getElementById('dt2');
     const dt3 = document.getElementById('dt3')
     const contact_icon = document.getElementById('contact')
-    const container = document.getElementById('container');
     const dark_animation = document.getElementById('dark-animation')
     const white_animation = document.getElementById('white-animation')
     const projectMenu = document.getElementById('myDropdown')
@@ -205,7 +211,6 @@ function toggleDarkMode() {
         dt && dt.classList.add('white-mode');
         dt2 && dt2.classList.add('white-mode');
         dt3 && dt3.classList.add('white-mode');
-        container && container.classList.add('white-mode');
         contact_icon && contact_icon.classList.add('white-mode');
         projectMenu && projectMenu.classList.add('white-mode');
         projectButton && projectButton.classList.add('white-mode');
@@ -242,7 +247,6 @@ function toggleDarkMode() {
         dt && dt.classList.remove('white-mode');
         dt2 && dt2.classList.remove('white-mode');
         dt3 && dt3.classList.remove('white-mode');
-        container && container.classList.remove('white-mode');
         contact_icon && contact_icon.classList.remove('white-mode');
         projectMenu && projectMenu.classList.remove('white-mode');
         projectButton && projectButton.classList.remove('white-mode');
