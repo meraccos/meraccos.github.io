@@ -22,7 +22,7 @@ h1 {
 
 .container {
     max-width: 1000px;
-    margin: 0;
+    margin: 0 auto;
     padding: 20px;
     flex-grow: 1;
 }
@@ -226,6 +226,10 @@ h1 {
     }
     .mobile {
         display: block;
+    }
+
+    .container {
+        margin: 0;
     }
 
     .nav {
