@@ -14,10 +14,6 @@
     justify-content: center;
 }
 
-.profile-description {
-    max-width: 55%;
-}
-
 .problem {
     display:block;
     padding-left: 20px;
@@ -269,9 +265,7 @@ li {
     }
   
     .profile-description {
-      max-width: 100%;
       margin-top: 20px;
-      text-align: center;
       order: 2;
     }
     .output_box {
