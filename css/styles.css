@@ -6,8 +6,10 @@
     margin-top: 20px;
 }
 
-.content.profile {
+.profile {
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .content.contact {
@@ -45,6 +47,7 @@
     border-radius: 50%;
     object-fit: cover;
     margin-left: 85px;
+    margin-top: 20px;
 }
 
 .animation {
@@ -259,16 +262,20 @@ li {
 
     .profile img {
         margin-left: 0;
+        margin-top: 10px;
         width: 200px !important;
         height: 200px !important;
         order: 1;
     }
-  
-    .profile-description {
-      margin-top: 20px;
-      order: 2;
-    }
     .output_box {
         max-height: calc(100vh - 450px);
+    }
+    .profile {
+        flex-direction: column;
+        align-items: center;
+    }
+    .profile .content {
+      margin-top: 20px;
+      order: 2;
     }
   }
