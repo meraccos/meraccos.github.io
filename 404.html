@@ -17,6 +17,13 @@
 
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Error page." />
+    <meta property="og:title" content="404 ERROR | Meraj Mammadov" />
+    <meta property="og:description" content="Error page." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://meraccos.com/404.html" />
+    <meta property="og:image" content="https://meraccos.com/img/image.jpeg" />
+    <meta property="og:site_name" content="Meraj Mammadov" />
     <title>Meraj Mammadov</title>
     <link rel="favicon" type="image/x-icon" href="/favicon.ico" />
     <link rel="stylesheet" href="/css/skeleton.css" />
@@ -30,35 +37,53 @@
   </head>
 
   <body>
-    <div class="container" id="container">
-      <h1><a href="/">Meraj Mammadov</a></h1>
-      <nav class="nav">
-        <a href="/">home</a>
-        <a href="/Meraj_cv.pdf">cv</a>
+  
+    <header>
+    <h1><a href="/">Meraj Mammadov</a></h1>
+    <nav class="nav">
 
-        <div class="dropdown">
-          <button onclick="ProjectsMenuFunction()" class="dropbtn" id="dropbtn">projects</button>
-          <div id="myDropdown" class="dropdown-content">
-            <a href="/merajpt/index.html">merajpt</a>
-            <a href="/movie/index.html">movie</a>
-            <a href="/html/life.html">life</a>
-          </div>
+      <a href="/" class="desktop">home</a>
+      <a href="/Meraj_cv.pdf" class="desktop">cv</a>
+
+      <div class="dropdown desktop">
+        <button onclick="ProjectsMenuFunction()" class="dropbtn" id="dropbtn">projects</button>
+        <div id="myDropdown" class="dropdown-content">
+          <a href="/merajpt/">merajpt</a>
+          <a href="/movie/">movie</a>
+          <a href="/sdr/">sdr</a>
+          <a href="/hangman/">hangman</a>
         </div>
+      </div>
 
-        <a href="/enigma/index.html">enigma</a>
-        <a href="/contact/index.html">contact</a>
+      <a href="/enigma/" class="desktop">enigma</a>
+      <a href="/contact/" class="desktop">contact</a>
 
-        <div class="darkmode-container">
-          <input type="checkbox" class="dark-mode-toggle" id="dark-mode-toggle" />
-          <label for="dark-mode-toggle"> </label>
-        </div>
-      </nav>
+      <strong id="mobile-menu-btn" class="menu-button mobile">
+        <div class="line" style="width: 30px;"></div>
+        <div class="line" style="width: 25px;"></div>
+        <div class="line" style="width: 20px;"></div>
+      </strong>
 
-      <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-      />
+      <div class="darkmode-container" id="darkmode-container">
+        <input type="checkbox" class="dark-mode-toggle" id="dark-mode-toggle" />
+        <label for="dark-mode-toggle" id="desktop-label" class="desktop-label" style="font-size: 45px;"> &#9788 </label>
+      </div>
+    </nav>
 
+    <div class="mobile-menu" style="display: none;">
+      <a href="/" class="mobile">home</a>
+      <a href="/Meraj_cv.pdf" class="mobile">cv</a>
+      <a href="/merajpt/" class="mobile">merajpt</a>
+      <a href="/movie/" class="mobile">movie</a>
+      <a href="/sdr/" class="mobile">sdr</a>
+      <a href="/hangman/">hangman</a>
+      <a href="/enigma/" class="mobile">enigma</a>
+      <a href="/contact/" class="mobile">contact</a>
+    </div>
+    </header>
+
+    <main>
+      <br />
       <section class="animation error" id="dark-animation">
         <script
           src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
@@ -90,6 +115,9 @@
           autoplay
         ></dotlottie-player>
       </section>
-    </div>
+    </main>
+    <footer>
+      <p>&copy; 2025 Meraj Mammadov</p>
+    </footer>
   </body>
 </html>

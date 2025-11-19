@@ -1,247 +1,254 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Google tag (gtag.js) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-ZHRFYB71LZ"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-      gtag("config", "G-ZHRFYB71LZ");
-    </script>
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-ZHRFYB71LZ"
+  ></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+    gtag("config", "G-ZHRFYB71LZ");
+  </script>
 
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Enigma</title>
-    <link rel="favicon" type="image/x-icon" href="/favicon.ico" />
-    <link rel="stylesheet" href="/css/skeleton.css" />
-    <link rel="stylesheet" href="/css/styles.css" />
-    <script src="/js/common.js" defer></script>
-    <script
-      src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
-      type="text/javascript"
-    ></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Fun problems in math and physics." />
+  <meta property="og:title" content="Enigma | Meraj Mammadov" />
+  <meta property="og:description" content="Fun problems in math and physics." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://meraccos.com/enigma/" />
+  <meta property="og:image" content="https://meraccos.com/img/image.jpeg" />
+  <meta property="og:site_name" content="Meraj Mammadov" />
+  <title>Enigma</title>
+  <link rel="favicon" type="image/x-icon" href="/favicon.ico" />
+  <link rel="stylesheet" href="/css/skeleton.css" />
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script src="/js/common.js" defer></script>
+  <script
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+    type="text/javascript"
+  ></script>
+  <link
+    href="https://fonts.googleapis.com/css?family=Lato:400,700"
+    rel="stylesheet"
+    type="text/css"
+  />
+</head>
+
+<body>
+  <header>
+    <h1><a href="/">Meraj Mammadov</a></h1>
+    <nav class="nav">
+
+      <a href="/" class="desktop">home</a>
+      <a href="/Meraj_cv.pdf" class="desktop">cv</a>
+
+      <div class="dropdown desktop">
+        <button onclick="ProjectsMenuFunction()" class="dropbtn" id="dropbtn">projects</button>
+        <div id="myDropdown" class="dropdown-content">
+          <a href="/merajpt/">merajpt</a>
+          <a href="/movie/">movie</a>
+          <a href="/sdr/">sdr</a>
+          <a href="/hangman/">hangman</a>
+        </div>
+      </div>
+
+      <a href="/enigma/" class="desktop">enigma</a>
+      <a href="/contact/" class="desktop">contact</a>
+
+      <strong id="mobile-menu-btn" class="menu-button mobile">
+        <div class="line" style="width: 30px;"></div>
+        <div class="line" style="width: 25px;"></div>
+        <div class="line" style="width: 20px;"></div>
+      </strong>
+
+      <div class="darkmode-container" id="darkmode-container">
+        <input type="checkbox" class="dark-mode-toggle" id="dark-mode-toggle" />
+        <label for="dark-mode-toggle" id="desktop-label" class="desktop-label" style="font-size: 45px;"> &#9788 </label>
+      </div>
+    </nav>
+
+    <div class="mobile-menu" style="display: none;">
+      <a href="/" class="mobile">home</a>
+      <a href="/Meraj_cv.pdf" class="mobile">cv</a>
+      <a href="/merajpt/" class="mobile">merajpt</a>
+      <a href="/movie/" class="mobile">movie</a>
+      <a href="/sdr/" class="mobile">sdr</a>
+      <a href="/hangman/">hangman</a>
+      <a href="/enigma/" class="mobile">enigma</a>
+      <a href="/contact/" class="mobile">contact</a>
+    </div>
+  </header>
+
+  <main>
     <link
-      href="https://fonts.googleapis.com/css?family=Lato:400,700"
       rel="stylesheet"
-      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-  </head>
 
-  <body>
-    <header>
-      <h1><a href="/">Meraj Mammadov</a></h1>
-      <nav class="nav">
+    <br />
 
-        <a href="/" class="desktop">home</a>
-        <a href="/Meraj_cv.pdf" class="desktop">cv</a>
+    <!-- <img src="/cat.gif" alt="Cat GIF" /> -->
+    <p class="content">
+      
+      Here I challenge you with some interesting math and physics problems
+      that I have encountered, or thought of over the years. The problems 
+      are selected based on the enjoyment they offer in the solution
+      process, rather than their difficulty. Enjoy them!
+    </p>
 
-        <div class="dropdown desktop">
-          <button onclick="ProjectsMenuFunction()" class="dropbtn" id="dropbtn">projects</button>
-          <div id="myDropdown" class="dropdown-content">
-            <a href="/merajpt/index.html">merajpt</a>
-            <a href="/movie/index.html">movie</a>
-            <a href="/sdr/index.html">sdr</a>
-            <a href="/hangman/index.html">hangman</a>
-          </div>
-        </div>
+    <p class="dt" id="dt"><span> Problems </span></p>
 
-        <a href="/enigma/index.html" class="desktop">enigma</a>
-        <a href="/contact/index.html" class="desktop">contact</a>
-
-        <strong id="mobile-menu-btn" class="menu-button mobile">
-          <div class="line" style="width: 30px;"></div>
-          <div class="line" style="width: 25px;"></div>
-          <div class="line" style="width: 20px;"></div>
-        </strong>
-
-        <div class="darkmode-container" id="darkmode-container">
-          <input type="checkbox" class="dark-mode-toggle" id="dark-mode-toggle" />
-          <label for="dark-mode-toggle" id="desktop-label" class="desktop-label" style="font-size: 45px;"> &#9788 </label>
-        </div>
-      </nav>
-
-      <div class="mobile-menu" style="display: none;">
-        <a href="/" class="mobile">home</a>
-        <a href="/Meraj_cv.pdf" class="mobile">cv</a>
-        <a href="/merajpt/index.html" class="mobile">merajpt</a>
-        <a href="/movie/index.html" class="mobile">movie</a>
-        <a href="/sdr/index.html" class="mobile">sdr</a>
-        <a href="/hangman/index.html">hangman</a>
-        <a href="/enigma/index.html" class="mobile">enigma</a>
-        <a href="/contact/index.html" class="mobile">contact</a>
-      </div>
-    </header>
-
-    <main>
-      <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-      />
-
+    <ol class="content problem" id="problem">
+      <li>
+        If \(A\) wins \(B\) with a probability \(p_{ab}\) and B wins \(C\) with
+        a probability \(p_{bc}\), find the probability that \(A\) wins \(C\).
+      </li>
       <br />
-
-      <!-- <img src="/cat.gif" alt="Cat GIF" /> -->
-      <p class="content">
-        
-        Here I challenge you with some interesting math and physics problems
-        that I have encountered, or thought of over the years. The problems 
-        are selected based on the enjoyment they offer in the solution
-        process, rather than their difficulty. Enjoy them!
-      </p>
-
-      <p class="dt" id="dt"><span> Problems </span></p>
-
-      <ol class="content problem" id="problem">
-        <li>
-          If \(A\) wins \(B\) with a probability \(p_{ab}\) and B wins \(C\) with
-          a probability \(p_{bc}\), find the probability that \(A\) wins \(C\).
-        </li>
-        <br />
-        <li>
-          Find a method to generate unbiased random bits (\(0\)s and \(1\)s) using a biased coin with unknown probability \(p\).
-        </li>
-        <br />
-        <li>
-          Find the surface area and the volume of an \(n\)-dimensional sphere.
-        </li>
-        <br />        
-        <li>
-          Find the optimal shape of a planet that maximizes the gravitational force at a given point on its surface.
-        </li>
-        <br />
-        <li>
-          A ballistic missile is launched from the north pole, the target is at
-          the latitude \(\phi\). Find the required launch angle (with respect to the horizon) to have the minimal launch velocity. \(^2\)
-        </li>
-        <br />
-        <li>
-          Imagine a homogenous, liquid planet of average radius \(R \) and
-          density \(\rho\), spinning around itself with an angular velocity of
-          \(w.\) Find its eccentricity.
-        </li>
-        <br />
-        <li>
-          Describe the properties of a material that makes up a liquid planet,
-          so that however much mass is removed, the radius of the planet stays
-          the same.
-        </li>
-        <br />
-        <li>
-          Imagine two identical objects with heat capacity \(C\) and
-          temperatures \(T_1\) and \(T_2\). If we were to build an engine out of
-          them, find the maximum work that this engine can do. \(^1\)
-        </li>
-        <br />
-        <li>
-          A point particle of mass \(m\) and charge \(q\) is moving under a
-          homogenous magnetic field of induction \(B\) and electrical field of
-          intensity \(E\), directed perpendicular to each other. Ignoring
-          gravity and relativity, find its trajectory.\(^1\)
-        </li>
-        <br />
-        <li>
-          Imagine a water sprinkler in the garden, sprinkling water uniformly at
-          each angle and in all directions at the same time. Find the distance from
-          the origin that would get watered the most.
-        </li>
-        <br />
-        <li>
-          Consider a particle undergoing a one-dimensional random walk, taking
-          steps of length \(a\) to the right or left with equal probability.
-          Find the probability distribution of the particle's position after
-          \(n\) steps.
-        </li>
-        <br />
-        <li>
-          Consider a particle undergoing an \(n\)-dimensional random walk,
-          taking steps in each direction with equal probability. Find the
-          probability that the particle will come back to the origin.
-        </li>
-        <br />
-        <li>
-          A person is collecting a set of distinct coupons, and each time they
-          acquire a coupon, it is equally likely to be any one of the set.
-          Determine the expected number of trials needed to complete the set.
-        </li>
-        <br />
-        <li>
-          Calculate the repulsion force the light rays from the Sun apply onto
-          the Earth.
-        </li>
-        <br />
-        <li>
-          Find the oscillation period of a spherical ball oscillating in
-          water.\(^1\)
-        </li>
-        <br />
-        <li>
-          Two small particles with opposing charges \(q\) are separated by a
-          distance \(L\) and left free. Find the collision time.\(^3\)
-        </li>
-        <br />
-        <li>
-          A light source of intensity \(I\) and frequency \(f_0\) falls normally
-          onto a mirror with mass \(m\) and initial velocity of zero. Find the
-          frequency of the reflected beam as a function of time.
-        </li>
-        <br />
-        <li>
-          A linearly polarised light beam transits from a medium with refraction
-          index of \(n_1\) to another of \(n_2\), normal to the surface. Find
-          the portion of the power that is reflected and refracted from the
-          surface.\(^3\)
-        </li>
-        <br />
-        <li>
-          Imagine that the clouds are made of tiny water droplets that hang onto
-          the air and distributed homogenously in the space. Find the
-          acceleration of a rain droplet that is falling down among them. The
-          rain droplet, initially of negligible size, has a density of \(\rho\),
-          and the water droplets in the cloud have a mean density of
-          \(\lambda\). Assume the rain droplet absorbs all encountered water
-          droplets while maintaining a spherical shape.
-        </li>
-        <br />
-        <li>
-          Consider a rigid container from which all the air has been pumped out.
-          Now, the valve of the container is slightly opened, and the air from
-          outside is slowly filling in. The air flow stops when mechanical
-          equilibrium is reached. Find the final temperature of the air inside.
-          The room temperature is T, and the heat flux through the walls is
-          ignored.\(^2\)
-        </li>
-        <br />
-        <li>
-          How far away from the handle of a sword of length \(L\) should you hit
-          an item, so that you feel the impact the least?
-        </li>
-        <br />
-        <li>
-          Imagine (1) an object (2) light ray approaching a planet of mass \(M\)
-          from infinity, with initial lateral distance to the center of the
-          planet \(R\) and speed \(v\). Find the shift in the heading direction
-          after it escapes the gravity of the planet.
-        </li>
-        <br />
-        <li>
-          Derive the approximation \(n! \sim \sqrt{2\pi n} \left( \frac{n}{e} \right)^n\)   (James Stirling, 1730).
-        </li>
-      </ol>
+      <li>
+        Find a method to generate unbiased random bits (\(0\)s and \(1\)s) using a biased coin with unknown probability \(p\).
+      </li>
       <br />
+      <li>
+        Find the surface area and the volume of an \(n\)-dimensional sphere.
+      </li>
+      <br />        
+      <li>
+        Find the optimal shape of a planet that maximizes the gravitational force at a given point on its surface.
+      </li>
       <br />
-      <div id="references">
-        References: \(^1\)Nahid Mammadov, \(^2\)Jaan Kalda, \(^3\)Rashadat
-        Gadmaliyev
-      </div>
-    </main>
-    <footer>
-      <p>&copy; 2025 Meraj Mammadov</p>
-    </footer>
-  </body>
+      <li>
+        A ballistic missile is launched from the north pole, the target is at
+        the latitude \(\phi\). Find the required launch angle (with respect to the horizon) to have the minimal launch velocity. \(^2\)
+      </li>
+      <br />
+      <li>
+        Imagine a homogenous, liquid planet of average radius \(R \) and
+        density \(\rho\), spinning around itself with an angular velocity of
+        \(w.\) Find its eccentricity.
+      </li>
+      <br />
+      <li>
+        Describe the properties of a material that makes up a liquid planet,
+        so that however much mass is removed, the radius of the planet stays
+        the same.
+      </li>
+      <br />
+      <li>
+        Imagine two identical objects with heat capacity \(C\) and
+        temperatures \(T_1\) and \(T_2\). If we were to build an engine out of
+        them, find the maximum work that this engine can do. \(^1\)
+      </li>
+      <br />
+      <li>
+        A point particle of mass \(m\) and charge \(q\) is moving under a
+        homogenous magnetic field of induction \(B\) and electrical field of
+        intensity \(E\), directed perpendicular to each other. Ignoring
+        gravity and relativity, find its trajectory.\(^1\)
+      </li>
+      <br />
+      <li>
+        Imagine a water sprinkler in the garden, sprinkling water uniformly at
+        each angle and in all directions at the same time. Find the distance from
+        the origin that would get watered the most.
+      </li>
+      <br />
+      <li>
+        Consider a particle undergoing a one-dimensional random walk, taking
+        steps of length \(a\) to the right or left with equal probability.
+        Find the probability distribution of the particle's position after
+        \(n\) steps.
+      </li>
+      <br />
+      <li>
+        Consider a particle undergoing an \(n\)-dimensional random walk,
+        taking steps in each direction with equal probability. Find the
+        probability that the particle will come back to the origin.
+      </li>
+      <br />
+      <li>
+        A person is collecting a set of distinct coupons, and each time they
+        acquire a coupon, it is equally likely to be any one of the set.
+        Determine the expected number of trials needed to complete the set.
+      </li>
+      <br />
+      <li>
+        Calculate the repulsion force the light rays from the Sun apply onto
+        the Earth.
+      </li>
+      <br />
+      <li>
+        Find the oscillation period of a spherical ball oscillating in
+        water.\(^1\)
+      </li>
+      <br />
+      <li>
+        Two small particles with opposing charges \(q\) are separated by a
+        distance \(L\) and left free. Find the collision time.\(^3\)
+      </li>
+      <br />
+      <li>
+        A light source of intensity \(I\) and frequency \(f_0\) falls normally
+        onto a mirror with mass \(m\) and initial velocity of zero. Find the
+        frequency of the reflected beam as a function of time.
+      </li>
+      <br />
+      <li>
+        A linearly polarised light beam transits from a medium with refraction
+        index of \(n_1\) to another of \(n_2\), normal to the surface. Find
+        the portion of the power that is reflected and refracted from the
+        surface.\(^3\)
+      </li>
+      <br />
+      <li>
+        Imagine that the clouds are made of tiny water droplets that hang onto
+        the air and distributed homogenously in the space. Find the
+        acceleration of a rain droplet that is falling down among them. The
+        rain droplet, initially of negligible size, has a density of \(\rho\),
+        and the water droplets in the cloud have a mean density of
+        \(\lambda\). Assume the rain droplet absorbs all encountered water
+        droplets while maintaining a spherical shape.
+      </li>
+      <br />
+      <li>
+        Consider a rigid container from which all the air has been pumped out.
+        Now, the valve of the container is slightly opened, and the air from
+        outside is slowly filling in. The air flow stops when mechanical
+        equilibrium is reached. Find the final temperature of the air inside.
+        The room temperature is T, and the heat flux through the walls is
+        ignored.\(^2\)
+      </li>
+      <br />
+      <li>
+        How far away from the handle of a sword of length \(L\) should you hit
+        an item, so that you feel the impact the least?
+      </li>
+      <br />
+      <li>
+        Imagine (1) an object (2) light ray approaching a planet of mass \(M\)
+        from infinity, with initial lateral distance to the center of the
+        planet \(R\) and speed \(v\). Find the shift in the heading direction
+        after it escapes the gravity of the planet.
+      </li>
+      <br />
+      <li>
+        Derive the approximation \(n! \sim \sqrt{2\pi n} \left( \frac{n}{e} \right)^n\)   (James Stirling, 1730).
+      </li>
+    </ol>
+    <br />
+    <br />
+    <div id="references">
+      References: \(^1\)Nahid Mammadov, \(^2\)Jaan Kalda, \(^3\)Rashadat
+      Gadmaliyev
+    </div>
+  </main>
+  <footer>
+    <p>&copy; 2025 Meraj Mammadov</p>
+  </footer>
+</body>
 </html>
