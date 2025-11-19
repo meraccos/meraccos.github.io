@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://meraccos.com/sitemap.xml
