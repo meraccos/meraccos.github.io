@@ -10,6 +10,9 @@
     <meta property="og:url" content="https://merajmammadov.com/" />
     <meta property="og:image" content="https://merajmammadov.com/imgs/meraj.jpg" />
     <meta property="og:site_name" content="Meraj Mammadov" />
+    <meta property="og:image:width" content="741" />
+    <meta property="og:image:height" content="737" />
+    <title>Meraj Mammadov</title>
     <link rel="canonical" href="https://merajmammadov.com/" />
     <script type="application/ld+json">
       {
@@ -57,7 +60,7 @@
     <link rel="stylesheet" href="/css/styles.css" />
     <script src="/js/common.js" defer></script>
     <link
-      href="https://fonts.googleapis.com/css?family=Lato:400,700"
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
       rel="stylesheet"
       type="text/css"
     />
@@ -66,13 +69,13 @@
   <body>
     <header>
       <h1><a href="/">Meraj Mammadov</a></h1>
-      <nav class="nav">
+      <nav class="nav" aria-label="Main navigation">
 
         <a href="/" class="desktop">home</a>
-        <a href="/Meraj_cv.pdf" class="desktop">cv</a>
+        <a href="/cv.pdf" class="desktop">cv</a>
 
         <div class="dropdown desktop">
-          <button onclick="ProjectsMenuFunction()" class="dropbtn" id="dropbtn">projects</button>
+          <button class="dropbtn" id="dropbtn" type="button" aria-expanded="false" aria-controls="myDropdown">projects</button>
           <div id="myDropdown" class="dropdown-content">
             <a href="/merajpt/">merajpt</a>
             <a href="/movie/">movie</a>
@@ -84,19 +87,19 @@
         <a href="/enigma/" class="desktop">enigma</a>
         <a href="/contact/" class="desktop">contact</a>
 
-        <strong id="mobile-menu-btn" class="menu-button mobile">
+        <button id="mobile-menu-btn" class="menu-button mobile" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
           <div class="line" style="width: 30px;"></div>
           <div class="line" style="width: 25px;"></div>
           <div class="line" style="width: 20px;"></div>
-        </strong>
+        </button>
 
         <div class="darkmode-container" id="darkmode-container">
-          <input type="checkbox" class="dark-mode-toggle" id="dark-mode-toggle" />
-          <label for="dark-mode-toggle" id="desktop-label" class="desktop-label" style="font-size: 45px;"> &#9788 </label>
+          <input type="checkbox" class="dark-mode-toggle" id="dark-mode-toggle" aria-label="Light mode" />
+          <label for="dark-mode-toggle" id="desktop-label" class="desktop-label" style="font-size: 45px;"> &#9788; </label>
         </div>
       </nav>
 
-      <div class="mobile-menu" style="display: none;">
+      <div class="mobile-menu" id="mobile-menu" hidden>
         <a href="/" class="mobile">home</a>
         <a href="/cv.pdf" class="mobile">cv</a>
         <a href="/merajpt/" class="mobile">merajpt</a>
