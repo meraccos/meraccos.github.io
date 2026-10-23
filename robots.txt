@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://meraccos.com/sitemap.xml
+Sitemap: https://merajmammadov.com/sitemap.xml
