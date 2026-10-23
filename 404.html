@@ -8,7 +8,7 @@
     <meta property="og:description" content="Error page." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://merajmammadov.com/404.html" />
-    <meta property="og:image" content="https://merajmammadov.com/imgs/meraj.jpg" />
+    <meta property="og:image" content="https://merajmammadov.com/media/meraj.jpg" />
     <meta property="og:site_name" content="Meraj Mammadov" />
     <title>Page Not Found | Meraj Mammadov</title>
     <meta name="robots" content="noindex" />
@@ -16,6 +16,8 @@
     <link rel="stylesheet" href="/css/skeleton.css" />
     <link rel="stylesheet" href="/css/styles.css" />
     <script src="/js/common.js" defer></script>
+    <script src="/js/vendor/lottie-light.min.js" defer></script>
+    <script src="/js/404.js" defer></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&amp;display=swap"
       rel="stylesheet"
@@ -72,35 +74,11 @@
     <main>
       <br />
       <section class="animation error" id="dark-animation">
-        <script
-          src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
-          type="module"
-        ></script>
-
-        <dotlottie-player
-          src="https://lottie.host/20cfab54-eda1-41f8-80da-983a5e401cb5/hxWo9EsI9B.json"
-          background="transparent"
-          speed="1"
-          style="width: 300px; height: 300px"
-          loop
-          autoplay
-        ></dotlottie-player>
+        <div data-animation-path="/media/404-light.json" style="width: 300px; height: 300px" role="img" aria-label="404: Page not found"></div>
       </section>
 
       <section class="animation error" id="white-animation">
-        <script
-          src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
-          type="module"
-        ></script>
-
-        <dotlottie-player
-          src="https://lottie.host/c6d25603-ae69-42eb-9d0e-a91ba5109495/lhYwK8MBmZ.json"
-          background="transparent"
-          speed="1"
-          style="width: 300px; height: 300px"
-          loop
-          autoplay
-        ></dotlottie-player>
+        <div data-animation-path="/media/404-dark.json" style="width: 300px; height: 300px" role="img" aria-label="404: Page not found"></div>
       </section>
     </main>
     <footer>
