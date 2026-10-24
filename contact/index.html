@@ -7,16 +7,20 @@
     <meta property="og:title" content="Contact | Meraj Mammadov" />
     <meta property="og:description" content="Find Meraj Mammadov’s GitHub, LinkedIn, and contact information." />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://meraccos.com/contact/" />
-    <meta property="og:image" content="https://meraccos.com/img/image.jpeg" />
+    <meta property="og:url" content="https://merajmammadov.com/contact/" />
+    <meta property="og:image" content="https://merajmammadov.com/media/meraj.jpg" />
     <meta property="og:site_name" content="Meraj Mammadov" />
-    <title>Contact</title>
-    <link rel="favicon" type="image/x-icon" href="/favicon.ico" />
+    <title>Contact | Meraj Mammadov</title>
+    <link rel="canonical" href="https://merajmammadov.com/contact/" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="stylesheet" href="/css/skeleton.css" />
     <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <script src="/js/common.js" defer></script>
+    <script src="/js/vendor/lottie-light.min.js" defer></script>
+    <script src="/js/animations.js" defer></script>
     <link
-      href="https://fonts.googleapis.com/css?family=Lato:400,700"
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&amp;display=swap"
       rel="stylesheet"
       type="text/css"
     />
@@ -25,13 +29,13 @@
   <body>
     <header>
       <h1><a href="/">Meraj Mammadov</a></h1>
-      <nav class="nav">
+      <nav class="nav" aria-label="Main navigation">
 
         <a href="/" class="desktop">home</a>
-        <a href="/Meraj_cv.pdf" class="desktop">cv</a>
+        <a href="/cv.pdf" class="desktop">cv</a>
 
         <div class="dropdown desktop">
-          <button onclick="ProjectsMenuFunction()" class="dropbtn" id="dropbtn">projects</button>
+          <button class="dropbtn" id="dropbtn" type="button" aria-expanded="false" aria-controls="myDropdown">projects</button>
           <div id="myDropdown" class="dropdown-content">
             <a href="/merajpt/">merajpt</a>
             <a href="/movie/">movie</a>
@@ -43,21 +47,21 @@
         <a href="/enigma/" class="desktop">enigma</a>
         <a href="/contact/" class="desktop">contact</a>
 
-        <strong id="mobile-menu-btn" class="menu-button mobile">
+        <button id="mobile-menu-btn" class="menu-button mobile" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
           <div class="line" style="width: 30px;"></div>
           <div class="line" style="width: 25px;"></div>
           <div class="line" style="width: 20px;"></div>
-        </strong>
+        </button>
 
         <div class="darkmode-container" id="darkmode-container">
-          <input type="checkbox" class="dark-mode-toggle" id="dark-mode-toggle" />
-          <label for="dark-mode-toggle" id="desktop-label" class="desktop-label" style="font-size: 45px;"> &#9788 </label>
+          <input type="checkbox" class="dark-mode-toggle" id="dark-mode-toggle" aria-label="Light mode" />
+          <label for="dark-mode-toggle" id="desktop-label" class="desktop-label" style="font-size: 45px;"> &#9788; </label>
         </div>
       </nav>
 
-      <div class="mobile-menu" style="display: none;">
+      <div class="mobile-menu" id="mobile-menu" hidden>
         <a href="/" class="mobile">home</a>
-        <a href="/Meraj_cv.pdf" class="mobile">cv</a>
+        <a href="/cv.pdf" class="mobile">cv</a>
         <a href="/merajpt/" class="mobile">merajpt</a>
         <a href="/movie/" class="mobile">movie</a>
         <a href="/sdr/" class="mobile">sdr</a>
@@ -68,10 +72,6 @@
     </header>
     
     <main>
-      <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-      />
       <br />
       <section class="content">
         <p>
@@ -82,41 +82,19 @@
       </section>
 
       <section class="animation" id="dark-animation">
-        <script
-          src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
-          type="module"
-        ></script>
 
-        <dotlottie-player
-          src="https://lottie.host/7656dc4c-aa54-406f-8b8c-7213eba5ee42/tEP5Lw0tMt.json"
-          background="transparent"
-          speed="1"
-          style="width: 300px; height: 300px"
-          loop
-          autoplay
-        ></dotlottie-player>
+        <div data-animation-path="/media/contact-light.json" style="width: 300px; height: 300px" aria-hidden="true"></div>
       </section>
       <section class="animation" id="white-animation">
-        <script
-          src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
-          type="module"
-        ></script>
 
-        <dotlottie-player
-          src="https://lottie.host/d2ad4f05-f866-4ea8-99ba-a288dccd74af/RJVQTO3S5M.json"
-          background="transparent"
-          speed="1"
-          style="width: 300px; height: 300px"
-          loop
-          autoplay
-        ></dotlottie-player>
+        <div data-animation-path="/media/contact-dark.json" style="width: 300px; height: 300px" aria-hidden="true"></div>
       </section>
 
       <section class="content contact profile" id="contact">
-        <a href="https://www.github.com/meraccos"
+        <a href="https://www.github.com/meraccos" aria-label="GitHub profile"
           ><i class="fa fa-github" style="font-size: 32px"></i
         ></a>
-        <a href="https://www.linkedin.com/in/meraccos"
+        <a href="https://www.linkedin.com/in/meraccos" aria-label="LinkedIn profile"
           ><i class="fa fa-linkedin" style="font-size: 32px"></i
         ></a>
         <i class="fa fa-envelope" style="font-size: 32px"></i>
