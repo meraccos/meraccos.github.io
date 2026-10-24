@@ -126,6 +126,8 @@ body.white-mode a {
     flex-direction: column;
     cursor: pointer;
     padding-left: 5px;
+    background: transparent;
+    border: 0;
 }
 
 .line {
@@ -153,6 +155,19 @@ body.white-mode a {
     justify-content: space-between;
 }
 
+.mobile-menu:not([hidden]) {
+    display: flex;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+:is(a, button, input, label):focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 4px;
+}
+
 /* Dark mode toggle */
 
 .darkmode-container {
@@ -169,7 +184,6 @@ body.white-mode a {
     background: #4e4949;
     border-radius: 200px;
     top: 3px;
-    box-shadow: inset 0px 5px 15px rgba(0,0,0,0,4), inset 0px -5px 15px rgba(255,255,255,0.4);
     cursor: pointer;
     transition: 0.3s;
 }
@@ -191,7 +205,15 @@ body.white-mode a {
 }
 
 .dark-mode-toggle {
-    visibility: hidden;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+}
+
+.dark-mode-toggle:focus-visible + label {
+    outline: 2px solid currentColor;
+    outline-offset: 4px;
 }
 
 .dark-mode-toggle:checked + label {
@@ -250,10 +272,6 @@ footer {
     }
     .white-mode .darkmode-container {
         color: #121212;
-    }
-
-    .dark-mode-toggle {
-        display: none;
     }
 
     .desktop-label {
