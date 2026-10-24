@@ -39,8 +39,12 @@
 }
 
 .profile img {
-    width: 350px !important;
-    height: 350px !important;
+    width: 350px;
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    flex-shrink: 0;
+    box-sizing: border-box;
 
     border: 1px solid;
     border-color: #3f1010;
@@ -53,7 +57,6 @@
 .animation {
     display: flex;
     align-items: center;
-    height: 200px;
     object-fit: cover;
     overflow: hidden;
     justify-content: center;
@@ -225,7 +228,6 @@
     color: #676464;
     line-height: 0.1em;
     margin: 0 auto;
-    padding-top: 50px;
     padding-top: 20px;
 }
 
@@ -263,8 +265,7 @@ li {
     .profile img {
         margin-left: 0;
         margin-top: 10px;
-        width: 200px !important;
-        height: 200px !important;
+        width: 200px;
         order: 1;
     }
     .output_box {
