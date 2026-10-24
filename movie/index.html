@@ -4,34 +4,35 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="An interactive movie recommender built by Meraj Mammadov using language model embeddings." />
-  <meta property="og:title" content="Movie recommender | Meraj Mammadov" />
-  <meta property="og:description" content="An interactive movie recommender built by Meraj Mammadov using language model embeddings." />
+  <meta name="description" content="An interactive movie recommender powered by language models." />
+  <meta property="og:title" content="Movie Recommender | Meraj Mammadov" />
+  <meta property="og:description" content="An interactive movie recommender powered by language models." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://meraccos.com/movie/" />
-  <meta property="og:image" content="https://meraccos.com/img/image.jpeg" />
+  <meta property="og:url" content="https://merajmammadov.com/movie/" />
+  <meta property="og:image" content="https://merajmammadov.com/media/meraj.jpg" />
   <meta property="og:site_name" content="Meraj Mammadov" />
-  <title>Movie Recommender</title>
-  <link rel="favicon" type="image/x-icon" href="/favicon.ico" />
+  <title>Movie Recommender | Meraj Mammadov</title>
+    <link rel="canonical" href="https://merajmammadov.com/movie/" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
   <link rel="stylesheet" href="/css/skeleton.css" />
   <link rel="stylesheet" href="/css/styles.css" />
   <link rel="stylesheet" href="/movie/movie.css" />
   <script src="/js/common.js" defer></script>
   <script src="/movie/movie.js" defer></script>
   <script src="https://cdn.jsdelivr.net/npm/onnxruntime-web/dist/ort.min.js"></script>
-  <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet" type="text/css" />
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&amp;display=swap" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
   <header>
     <h1><a href="/">Meraj Mammadov</a></h1>
-    <nav class="nav">
+    <nav class="nav" aria-label="Main navigation">
 
       <a href="/" class="desktop">home</a>
-      <a href="/Meraj_cv.pdf" class="desktop">cv</a>
+      <a href="/cv.pdf" class="desktop">cv</a>
 
       <div class="dropdown desktop">
-        <button onclick="ProjectsMenuFunction()" class="dropbtn" id="dropbtn">projects</button>
+        <button class="dropbtn" id="dropbtn" type="button" aria-expanded="false" aria-controls="myDropdown">projects</button>
         <div id="myDropdown" class="dropdown-content">
           <a href="/merajpt/">merajpt</a>
           <a href="/movie/">movie</a>
@@ -43,21 +44,21 @@
       <a href="/enigma/" class="desktop">enigma</a>
       <a href="/contact/" class="desktop">contact</a>
 
-      <strong id="mobile-menu-btn" class="menu-button mobile">
+      <button id="mobile-menu-btn" class="menu-button mobile" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
         <div class="line" style="width: 30px;"></div>
         <div class="line" style="width: 25px;"></div>
         <div class="line" style="width: 20px;"></div>
-      </strong>
+      </button>
 
       <div class="darkmode-container" id="darkmode-container">
-        <input type="checkbox" class="dark-mode-toggle" id="dark-mode-toggle" />
-        <label for="dark-mode-toggle" id="desktop-label" class="desktop-label" style="font-size: 45px;"> &#9788 </label>
+        <input type="checkbox" class="dark-mode-toggle" id="dark-mode-toggle" aria-label="Light mode" />
+        <label for="dark-mode-toggle" id="desktop-label" class="desktop-label" style="font-size: 45px;"> &#9788; </label>
       </div>
     </nav>
 
-    <div class="mobile-menu" style="display: none;">
+    <div class="mobile-menu" id="mobile-menu" hidden>
       <a href="/" class="mobile">home</a>
-      <a href="/Meraj_cv.pdf" class="mobile">cv</a>
+      <a href="/cv.pdf" class="mobile">cv</a>
       <a href="/merajpt/" class="mobile">merajpt</a>
       <a href="/movie/" class="mobile">movie</a>
       <a href="/sdr/" class="mobile">sdr</a>
