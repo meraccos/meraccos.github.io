@@ -1,43 +1,56 @@
 const darkModeToggle = document.getElementById('dark-mode-toggle');
+const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+const mobileMenu = document.getElementById('mobile-menu');
+const projectsButton = document.getElementById('dropbtn');
+const projectsMenu = document.getElementById('myDropdown');
 
-// Nav menu on mobile
-var mobileMenuBtn = document.querySelector("#mobile-menu-btn");
-var mobileMenu = document.querySelector(".mobile-menu");
-var darkanimation = document.querySelector("#dark-animation")
-var whiteanimation = document.querySelector("#white-animation")
-var footer = document.querySelector("footer")
-var main = document.querySelector("main")
+function setMobileMenu(open) {
+    mobileMenu.hidden = !open;
+    mobileMenuBtn.setAttribute('aria-expanded', String(open));
+    mobileMenuBtn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    document.querySelector('main').hidden = open;
+    document.querySelector('footer').hidden = open;
+}
 
-mobileMenuBtn.addEventListener("click", () => {
-    footer.style.display = "none"
-    main.style.display = "none"
-    if (mobileMenu.style.display === "none") {
-      mobileMenu.style.display = "flex";
-      if (darkanimation) {
-        darkanimation.style.display = "none"
-        whiteanimation.style.display = "none"
-      }
-    } 
-    else {
-      main.style.display = "block"
-      footer.style.display = "block"
-      mobileMenu.style.display = "none";
-      if (darkanimation) {
-        if (darkModeToggle.checked) {
-            darkanimation.style.display = "flex"
-          } else {
-            whiteanimation.style.display = "flex"
-          }
-      }
+mobileMenuBtn.addEventListener('click', () => {
+    setMobileMenu(mobileMenu.hidden);
+});
+
+window.matchMedia('(min-width: 769px)').addEventListener('change', (event) => {
+    if (event.matches) setMobileMenu(false);
+});
+
+function setProjectsMenu(open) {
+    projectsMenu.classList.toggle('show', open);
+    projectsButton.setAttribute('aria-expanded', String(open));
+}
+
+projectsButton.addEventListener('click', () => {
+    setProjectsMenu(!projectsMenu.classList.contains('show'));
+});
+
+document.addEventListener('click', (event) => {
+    if (!event.target.closest('.dropdown')) setProjectsMenu(false);
+});
+
+document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') {
+        if (projectsMenu.classList.contains('show')) {
+            setProjectsMenu(false);
+            projectsButton.focus();
+        } else if (!mobileMenu.hidden) {
+            setMobileMenu(false);
+            mobileMenuBtn.focus();
+        }
     }
-  });
+});
 
 // Handling the cookies
 
 function setCookie(name, value, days, path) {
     const expirationDate = new Date();
     expirationDate.setDate(expirationDate.getDate() + days);
-    const cookieValue = escape(value) +
+    const cookieValue = encodeURIComponent(value) +
         ((days == null) ? "" : "; expires=" + expirationDate.toUTCString()) +
         (path ? "; path=" + path : "") +
         "; domain=" + window.location.hostname;
@@ -49,7 +62,7 @@ function getCookie(name) {
     for (let i = 0; i < cookies.length; i++) {
         let cookie = cookies[i].trim();
         if (cookie.startsWith(name + '=')) {
-            return unescape(cookie.substring(name.length + 1));
+            return decodeURIComponent(cookie.substring(name.length + 1));
         }
     }
     return null;
@@ -84,24 +97,3 @@ if (darkModeCookie === 'enabled') {
 }
 
 darkModeToggle.addEventListener('change', toggleDarkMode);
-
-
-/* When the user clicks on the button, 
-toggle between hiding and showing the dropdown content */
-function ProjectsMenuFunction() {
-    document.getElementById("myDropdown").classList.toggle("show");
-    }
-    
-    // Close the dropdown if the user clicks outside of it
-    window.onclick = function(event) {
-    if (!event.target.matches('.dropbtn')) {
-        var dropdowns = document.getElementsByClassName("dropdown-content");
-        var i;
-        for (i = 0; i < dropdowns.length; i++) {
-        var openDropdown = dropdowns[i];
-        if (openDropdown.classList.contains('show')) {
-            openDropdown.classList.remove('show');
-        }
-        }
-    }
-}
