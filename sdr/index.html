@@ -3,21 +3,22 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Satellite image retrieval with RTL-SDR." />
-    <meta property="og:title" content="RTL-SDR | Meraj Mammadov" />
-    <meta property="og:description" content="Satellite image retrieval with RTL-SDR." />
+    <meta name="description" content="A project exploring antenna construction and weather satellite image reception using software-defined radio." />
+    <meta property="og:title" content="Weather Satellite SDR Project | Meraj Mammadov" />
+    <meta property="og:description" content="A project exploring antenna construction and weather satellite image reception using software-defined radio." />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://meraccos.com/sdr/" />
-    <meta property="og:image" content="https://meraccos.com/img/image.jpeg" />
+    <meta property="og:url" content="https://merajmammadov.com/sdr/" />
+    <meta property="og:image" content="https://merajmammadov.com/media/meraj.jpg" />
     <meta property="og:site_name" content="Meraj Mammadov" />
-    <title>SDR</title>
-    <link rel="favicon" type="image/x-icon" href="/favicon.ico" />
+    <title>Weather Satellite SDR Project | Meraj Mammadov</title>
+    <link rel="canonical" href="https://merajmammadov.com/sdr/" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="stylesheet" href="/css/skeleton.css" />
     <link rel="stylesheet" href="/css/styles.css" />
     <link rel="stylesheet" href="/css/sdr.css" />
     <script src="/js/common.js" defer></script>
     <link
-      href="https://fonts.googleapis.com/css?family=Lato:400,700"
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&amp;display=swap"
       rel="stylesheet"
       type="text/css"
     />
@@ -26,13 +27,13 @@
   <body>
     <header>
       <h1><a href="/">Meraj Mammadov</a></h1>
-      <nav class="nav">
+      <nav class="nav" aria-label="Main navigation">
 
         <a href="/" class="desktop">home</a>
-        <a href="/Meraj_cv.pdf" class="desktop">cv</a>
+        <a href="/cv.pdf" class="desktop">cv</a>
 
         <div class="dropdown desktop">
-          <button onclick="ProjectsMenuFunction()" class="dropbtn" id="dropbtn">projects</button>
+          <button class="dropbtn" id="dropbtn" type="button" aria-expanded="false" aria-controls="myDropdown">projects</button>
           <div id="myDropdown" class="dropdown-content">
             <a href="/merajpt/">merajpt</a>
             <a href="/movie/">movie</a>
@@ -44,21 +45,21 @@
         <a href="/enigma/" class="desktop">enigma</a>
         <a href="/contact/" class="desktop">contact</a>
 
-        <strong id="mobile-menu-btn" class="menu-button mobile">
+        <button id="mobile-menu-btn" class="menu-button mobile" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
           <div class="line" style="width: 30px;"></div>
           <div class="line" style="width: 25px;"></div>
           <div class="line" style="width: 20px;"></div>
-        </strong>
+        </button>
 
         <div class="darkmode-container" id="darkmode-container">
-          <input type="checkbox" class="dark-mode-toggle" id="dark-mode-toggle" />
-          <label for="dark-mode-toggle" id="desktop-label" class="desktop-label" style="font-size: 45px;"> &#9788 </label>
+          <input type="checkbox" class="dark-mode-toggle" id="dark-mode-toggle" aria-label="Light mode" />
+          <label for="dark-mode-toggle" id="desktop-label" class="desktop-label" style="font-size: 45px;"> &#9788; </label>
         </div>
       </nav>
 
-      <div class="mobile-menu" style="display: none;">
+      <div class="mobile-menu" id="mobile-menu" hidden>
         <a href="/" class="mobile">home</a>
-        <a href="/Meraj_cv.pdf" class="mobile">cv</a>
+        <a href="/cv.pdf" class="mobile">cv</a>
         <a href="/merajpt/" class="mobile">merajpt</a>
         <a href="/movie/" class="mobile">movie</a>
         <a href="/sdr/" class="mobile">sdr</a>
@@ -82,38 +83,34 @@
         </p>
       </section>
 
-      <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-      />
 
       <section class="content">
         Here is the first setup that I tried, a simple dipole antenna on a tripod with
         an aluminum dish as a reflector. It quickly turned out that both of them were too weak
         to capture the weak signals from the satellite at the required frequency (~1.7 GHz). 
       </section>
-      <img src="/img/sdr_2.JPG" alt="Image 1" class="sdr-image">
+      <img src="/media/sdr-dipole.jpg" alt="First satellite receiver: a dipole antenna on a tripod with an aluminum dish" class="sdr-image" width="1600" height="1200" loading="lazy" decoding="async">
 
       <section class="content">
         To improve the reception, I built this Yagi-Uda antenna with dimensions specific 
         to the frequency of the satellite signals. The signal strength was improved, but
         the antenna alone has a very narrow beamwidth and requires a wider reflector.
       </section>
-      <img src="/img/yagi.jpg" alt="Image 1" class="sdr-image">
+      <img src="/media/sdr-yagi.jpg" alt="Homemade Yagi-Uda antenna for receiving satellite signals" class="sdr-image" width="1600" height="1213" loading="lazy" decoding="async">
 
       <section class="content">
         So, I built a bigger reflector out of an old umbrella and some aluminum foil. Although this 
         is the design that finally seemed to work, I still had to spend some frustrating hours with no signs of life. The setup seems to be 
         too sensitive to small changes in the antenna's alignment.
       </section>
-      <img src="/img/sdr_1.JPG" alt="Image 1" class="sdr-image">
+      <img src="/media/sdr-umbrella.jpg" alt="Aluminum foil umbrella reflector beside the Yagi-Uda antenna" class="sdr-image" width="1200" height="1600" loading="lazy" decoding="async">
 
       <section class="content">
         I am lucky to live in a place with the satellite almost over my head (48.7 degrees elevation), 
         which makes this setup enough to capture the signals. The received images are in grayscale. After some 
         post-processing, the final image looks like this:
       </section>
-      <img src="/img/output2.png" alt="Image 1" class="sdr-image">
+      <img src="/media/sdr-weather-image.jpg" alt="Processed grayscale weather satellite image received with the SDR setup" class="sdr-image" width="965" height="964" loading="lazy" decoding="async">
       
       <section class="content">
         The satellite sends the images about every 10 minutes. I am waiting for the weather in Korea to get colder a bit to leave my setup outside 
